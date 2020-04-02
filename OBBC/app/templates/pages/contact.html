@@ -1,0 +1,35 @@
+{% extends 'conteneur.html' %}
+
+
+{% block content %}
+
+<div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <br />
+        <h1 class="page_titre">{%block titre %}Contact{% endblock titre %}</h1>
+        <hr class="style-two" />
+        <article>
+            <p>&nbsp;Lucas Terriel</p>
+            <p>&nbsp;Développeur du site OBBC, étudiant master TNAH à l'Ecole nationale des chartes (Prom. 2020) </p>
+            <p>&nbsp;Contactez-moi via cette <a href="mailto:ls.terriel@gmail.com" title="ls.terriel@gmail.com">adresse mail</a></p>
+            <br>
+            <p>&nbsp;Retour à la <a href="{{url_for('accueil')}}">page d'accueil</a></p>
+        </article>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+{% endblock content %}

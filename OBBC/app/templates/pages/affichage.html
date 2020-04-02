@@ -1,0 +1,18 @@
+{% extends 'conteneur.html' %}
+
+{% block content %}
+
+{% block titre %}Affichage{% endblock titre %}
+
+<div>
+    <br>
+    <br>
+    <div class="container">
+       
+        {{chanson|safe}}
+        
+    </div>
+    <br>
+</div>
+
+{% endblock content %}

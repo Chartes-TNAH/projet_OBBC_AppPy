@@ -1,0 +1,28 @@
+{% extends 'conteneur.html' %}
+
+{% block content %}
+
+<div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <br />
+        <h1 class="page_titre">{% block titre %}Resultats par dialectes{% endblock titre %}</h1>
+        <hr class="style-two" />
+        <br>
+        {{resultatDialecte|safe}}
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+{% endblock content %}

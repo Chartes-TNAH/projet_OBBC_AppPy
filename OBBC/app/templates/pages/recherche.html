@@ -1,0 +1,59 @@
+{% extends 'conteneur.html' %}
+
+
+{% block content %}
+
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+
+
+        <h1 class="page_titre">{%block titre%}{{titre}}{%endblock titre%}</h1>
+        <hr class="style-two" />
+
+        {% if resultats  %}
+
+        <p>Il y a {{resultats | length}} chanson(s) qui correspond(ent) à votre requête :</p>
+        
+        <ul>
+           
+            {% endif %}
+            
+            {% for chanson in resultats %}
+            
+            <li><a href="{{ url_for('affichage', chanson_id=chanson.id) }}">{{chanson.titre_fr}}, <em>{{ chanson.titre_brz }}</em></a></li>
+            
+            {% else %}
+            
+            <br>
+            <br>
+            <h5>Désolé, votre recherche n'a pas abouti</h5>
+            
+            {% endfor %}
+            
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+
+{% endblock %}

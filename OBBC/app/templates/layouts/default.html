@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Open Barzaz Breiz Collection -{%block titre %}{%endblock%}</title>
+
+    <!------------------------------------------------------>
+    <!--            ____________________                  -->
+    <!--          ||! ! ! ! ████████████|                 -->
+    <!--          || ! ! !  ▄▄▄▄▄▄▄▄▄▄▄▄|  OPEN           -->
+    <!--          ||! ! ! ! ▀▀▀▀▀▀▀▀▀▀▀▀|  BARZAZ         -->
+    <!--          ||████████████████████|  BREIZ          -->
+    <!--          ||▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄|  COLLECTION     -->
+    <!--          ||▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀|  @2020/ENC      -->
+    <!--          ||████████████████████|  L.T            -->
+    <!--          ||                                      -->
+    <!--          ||                                      -->
+    <!--          ||                                      -->
+    <!------------------------------------------------------>
+
+    {% include "partials/metadata.html" %}
+
+    {% include "partials/css.html" %}
+
+    <script src="https://kit.fontawesome.com/ea6f94abf5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% block body %}{% endblock body %}
+
+    {% block script %}{% endblock script %}
+</body>
+
+</html>

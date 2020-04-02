@@ -1,0 +1,28 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block body %}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img style="float:inherit; padding:47px 291px !important;" src="{{url_for('static', filename='images/img_404_mbrz.png')}}" alt="grand-mères bretonnes face à la mère">
+        </div>
+        <div class="col-4">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr>
+            <h1 style="text-align: justify !important">ERREUR 404 : PAGE INTROUVABLE</h1>
+            <p style="font-family: rubik; text-align: justify;">Sacre'Breizh ! Il semble que vous avez perdu votre chemin. Retournez sur Open Barzaz Breiz Collection en <a href="{{url_for('accueil')}}">cliquant ici</a></p>
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock body %}

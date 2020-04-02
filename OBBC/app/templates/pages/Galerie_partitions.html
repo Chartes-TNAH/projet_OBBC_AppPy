@@ -1,0 +1,97 @@
+{% extends 'conteneur.html' %}
+
+
+{% block content %}
+
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="page_titre">{%block titre %}Galerie{% endblock titre %}</h1>
+    <hr class="style-two" />
+    <nav aria-label="research-pagination">
+        <ul class="pagination">
+            {% for page in Images.iter_pages() %}
+
+            {% if page %}
+
+            {% if page != Images.page %}
+
+            <li class="page-item">
+                <a class="page-link" href="{{url_for('galerie',  page=page) }}">{{page}}</a>
+            </li>
+
+            {% else %}
+
+            <li class="page-item active disabled">
+                <a class="page-link">{{page}} <span class="sr-only">(actuelle)</span></a>
+            </li>
+
+            {% endif %}
+
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link">...</a>
+            </li>
+
+            {% endif %}
+
+            {% endfor %}
+
+        </ul>
+    </nav>
+
+    <div class="row">
+
+        {% for image in Images.items %}
+
+        <a href="{{ url_for('affichage', chanson_id=image.id) }}" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+
+            <h5 class="titre_img">{{ image.titre_fr }}</h5>
+
+            <div>{{ image.cheminPartition | safe }}</div>
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+    <br>
+
+    <nav aria-label="research-pagination">
+        <ul class="pagination">
+            {% for page in Images.iter_pages() %}
+
+            {% if page %}
+
+            {% if page != Images.page %}
+
+            <li class="page-item">
+                <a class="page-link" href="{{url_for('galerie',  page=page) }}">{{page}}</a>
+            </li>
+
+            {% else %}
+
+            <li class="page-item active disabled">
+                <a class="page-link">{{page}} <span class="sr-only">(actuelle)</span></a>
+            </li>
+            {% endif %}
+
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link">...</a>
+            </li>
+            {% endif %}
+
+            {% endfor %}
+
+        </ul>
+    </nav>
+    <br>
+    <hr class="style-two" />
+    <br>
+    <br>
+</div>
+
+{% endblock content %}

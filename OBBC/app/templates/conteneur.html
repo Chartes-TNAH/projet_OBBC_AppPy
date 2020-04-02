@@ -1,0 +1,117 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block body %}
+
+<!-- header : navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-header" role="navigation">
+    <span><a class="navbar-brand" href="{{ url_for('accueil')}}" title="OBBC"><img class="box" src="{{url_for('static', filename='images/logo_site.png')}}" width="60" height="40" class="d-inline-block align-top" alt="logo"></a></span>
+    <span><a class="navbar-brand" href="{{ url_for('accueil') }}">
+            <h5 class="h5-nav"> OPEN BARZAZ BREIZ COLLECTION</h5>
+        </a></span>
+    <div class="container-fluid">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link a-nav" href="{{ url_for('nav_carte_dialectes')}}"><i class="far fa-map"></i>&nbsp;Carte des dialectes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link a-nav" href="{{ url_for('themes')}}"><i class="fas fa-anchor"></i>&nbsp;Recherche par thèmes</a>
+            </li>
+            <li class="nav-item a-nav">
+                <a class="nav-link" href="{{ url_for('sommaire')}}"><i class="fab fa-itunes-note"></i>&nbsp;&nbsp;Index général des chansons</a>
+            </li>
+            <li class="nav-item a-nav">
+                <a class="nav-link" href="{{ url_for('bibliographie')}}"><i class="fas fa-book"></i>&nbsp;&nbsp;Bibliographie</a>
+            </li>
+        </ul>
+        <div class="octocat-icon"><a href="https://github.com/Lucaterre/Open-Barzaz-Breiz-Collection-Project.git" target="_blank"><img width="36" height="36" src="{{url_for('static', filename='images/octocat-icon.png')}}" alt="Fork me on GitHub" title="Fork me on Github"></a></div>
+        <div class="fastSearch">
+            <form class="form-inline" action="{{url_for('recherche')}}" method="GET">
+                <input class="form-control mr-sm-3" name="keyword" type="text" placeholder="Recherche rapide" aria-label="search">
+                <button class="btn btn-outline-dark" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <!-- div pour créer les éléments de connexion -->
+        <!--
+        <div class="items-connexion">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-users"></i>  Se connecter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-user-edit"></i>  S'inscrire</a>
+            </li>
+        </ul>
+        </div>
+        -->
+    </div>
+</nav>
+
+<!------------>
+
+
+{% block content %}{% endblock content %}
+
+
+
+<!-- footer -->
+<footer class="page-footer">
+
+
+    <div class="container">
+
+
+        <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+
+            <div class="col-md-3 mb-3">
+                <h6 class="h6-footer">
+                    <a href="{{url_for('a_propos')}}" class="a-footer">À propos du site</a>
+                </h6>
+            </div>
+
+            <div class="vl"></div>
+
+            <div class="col-md-3 mb-3">
+                <h6 class="h6-footer">
+                    <a href="{{url_for('contact')}}" class="a-footer">Contact</a>
+                </h6>
+            </div>
+
+            <div class="vl"></div>
+
+            <div class="col-md-3 mb-3">
+                <h6 class="h6-footer">
+                    <a href="{{url_for('CGU')}}" class="a-footer">Conditions générales d'utilisation</a>
+                </h6>
+            </div>
+            <!--
+<div class="vl"></div>
+
+      <div class="col-md-2 mb-3">
+        <h6 class="h6-footer">
+          <a href="#!" class="a-footer">Liens utiles</a>
+        </h6>
+      </div>
+-->
+        </div>
+
+    </div>
+
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        <p class="p-coyright">© Open Barzaz Breitz Collection - Lucas Terriel, TNAH, prom. 2020</p>
+        <a href="http://www.chartes.psl.eu/fr" target="_blank"><img src="{{url_for('static', filename='images/logo-enc-footer-red.png')}}" class="img-fluid" alt="logo Ecole nationale des chartes" width="220"></a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+
+
+<!------------>
+
+
+
+{% endblock body %}

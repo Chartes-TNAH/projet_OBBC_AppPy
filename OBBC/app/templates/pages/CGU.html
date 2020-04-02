@@ -1,0 +1,63 @@
+{% extends 'conteneur.html' %}
+
+
+{% block content %}
+
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <br />
+        <h1 class="page_titre">{% block titre %}Conditions générales d'utilisation{% endblock titre %}</h1>
+        <hr class="style-two" />
+        <article>
+            <h4>Article 1 : Objet</h4>
+            <hr />
+            <p>Les présentes CGU ou Conditions Générales d’Utilisation encadrent juridiquement l’utilisation des services du site Open Barzaz Breiz Collection (ci-après dénommé « OBBC »).</p>
+            <p>Constituant le contrat entre OBBC et l’Utilisateur. L’accès à la plateforme OBBC signifie l’acceptation des présentes CGU.</p>
+            <br>
+            <h4>Article 2 : Mentions légales</h4>
+            <hr />
+            <p>L’édition du site OBBC est assurée par Lucas Terriel, étudiant en master TNAH à l'Ecole nationale des chartes. OBBC est une application web ouverte réalisée dans un cadre académique, dont le code est disponible sous forme d'un dépôt hébergé sur <a href="https://github.com/Lucaterre/Open-Barzaz-Breiz-Collection-Project.git" target="_blank">Github</a>. Toute suggestion de modification peut se faire avec le consentement du créateur du site (<a href="{{url_for('contact')}}">contact</a>) dans un souci organisationnel et fonctionnel.</p>
+            <br>
+            <h4>Article 3 : Accès au site</h4>
+            <hr />
+            <p>Le site OBBC permet d’accéder gratuitement à l'ensemble des services proposés. Le site est accessible gratuitement depuis n’importe quel lieu par tout utilisateur disposant d’un accès à Internet. Tous les frais nécessaires pour l’accès aux services (matériel informatique, connexion Internet…) sont à la charge de l’utilisateur. Pour des raisons de maintenance ou autres, l’accès au site peut être interrompu ou suspendu par l’éditeur sans préavis ni justification.</p>
+            <br>
+            <h4>Article 4 : Collecte des données</h4>
+            <hr />
+            <p>Conformément à la loi n°78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, la collecte et le traitement d’informations personnelles s’effectuent dans le respect de la vie privée. Ne disposant d'aucune possibilité de connexion utilisateur, OBBC ne collecte aucune données liées aux utilisateurs.</p>
+            <br>
+            <h4>Article 5 : Propriété intellectuelle</h4>
+            <hr />
+            <p>Le design et le code de OBBC sont entièrements ouverts (Article 2). L'ensemble des images et textes déposés et disponibles sont issus de silos de données en libre accès.</p>
+            <br>
+            <h4>Article 6 : Responsabilité</h4>
+            <hr />
+            <p>Bien que les informations publiées sur le site soient réputées fiables, OBBC se réserve la faculté d’une non-garantie de la fiabilité des sources.</p>
+            <p>Les informations diffusées sur OBBC sont présentées à titre purement informatif, académique et sont sans valeur contractuelle. En dépit des mises à jour, la responsabilité de OBBC ne peut être engagée en cas de modification des dispositions administratives et juridiques apparaissant après la publication. Il en est de même pour l’utilisation et l’interprétation des informations communiquées sur la plateforme.</p>
+            <p>OBBC décline toute responsabilité concernant les éventuels virus pouvant infecter le matériel informatique de l’Utilisateur après l’utilisation ou l’accès à OBBC.</p>
+            <p>OBBC ne peut être tenu pour responsable en cas de force majeure ou du fait imprévisible et insurmontable d’un tiers.</p>
+            <p>La garantie totale de la sécurité et la confidentialité des données n’est pas assurée par le site. Cependant, OBBC s’engage à mettre en œuvre toutes les méthodes requises pour le faire au mieux.</p>
+            <br>
+            <h4>Article 7 : Liens hypertextes</h4>
+            <hr />
+            <p>OBBC peut être constitué de liens hypertextes. En cliquant sur ces derniers, l’Utilisateur sortira de la plateforme. Cette dernière n’a pas de contrôle et ne peut pas être tenue responsable du contenu des pages web relatives à ces liens.</p>
+            <br>
+            <h4>Article 8 : Durée du contrat</h4>
+            <hr />
+            <p>Le présent contrat est valable pour une durée indéterminée. Le début de l’utilisation des services de OBBC marque l’application du contrat à l’égard de l’Utilisateur. En cas de modification de ce présent contrat, celles-ci seront signifiées sur la page d'acceuil de OBBC</p>
+            <br>
+            <h4>Article 9 : Droit applicable et juridiction compétente</h4>
+            <hr />
+            <p>Le présent contrat est soumis à la législation française. L’absence de résolution à l’amiable des cas de litige entre les parties implique le recours aux tribunaux français compétents pour régler le contentieux.</p>
+            <br>
+            <br>
+            <p>&nbsp;Retour à la <a href="{{url_for('accueil')}}">page d'accueil</a></p>
+        </article>
+    </div>
+</div>
+
+{% endblock content %}

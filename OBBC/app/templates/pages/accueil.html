@@ -1,0 +1,171 @@
+{% extends 'conteneur.html' %}
+
+{% block content %}
+
+<!-- Infinite carousel by Code Joey, July 4, 2019 / responsive : no  -->
+<div class="items">
+    <div class="item active"><a title="Galerie de partitions" href="{{url_for('galerie')}}">
+            <img src="static/images/partition-present.jpg" alt="partition Barzaz Breiz"></a>
+    </div>
+    <div class="item next"><a title="Biographie de Théodore de La Villemarqué" href="#Biographie">
+            <img src="static/images/Théodore_de_La_Villemarqué.png" alt="portrait Théodore de La Villemarqué"></a>
+    </div>
+    <div class="item"><a title="Histoire du Barzaz Breiz" href="#HistoriqueBB">
+            <img src="static/images/Barzaz_Breiz_couverture_1846.djvu.jpg" alt="Couverture du Barzaz Breiz de 1846"></a>
+    </div>
+    <div class="item prev">
+        {% set number =  range(1,10) | random -%}
+        <a title="Chanson aléatoire" href="{{url_for('affichage', chanson_id=number)}}">
+            <img src="static/images/Gavotte.jpg" alt="La Gavotte, danse populaire bretonne"></a>
+    </div>
+    <div class="button-container">
+        <div class="button"><i class="fas fa-angle-left"></i></div>
+        <div class="button"><i class="fas fa-angle-right"></i></div>
+    </div>
+</div>
+
+<!--------------------------------------------------->
+
+<br>
+<div class="container" id="accueil">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 class="display-4"><img id="test" class="rotating" src="{{url_for('static', filename='images/Triskele-logo.png')}}" width="50" height="50" class="d-inline-block align" alt="logo"> Open Barzaz Breiz Collection <img id="test" class="rotating" src="{{url_for('static', filename='images/Triskele-logo.png')}}" width="50" height="50" class="d-inline-block align" alt="logo"></h1>
+    <hr class="style-two" />
+    <p class="texte_accueilB">(Re)Découvrir et explorer les chants populaires bretons du <em>Barzaz Breiz</em></p>
+    <div>
+
+
+        <!-- Test de la carte audio (section media)
+        <div class="carte_audio">
+            <p class="texte_accueilC">Un petit air de musique bretonne ? -<em>Ar Curez ar Camarez, fugue à 4</em>&nbsp;-&nbsp;<a class="a-accueil" href="http://www.partitions.bzh/fichier/1999_Ar_Curez_ar_Camarez.mp3" title="http://www.partitions.bzh/fichier/1999_Ar_Curez_ar_Camarez.mp3">[source]</a></p>
+            <audio controls="controls">
+                <source src="http://www.partitions.bzh/fichier/1999_Ar_Curez_ar_Camarez.mp3" type="audio/mp3" />
+                <p>Votre navigateur n'est pas compatible, acceder au fichier via<a href="http://www.partitions.bzh/fichier/1999_Ar_Curez_ar_Camarez.mp3">ce lien</a>.</p>
+            </audio>
+        </div>
+-->
+
+        <div class="div-acceuil reveal">
+            <br />
+            <h3>Donemat !*</h3>
+            <br />
+            <p class="texte_accueil">Open Barzaz Breiz Collection est une application web pour rendre accessible les chansons bretonnes issues de l'ouvrage <a class="a-accueil" href="#HistoriqueBB" title="historique du Barzaz Breiz"><em>Barzaz Breiz, chants populaires de la Bretagne</em></a> (1839) écrit par <a class="a-accueil" href="#Biographie" title="Biographie de Théodore Hersart de La Villemarqué">Théodore Hersart, vicomte de La Villemarqué</a> dans un esprit de (re)découverte et de valorisation du folklore breton.</p>
+            <p class="texte_accueil">Réalisée dans le cadre du Master 2 TNAH de l'École nationale des chartes, cette application est conçue comme une édition numérique et dynamique du <em>Barzaz Breiz</em>. Pour plus d'informations sur la réalisation technique de l'application consulter la section <a class="a-accueil" href="{{url_for('a_propos')}}" title="À propos">À propos du site</a>.</p>
+            <p class="texte_accueil">Les paroles des chansons sont présentées dans leur version originale en breton et en version française, l'argumentaire et les notes de La Villemarqué sont également restitués. La récupération des paroles en format XML, <a href="https://tei-c.org/" target="_blank" title="<Text Encoding Initiative>">TEI</a> compatible, est disponible via la fonction "Affichage en XML TEI" située en bas de chacune des chansons pour permettre aux chercheuses et aux chercheurs en humanités numériques d'exploiter ce corpus à la lumière de leurs outils d'analyse textuel.</p>
+            <p class="texte_accueil">Basée sur l'organisation thématique et sur la mise en page de l'édition de 1846 du <em>Barzaz Breiz</em> (<a class="a-accueil" href="https://fr.wikisource.org/wiki/Barzaz_Breiz/1846" title="Lien Wikisource vers le Barzaz Breiz" target="_blank">disponible sur Wikisource</a>), chacune des chansons est accessible grâce à plusieurs possibilités de recherche :</p>
+            <ul class="texte_accueil">
+                <li>par mots-clefs (via la barre de recherche rapide en haut à droite)</li>
+                <li>par dialectes bretons via la <a class="a-accueil" href="{{url_for('nav_carte_dialectes')}}" title="Carte interactive des dialectes bretons">carte des dialectes</a></li>
+                <li>par <a class="a-accueil" href="{{url_for('themes')}}" title="Recherche par thèmes">thèmes</a>, respectant les catégories de La Villemarqué présentées dans l'édition de 1846 du <em>Barzaz Breiz</em></li>
+                <li>par <a class="a-accueil" href="{{url_for('sommaire')}}" title="Index général des chansons">l'index général des chansons</a></li>
+            </ul>
+            <p class="texte_accueil">Pour améliorer l'expérience n'hésitez pas à vous rendre sur la page <a href="{{url_for('contact')}}" title="Contact">contact</a>, et à proposer vos suggestions !</p>
+            <br />
+            <h3>Beaj vad !*</h3>
+            <br />
+            *Bienvenue ! / bon voyage !
+            <br />
+            <br />
+        </div>
+        <div class="div-acceuil" id="Biographie">
+            <br />
+            <br />
+            <h3>Théodore Hersart, vicomte de La Villemarqué (1815-1895)</h3>
+            <hr>
+            <br />
+            <p class="flotte-left reveal">
+                <img src="{{url_for('static', filename='images/portrait_Villemarqué.jpg')}}" alt="Portrait de Théodore Hersart, 1884, par Évariste-Vital Luminais." title="Portrait de Théodore Hersart, 1884, par Évariste-Vital Luminais." style="border: double;" />
+            </p>
+
+            <p class="texte_accueil" style="line-height: 20px">Né à Quimperlé le 8 décembre 1815 dans une famille légitimiste, il passe sa jeunesse dans sa région natale avant de partir pour Paris en 1834 et y intégrer la faculté de droit.</p>
+
+            <p class="texte_accueil">Il se tourne toutefois vers des études littéraires de la période médiévale. Ayant abandonné le droit, il suit les enseignements de l'Ecole nationale des chartes en auditeur libre avant de s'y inscrire officiellement en 1836.</p>
+
+            <p class="texte_accueil">L'étude des traditions bretonnes ayant toujours pris une place importante dans ses recherches, il commence la préparation du <em>Barzaz Breiz</em> l'année même de son entrée à l'école. Il prend des cours de breton, langue qu'il ne parle pas, afin de faciliter son travail. C'est l'abbé Jean-Guillaume Henry qui fut son professeur ainsi que le correcteur de son recueil.</p>
+
+            <br />
+
+            <p class="texte_accueil">Lors de voyages en Bretagne il collecte des chants ainsi que les musiques qu'il retranscrit dans des carnets.</p>
+
+            <p class="texte_accueil">En 1837 il propose au comité des travaux historiques la publication de son recueil afin de contribuer à la transmission de l'histoire de France. Cependant, sa demande est rejetée.</p>
+
+            <p class="texte_accueil">Dès son retour à la capitale en 1839 il publie son recueil sur ses propres deniers.
+                Il s'inscrit dans le courant des romantiques, ceux-ci s'affranchissent des contraintes de l'écriture classique et mettent en avant la redécouverte des littératures orales d'Europe. Ce mouvement invite entre autre à recueillir les chants populaires régionaux, à l'image de Gérard de Nerval et de ces travaux sur les chants du Valois ou encore George Sand avec ceux du Berry. Cette dernière déclare même en 1856 : <em>Une seule province de France est à la hauteur, dans la poésie, de ce que le génie des plus grands poètes et celui des nations les plus poétiques ont jamais produit, nous oserons dire qu’elle le surpasse. Nous voulons parler de la Bretagne.</em>.</p>
+
+            <p class="texte_accueil">Les textes édités sont rédigés en breton et précédés d'une notice où sont exposés les avis de chercheurs.</p>
+
+            <p class="flotte-right reveal">
+                <img src="{{url_for('static', filename='images/La_Villemarqué_collecte.jpg')}}" alt="La Villemarqué à 30 ans transcrivant une chanson - Ernest Boyer — Barzaz pe ganaouennou breiz" height="250" width="300" title="La Villemarqué à 30 ans transcrivant une chanson - Ernest Boyer — Barzaz pe ganaouennou breiz" style="border: double;" />
+            </p>
+
+            <p class="texte_accueil">Loin d'être un succès littéraire, il obtient cependant un intérêt immédiat auprès des lettrés parisiens. La beauté poétique de cette édition tout d'abord, mais également l'attente idéologique des bretons qui retrouvent leur identité historique au fil de ces pages lui donne ses lettres de noblesse. Il trouve cependant un écho bien plus mesuré au sein des classes populaires, même bretonnes. La Villemarqué appartient à un mouvement littéraire et culturel regrouppant « de jeunes aristocrates et bourgeois d'origine bretonne » qui vivent la plupart du temps à Paris qui s'intéressent à la Bretagne. Animés par des intérêts culturels : histoire, poésie, littérature... mais également politiques ou idéologiques (panceltisme), ce petit groupe incarne, pour La Villemarqué, <em>« l'esprit des temps nouveaux »</em>.</p>
+
+            <p class="texte_accueil">En 1846, il reçoit la légion d'honneur et est considéré comme une autorité scientifique dans son domaine. En 1858, il devient membre de l'Institut de France.</p>
+
+            <p class="texte_accueil">Il soutient en parallèle le travail de Jean-François Le Gonidec : <em>Tad ar brezhoneg, un Dictionnaire français-breton</em> dont il publie en 1850 une nouvelle édition. Tous deux sont les promoteurs d'une orthographe simplifiée et d'une grammaire normative dans le but d'unifier la langue bretonne dispersée dans une grande variété dialectale.</p>
+
+            <p class="flotte-left reveal">
+                <img src="{{url_for('static', filename='images/statue_Villemarqué.jpg')}}" alt="Statue de la Villemarqué à Quimperlé" title="Statue de la Villemarqué à Quimperlé" height="430" width="250" style="border: double;" />
+            </p>
+
+            <p class="texte_accueil">Dans les années 1860-1870, sa démarche philologique se heurte aux avancées des chercheurs qui, comme François-Marie Luzel, adoptent des méthodes de transcription critique de l'oralité. Celui-ci s'interroge sur les commentaires visant à prouver l'authenticité des chants au sein du recueil. Certains chercheurs remettent en cause le <em>Barzaz Breiz</em> qui donne lieu à la «querelle du Barzaz Breiz» ; leur principal reproche étant que les textes auraient été falsifiés au moment de leur transcription ou encore que l'ancienneté des poèmes serait exagérée. Même si des défauts de méthode scientifique lui sont grandement reproché, l'oeuvre est traduite dans plusieurs langues et ses qualités littéraire sont toujours reconnus.</p>
+
+            <p class="texte_accueil">Théodore Hersart de La Villemarqué meurt en décembre de l'année 1895.</p>
+
+
+            <p class="texte_accueil">L'ethnologue Donatien Laurent redécouvrit les carnets de collecte en 1964 et initia une nouvelle approche de recherche sur l'auteur du <em>Barzaz-Breiz</em> qui se poursuit encore aujourd'hui. En 2018 le Conseil départemental du Finistère acquiert, de la famille, les fonds d'archives, les carnets de collecte et la bibliothèque de travail de Théodore Hésart de la Villemarqué, permettant une revalorisation patrimoniale du travail de l'auteur.</p>
+
+            <p>SOURCE (texte et images): <a href="https://fr.wikipedia.org/wiki/Th%C3%A9odore_Hersart_de_La_Villemarqu%C3%A9" target="_blank" title=" Wikipédia">Wikipédia</a></p>
+
+        </div>
+        <div class="div-acceuil reveal" id="HistoriqueBB">
+            <br />
+            <h3>La Villemarqué et <em>Le Barzaz Breiz</em></h3>
+            <hr>
+            <br />
+            <p class="flotte-left">
+                <img src="{{url_for('static', filename='images/Carnet.jpg')}}" alt="Un des carnets de la Villemarqué" title="carnet de la Villemarqué." style="border: double;" height="250" width="220" />
+            </p>
+            <p class="texte_accueil">Le <em>Barzaz Breiz</em> est un recueil de chants populaires bretons, sous-titré «recueillis et publiés avec une traduction française, des éclaircissements, des notes et les mélodies originales par Th. de La Villemarqué». La quasi-totalité des textes sont issus d'une collecte commencée par sa mère, Marie-Ursule de Feydeau de Vaugien, et poursuivie à plus grande échelle par le jeune chartiste. Les paroles et la musique sont collectées dans la Basse-Bretagne au XIXe siècle, traduites et annotées par Théodore Hersart de La Villemarqué.
+            </p>
+            <p class="texte_accueil">Barzaz, signifie « bardit, ensemble de poèmes » (Barzhaz) et Breiz signifie la « Bretagne » (Breizh en breton moderne).</p>
+            <p class="texte_accueil">Chaque poème est présenté dans la langue bretonne avec une traduction française mise en parallèle. Une introduction historique ainsi qu'un préambule sur la méthode, ainsi qu'un "traité de la poésie populaire en Bretagne" ouvrent l'ouvrage. Des "Arguments" et "Notes et éclaicissements" accompagnent les chants afin d'expliciter certains aspects des paroles. A la fin de son ouvrage, La Villemarqué donne la ligne mélodique de chaque poème.</p>
+            <p class="flotte-right">
+                <img src="{{url_for('static', filename='images/Barzaz_Breiz_4e_edition.jpg')}}" alt="Quatrième édition du Barzaz Breiz 1846" height="350" width="300" title="Quatrième édition du Barzaz Breiz 1846" style="border: double;" />
+            </p>
+            <p class="texte_accueil">Plusieurs éditions sont parues : en 1839, 1840, 1845. En 1867, l'ouvrage parait en un seul volume avec la mention « sixième édition ». La cinquième édition n'est à ce jour pas connue. En 1867, 1883 et 1893, d'autres éditions paraissent. Il est traduit dans plusieurs langues et dès 1865 en anglais par Tom Taylor.</p>
+            <p class="texte_accueil">L'oeuvre a connu un succès certain auprès de la haute société parisienne. Aujourd'hui encore, par sa qualité littéraire, scientifique et politique, il est la source d'inspiration de nombreux musiciens. C'est un document musicologique à part entière.</p>
+            <p class="texte_accueil">Une querelle autour de l'authenticité des textes née en 1868. Largement critiquée, une thèse défendue par Francis Gourvil en 1960 soutenait que le Barzaz Breiz était un faux forgé. Malgré tous ces détracteurs et ces remises en question, son authenticité fut reconnue et il a inspiré et inspire encore les artistes et musiciens dont Alan Stivell ou Tri Yann.</p>
+            <p>SOURCE (texte et images): <a href="https://fr.wikipedia.org/wiki/Barzaz_Breiz" target="_blank" title="Wikipédia">Wikipédia</a> et
+                <a href="http://www.archives-finistere.fr/th%C3%A9odore-hersart-de-la-villemarqu%C3%A9" target="_blank" title="Archives départementales Finistère">Archives départementales du Finistère</a></p>
+        </div>
+        <h4><a class="navbar-brand" href="#accueil">haut de page</a></h4>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+{% block script %}
+<script type="text/javascript" src="static/js/infinite_carousel.js "></script>
+<script type="text/javascript" src="static/js/screenAPIIO.js"></script>
+{% endblock script %}
+
+{% endblock content %}

@@ -1,0 +1,382 @@
+.title-header {
+    color: #fff;
+}
+
+.div_register {
+    padding-left: 100px;
+}
+
+.h5-nav {
+    color: #fff;
+    margin-top: 6.5px;
+    font-size: 18px;
+}
+
+.btn {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #9e9e9e;
+    border-color: #9e9e9e;
+}
+
+
+.nav-header {
+    background-color: black;
+    position: fixed;
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    margin-top: 0;
+}
+
+.page-footer {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+}
+
+.h6-footer {
+    color: #cccccc !important;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.vl {
+    border-left: 2px solid #cccccc;
+    height: 25px;
+}
+
+.p-coyright {
+    color: #cccccc !important;
+}
+
+.items-connexion {
+    margin-left: 10px;
+}
+
+
+
+/*carousel d'accceuil*/
+.items {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.items .item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+    opacity: 0;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item.active {
+    opacity: 1;
+    z-index: 99;
+    box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.item.prev {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(-125%, -50%);
+}
+
+.item.next {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(25%, -50%);
+}
+
+.items .button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 275px;
+    z-index: 100;
+}
+
+.button-container .button {
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.75;
+    transition: all 300ms ease-in-out;
+}
+
+.button-container .button:hover {
+    opacity: 1;
+}
+
+.button-container .button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    z-index: -99;
+}
+
+.button-container .button:nth-child(1) {
+    float: left;
+}
+
+.button-container .button:nth-child(2) {
+    float: right;
+}
+
+/****************/
+
+.banner-git {
+    position: absolute;
+    top: 60px;
+    right: -1px;
+    width: 150px;
+}
+
+
+.fastSearch {
+    margin-right: 0px;
+}
+
+.a-footer {
+    color: gainsboro;
+}
+
+.a-footer:hover {
+    color: grey;
+}
+
+.scroll-div {
+    overflow: auto;
+    height: 450pt;
+    background-color: #c0d1e3;
+    margin: 1%;
+    padding: 15px;
+    text-align: justify;
+    border: 2.5px solid black;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+}
+
+/* Flaired edges, by Tomas Theunissen */
+
+hr.style-seven {
+    overflow: visible;
+    /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+hr.style-seven:before {
+    /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+/* Gradient transparent - color - transparent */
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.page_titre {
+    text-align: center;
+}
+
+.box {
+    display: block;
+    width: 50px;
+    height: 30px;
+    transition: width 1s, height 1s, transform 1s;
+
+}
+
+.box:hover {
+    width: 50px;
+    height: 30px;
+    transform: rotate(720deg);
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 2.5s linear infinite;
+}
+
+#test {
+    width: 50px;
+    height: 50px;
+    transform-origin: 50% 50%;
+}
+
+
+.argument {
+    text-align: justify;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.Ne {
+    text-align: justify;
+    font-family: 'Nunito', sans-serif;
+}
+
+.titre-resthemes {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+.octocat-icon {
+    margin-right: 30px;
+}
+
+
+
+.titre_index {
+    font-family: 'Nunito', sans-serif;
+}
+
+.titre_themes {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    word-spacing: 5px;
+    letter-spacing: 2.5px;
+    font-size: 17px;
+}
+
+.texte_accueil {
+    font-family: 'Rubik', sans-serif;
+    word-spacing: 5px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+
+.texte_accueilB {
+    font-family: 'Rubik', sans-serif;
+    word-spacing: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.float {
+    width: 200px;
+    height: 100px;
+    float: right;
+
+}
+
+
+
+.div-acceuil {
+    padding: 5px 5px 5px 5px;
+}
+
+.texte_accueilF {
+    font-family: 'Rubik', sans-serif;
+    word-spacing: 5px;
+    text-align: justify;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+.texte_accueilC {
+    font-family: 'Rubik', sans-serif;
+    word-spacing: 5px;
+    text-align: left;
+    font-size: 16.590px;
+    padding: 2px 1px 0px 22px;
+}
+
+.carte_audio {
+    position: relative;
+    display: -ms-flexbox;
+    border: thick double;
+    display: flex;
+    padding: 9px 0px 0px 0px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: gainsboro;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+    float: right;
+    width: 361px;
+    top: 11px;
+    right: -5px;
+    height: 148px;
+}
+
+.a-nav {
+    font-size: 90%;
+}
+
+.flotte-left {
+    float: left;
+    padding: 1px 16px 0px 0px;
+}
+
+.flotte-right {
+    float: right;
+    padding: 6px 3px 11px 20px;
+}
+
+.row-gallery {
+    margin: 15px;
+}
+
+
+.titre_img {
+    text-align: center !important
+}

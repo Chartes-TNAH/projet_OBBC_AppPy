@@ -1,0 +1,55 @@
+{% extends 'conteneur.html' %}
+
+
+{% block content %}
+
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <br />
+        <h1 class="page_titre">{% block titre %}Recherche par thèmes{% endblock titre %}</h1>
+        <hr class="style-two" />
+        <div class="card-group">
+            <div class="card">
+                <img src="{{url_for('static', filename='images/Mythologiques.jpg')}}" class="card-img-top" alt="La Fuite du roi Gradlon selon Évariste-Vital Luminais, vers 1884, conservé au musée des beaux-arts de Quimper. Cette peinture représente une célèbre scène de la légende de la ville d'Ys." title="La Fuite du roi Gradlon selon Évariste-Vital Luminais, vers 1884, conservé au musée des beaux-arts de Quimper. Cette peinture représente une célèbre scène de la légende de la ville d'Ys." width="250" height="300">
+            </div>
+            <br />
+            <div class="card">
+                <img src="{{url_for('static', filename='images/historiques.jpg')}}" class="card-img-top" alt="Manuscrit anonyme du Lancelot-Graal (vers 1220), conservé dans une bibliothèque municipale de Rennes." title="Manuscrit anonyme du Lancelot-Graal (vers 1220), conservé dans une bibliothèque municipale de Rennes." width="250" height="300">
+            </div>
+            <br />
+            <div class="card">
+                <img src="{{url_for('static', filename='images/domestiques_amour.jpg')}}" class="card-img-top" alt="..." title="La clairière aux légendes par Henri Royer, huile sur toile, 1936. Conservé au musée des beaux-arts de Brest." width="250" height="300">
+            </div>
+            <br />
+            <div class="card">
+                <img src="{{url_for('static', filename='images/religieux_légendes.JPG')}}" class="card-img-top" alt="L'Ankou représenté sur l'ossuaire de Ploudiry." title="L'Ankou représenté sur l'ossuaire de Ploudiry." width="250" height="300">
+            </div>
+            <br />
+        </div>
+    </div>
+    <div class="container">
+        <div class="card-group">
+            {% set counter = 1 -%}
+            {% for theme in themes %}
+            <div class="card">
+                <div class="card-body">
+                    <hr class="style-seven">
+                    <p class="titre_themes"><a href="{{url_for('resultatTheme', theme_id= counter + loop.index0)}}">{{theme.text}}</a></p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+{% endblock content %}

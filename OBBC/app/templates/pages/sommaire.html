@@ -1,0 +1,29 @@
+    {% extends 'conteneur.html' %}
+
+    {% block content %}
+    
+    <div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <br>
+            <h1 class="page_titre">{% block titre %}Index général des chansons{% endblock titre %}</h1>
+            <hr class="style-two" />
+            <br>
+            <h5>Actuellement, OBBC vous propose l'accès à {{n|length}} chansons du Barzaz Breiz :</h5>
+            <br>
+            <div>
+                <ul>
+                    {% set counter = 1 -%}
+                    {% for titre in titres %}
+                    <li class="titre_index"><a href={{url_for('affichage', chanson_id= counter + loop.index0)}}>{{titre.text}}</a></li>
+                    <hr>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    {% endblock content %}
