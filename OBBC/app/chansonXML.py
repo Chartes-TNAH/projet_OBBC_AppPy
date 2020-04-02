@@ -8,7 +8,7 @@ Date: 31/03/2020
 
 """
 
-# Import du package lxml et du module etree renommé ET
+
 
 from lxml import etree as ET
 
