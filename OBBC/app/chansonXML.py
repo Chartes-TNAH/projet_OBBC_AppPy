@@ -1,6 +1,6 @@
 """
 
-Script constantes.py pour la fonction chansonXmlTei()
+Script chansonXML.py pour la fonction chansonXmlTei()
 et la sous-fonction layoutDivP().
 
 Author : Lucas Terriel
@@ -71,6 +71,7 @@ def layoutDivP(attributeContent, xpathElement, parent):
 
         for y in liste:
             paragraphe.text = y
+
 
 
 def chansonXmlTei(chanson_id):
@@ -155,6 +156,7 @@ def chansonXmlTei(chanson_id):
 
     for elements in teiHeader_content:
         TEI.insert(1, elements)
+
 
     # Text
 
