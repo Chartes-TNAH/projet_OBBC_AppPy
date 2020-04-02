@@ -8,7 +8,7 @@ Date: 31/03/2020
 
 """
 
-
+# Import du package lxml et du module etree renommé ET
 
 from lxml import etree as ET
 
@@ -50,7 +50,7 @@ def layoutDivP(attributeContent, xpathElement, parent):
     # liste vide intermédiaire pour récupérer les élements
     # de la liste de la variable xpathElement
 
-    list = []
+    liste = []
 
     # première itération pour récupérer les élements  correpondants
     # au xpath de la liste issue de la méthode findall()
@@ -64,12 +64,12 @@ def layoutDivP(attributeContent, xpathElement, parent):
         # on ajoute à la liste intermédiaire les
         # éléments cotenus dans la liste générée par .findall()
 
-        list.append(x.text)
+        liste.append(x.text)
 
         # seconde itération afin de placer les éléments de la
         # liste intermédiaire dans l'élément <p> grâce à .text
 
-        for y in list:
+        for y in liste:
             paragraphe.text = y
 
 
@@ -91,6 +91,12 @@ def chansonXmlTei(chanson_id):
     # l'intérieur duquel on opère une concaténation
     # du paramètre de la fonction (chanson_id) qui
     # correspond à l'id  de la chanson
+
+    # Le teiHeader_content récupère le teiHeader
+    # du dataset dans son entier pour l'injecter
+    # dans le nouveau document XML
+
+    teiHeader_content = source_doc.findall('teiHeader')
 
     titres = source_doc.findall(
         "//div[@type='chanson'][@n='" + str(chanson_id) +
@@ -121,7 +127,8 @@ def chansonXmlTei(chanson_id):
     # .set('nom_de_l'attribut', 'contenu_de_l'attribut') :
     # ajout d'un attribut à un élément ou à un sous-élément
     # .comment : ajout de commentaire
-    # .insert : insertion du commentaire suivant une position
+    # .insert : insertion du commentaire ou
+    # d'une partie du dataset suivant une position
     # .SubElement(élement_parent, 'nom_sous-élement') :
     # création d'un sous-élément
     # .text(''): contenu de l'élément ou
@@ -132,105 +139,22 @@ def chansonXmlTei(chanson_id):
     TEI.set('xmlns',
             'http://www.tei-c.org/ns/1.0')
 
-    comment = ET.Comment(
-        "Rajouter les schémas RNG TEI ALL pour obtenir un document valide")
+    avertissementOBBC = ET.SubElement(
+        TEI, "p")
 
-    TEI.insert(1, comment)
+    avertissementOBBC.text = \
+        "INSTRUCTIONS : 1) CLIC DROIT DANS LE NAVIGATEUR POUR " \
+        "AFFICHER LE CODE SOURCE ET RECUPERER " \
+        "LE FICHIER EN XML/TEI ** " \
+        "2) Copier-coller le code dans un éditeur XML **" \
+        "3) Rajouter les schémas RNG TEI ALL " \
+        "pour obtenir un document valide  **" \
+        "4) Supprimer ce commentaire **"
 
     # TeiHeader
 
-    teiHeader = ET.SubElement(TEI, 'teiHeader')
-
-    avertissementOBBC = ET.SubElement(
-        teiHeader, "p")
-
-    avertissementOBBC.text = \
-        "!!!!!!!!!=============CLIC DROIT DANS LE NAVIGATEUR POUR " \
-        "AFFICHER LE CODE SOURCE ET RECUPERER " \
-        "LE FICHIER EN XML/TEI==============" \
-        "!!!!!!!!"
-
-    # fileDesc
-
-    fileDesc = ET.SubElement(teiHeader, 'fileDesc')
-
-    # titleStmt
-
-    titleStmt = ET.SubElement(fileDesc, 'titleStmt')
-
-    title = ET.SubElement(titleStmt, "title")
-
-    title.text = "Barzaz Breiz, chants populaires de la Bretagne"
-
-    title2 = ET.SubElement(titleStmt, "title")
-
-    title2.text = "recueillis et publiés avec une " \
-                  "traduction française, des éclaircissements, " \
-                  "des notes et les mélodies originales par " \
-                  "Th. de La Villemarqué"
-
-    author = ET.SubElement(titleStmt, "author")
-
-    forename = ET.SubElement(author, "forename")
-
-    forename.text = "Théodore"
-
-    surname = ET.SubElement(author, "surname")
-
-    surname.text = "Hersart de La Villemarqué"
-
-    # publicationStmt
-
-    publicationStmt = ET.SubElement(fileDesc, 'publicationStmt')
-
-    publisher = ET.SubElement(publicationStmt, "publisher")
-
-    forename1 = ET.SubElement(publisher, "forename")
-
-    forename1.text = "Albert"
-
-    surname1 = ET.SubElement(publisher, "surname")
-
-    surname1.text = "Franck"
-
-    pubPlace = ET.SubElement(publicationStmt, "pubPlace")
-
-    address = ET.SubElement(pubPlace, "address")
-
-    addrLine = ET.SubElement(address, "addrLine")
-
-    addrLine.text = "69, rue de Richelieu Paris"
-
-    date = ET.SubElement(publicationStmt, "date")
-
-    date.set("when-iso", "1846")
-
-    date.text = "1846"
-
-    distributor = ET.SubElement(publicationStmt, "distributor")
-
-    distributor.set("facs", "https://fr.wikisource.org/wiki/Barzaz_Breiz/1846")
-
-    distributor.text = "Wikisource"
-
-    availability = ET.SubElement(publicationStmt, "availability")
-
-    licence = ET.SubElement(availability, "licence")
-
-    licence.set("target",
-                "https://creativecommons.org/licenses/by-sa/3.0/deed.fr")
-
-    licence.text = "Licence Creative Commons Attribution-" \
-                   "partage dans les mêmes conditions"
-
-    # sourceDesc
-
-    sourceDesc = ET.SubElement(fileDesc, "sourceDesc")
-
-    pSD = ET.SubElement(sourceDesc, "p")
-
-    pSD.text = "Ici informations supplémentaire " \
-               "sur la source à voir apparaître"
+    for elements in teiHeader_content:
+        TEI.insert(1, elements)
 
     # Text
 
