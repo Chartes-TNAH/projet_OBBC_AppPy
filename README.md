@@ -1,4 +1,4 @@
-# projet_OBBC_AppPy
+# OPEN BARZAZ BREIZ COLLECTION
 
 (En cours)
 
