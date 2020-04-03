@@ -12,15 +12,9 @@ Date: 31/03/2020
 
 from lxml import etree as ET
 
-# Import du module deep copy du package copy,
-# pour le stockage en mémoire de la copie du noeud teiHeader (l.164)
-
-from copy import deepcopy
-
 # Import de la source XML (dataset) qui contient l'emsemble des chansons
 
 from .constantes import source_doc
-
 
 
 def layoutDivP(attributeContent, xpathElement, parent):
@@ -103,7 +97,7 @@ def chansonXmlTei(chanson_id):
     # du dataset dans son entier pour l'injecter
     # dans le nouveau document XML
 
-    noeud_TeiContent = source_doc.findall('teiHeader')
+    teiHeader_content = source_doc.findall('teiHeader')
 
     titres = source_doc.findall(
         "//div[@type='chanson'][@n='" + str(chanson_id) +
@@ -160,8 +154,9 @@ def chansonXmlTei(chanson_id):
 
     # TeiHeader
 
-    for elements in noeud_TeiContent:
-        TEI.append(deepcopy(elements))
+    for elements in teiHeader_content:
+        TEI.insert(1, elements)
+
 
     # Text
 
