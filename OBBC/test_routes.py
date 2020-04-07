@@ -1,6 +1,5 @@
-from app.app import app
-
 import unittest
+from app.app import app
 
 
 
@@ -60,6 +59,7 @@ class testMainRoads(unittest.TestCase):
 
 
 
-
+if __name__ == '__main__':
+    unittest.main ()
 
 
