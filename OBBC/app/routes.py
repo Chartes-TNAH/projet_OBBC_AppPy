@@ -33,14 +33,18 @@ def themes():
 
 
 #  Route vers les résultats par thèmes
+#  On donne une condition ici car il n'existe que quatre thèmes dans l'ouvrage
 
 
 @app.route("/themes/<int:theme_id>")
 def resultatTheme(theme_id):
-    output_doc = xslt_transformer_2(source_doc, themeXsl=str(theme_id))
-    return render_template('pages/resultats_theme.html',
+    if (theme_id <= 4 and theme_id != 0):
+        output_doc = xslt_transformer_2(source_doc, themeXsl=str(theme_id))
+        return render_template('pages/resultats_theme.html',
                            resultattheme=str(output_doc),
                            theme_id=theme_id)
+    else:
+        return page_not_found(404)
 
 
 #  Route qui permet d'appeler la fonction affichage après le choix du thème
@@ -48,7 +52,8 @@ def resultatTheme(theme_id):
 
 @app.route("/themes/affichage/<int:chanson_id>")
 def resultatTheme_affichage(chanson_id):
-    return affichage(chanson_id)
+        return affichage(chanson_id)
+
 
 
 # Route vers la navigation sur la carte intéractive
@@ -60,15 +65,17 @@ def nav_carte_dialectes():
 
 
 #  Route vers les resultats dialectes
-
+#  On donne une condition ici car il n'existe que quatre dialectes en Basse-Bretagne
 
 @app.route("/nav_carte_dialectes/<int:dialecte_id>")
 def resultatDialectes(dialecte_id):
-    output_doc = xslt_transformer_3(source_doc, dialecteXsl=str(dialecte_id))
-    return render_template('pages/resultats_dialectes.html',
-                           resultatDialecte=str(output_doc),
-                           dialecte_id=dialecte_id)
-
+    if (dialecte_id <= 4 and dialecte_id != 0):
+        output_doc = xslt_transformer_3(source_doc, dialecteXsl=str(dialecte_id))
+        return render_template('pages/resultats_dialectes.html',
+                               resultatDialecte=str(output_doc),
+                               dialecte_id=dialecte_id)
+    else:
+        return page_not_found(404)
 
 #  Route qui permet d'appeler la fonction affichage après le choix du dialecte
 
@@ -92,14 +99,17 @@ def sommaire():
 # Route vers la page d'affichage des chansons (affichage)
 
 
-@app.route("/affichage/<int:chanson_id>", methods=['GET'])
+@app.route("/affichage/<int:chanson_id>")
 def affichage(chanson_id):
-    output_doc = xslt_transformer_1(source_doc,
-                                    numero=str(chanson_id))
-    return render_template('pages/affichage.html',
-                           chanson=str(output_doc),
-                           id=chanson_id)
-
+    if(chanson_id != 0):
+        output_doc = xslt_transformer_1(source_doc,
+                                        numero=str(chanson_id))
+        return render_template('pages/affichage.html',
+                               chanson=str(output_doc),
+                               id=chanson_id,
+                               chanson_id=chanson_id)
+    else:
+        return page_not_found(404)
 
 # Route vers la page de galerie de partitions
 
@@ -130,9 +140,11 @@ def affichage_XMLTEI(chanson_id):
     return chansonXmlTei(chanson_id)
 
 
+
 @app.route('/nav_carte_dialectes/affichage/download/<int:chanson_id>')
 def affichage_XMLTEI2(chanson_id):
     return chansonXmlTei(chanson_id)
+
 
 
 @app.route('/themes/affichage/download/<int:chanson_id>')
@@ -192,17 +204,6 @@ def recherche():
     )
 
 
-# ROUTES DES PAGES ANNEXES
-
-
-# Route vers la page à propos
-
-
-@app.route('/a_propos')
-def a_propos():
-    return render_template('pages/a_propos.html')
-
-
 # Route vers la page bibliographie
 
 
@@ -231,6 +232,17 @@ def download_bibXml():
     return send_file(BibXml,
                      attachment_filename='Bibliographie_OBBC.xml',
                      as_attachment=True)
+
+
+# ROUTES DES PAGES ANNEXES
+
+
+# Route vers la page à propos
+
+
+@app.route('/a_propos')
+def a_propos():
+    return render_template('pages/a_propos.html')
 
 
 # Route vers la page contact
