@@ -74,6 +74,8 @@
 
 
       <!-- 
+         DATASET ACTUEL : 
+         
          = THEMES =
          T1 : Chants mythologiques, heroiques et historiques
          T2 : Chants historiques
@@ -1040,7 +1042,7 @@
                         Lannion, où l’événement s’est passé.</p>
                   </div>
                   <div type="transcription" xml:lang="fr">
-                     <head type="titre-français">L'Orpheline de Lannion</head>
+                     <head type="titre-français">L’Orpheline de Lannion</head>
                      <lg>
                         <l>En cette année mil six cent quatre-vingt-treize, est arrivé un malheur
                            dans la petite ville de Lannion ;</l>
@@ -1392,7 +1394,7 @@
             <div type="D" n="1">
                <head>Dialecte Cornouaillais (Kerneveg)</head>
                <div type="chanson" n="7">
-                  <head type="titre_général">L’AIRE NEUVE (SON LEUR-NEVEZ)</head>
+                  <head type="titre_général">L'AIRE NEUVE (SON LEUR-NEVEZ)</head>
                   <div type="argument">
                      <head>Argument</head>
                      <p>L’aire neuve est par excellence la fête de l’agriculture. Lorsque la surface
@@ -1432,7 +1434,7 @@
                         différente ; elle se chante en haute Cornouaille.</p>
                   </div>
                   <div type="transcription" xml:lang="fr">
-                     <head type="titre-français">L'Aire neuve</head>
+                     <head type="titre-français">L’Aire neuve</head>
                      <lg>
                         <l>Les miens étaient allés à l’aire neuve ; et moi d’aller aussi avec eux, à
                            la fête !</l>
@@ -1657,7 +1659,7 @@
                         primitive. J’ai donc cru devoir suivre la version populaire.</p>
                   </div>
                   <div type="transcription" xml:lang="fr">
-                     <head type="titre-français">L'Enfer</head>
+                     <head type="titre-français">L’Enfer</head>
                      <lg>
                         <l>Descendons tous, chrétiens, en enfer, pour voir quel supplice effroyable
                            endurent les âmes damnées que la colère de Dieu tient enchaînées au
