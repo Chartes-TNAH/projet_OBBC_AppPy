@@ -39,6 +39,7 @@ def layoutDivP(attributeContent, xpathElement, parent):
     :param parent: élément du nouvel
     arbre XML sous lequel
     on contruit la nouvel arborescence
+    :type parent: noeud XML
     :return: sous-arborescence d'un document XML
     :rtype : XML
     """
