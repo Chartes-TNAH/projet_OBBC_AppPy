@@ -48,9 +48,9 @@
 
         <a href="{{ url_for('affichage', chanson_id=image.id) }}" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
 
-            <h5 class="titre_img">{{ image.titre_fr }}</h5>
+            <h5 class="titre_img">{{ image.title_fr }}</h5>
 
-            <div>{{ image.cheminPartition | safe }}</div>
+            <div>{{ image.MusicSheetPath | safe }}</div>
         </a>
 
         {% endfor %}

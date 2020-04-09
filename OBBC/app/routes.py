@@ -12,7 +12,7 @@ from .app import app
 from .constantes import source_doc, xslt_transformer_1, \
     xslt_transformer_2, xslt_transformer_3
 from .chansonXML import chansonXmlTei
-from .modeles.donnees import ChansonBB
+from .modeles.donnees import SongsBB
 
 
 # Route vers la page d'acceuil
@@ -125,7 +125,7 @@ def galerie():
     else:
         page = 1
 
-    cheminsImg = ChansonBB.query.filter(ChansonBB.id).paginate(
+    cheminsImg = SongsBB.query.filter(SongsBB.id).paginate(
         page=page,
         per_page=IMAGES_PAR_PAGES)
 
@@ -179,17 +179,17 @@ def recherche():
     #  ORDER BY ChansonBB.titre_fr ASC traduite suivant la syntaxe SQLAlchemy
 
     if motclef:
-        resultats = ChansonBB.query.filter(
+        resultats = SongsBB.query.filter(
             or_(
-                ChansonBB.titre_fr.like("%{}%".format(motclef)),
+                SongsBB.title_fr.like("%{}%".format(motclef)),
                 \
-                ChansonBB.titre_brz.like("%{}%".format(motclef)),
+                SongsBB.title_brz.like("%{}%".format(motclef)),
                 \
-                ChansonBB.chanson_fr.like("%{}%".format(motclef)),
+                SongsBB.song_fr.like("%{}%".format(motclef)),
                 \
-                ChansonBB.chanson_brz.like("%{}%".format(motclef)),
+                SongsBB.song_brz.like("%{}%".format(motclef)),
             )
-        ).order_by(ChansonBB.titre_fr.asc()).all()
+        ).order_by(SongsBB.title_fr.asc()).all()
 
     #  Dans la variable titre concaténation
     #  du motclef avec une chaîne de caractère

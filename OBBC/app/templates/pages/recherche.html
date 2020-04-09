@@ -24,7 +24,7 @@
             
             {% for chanson in resultats %}
             
-            <li><a href="{{ url_for('affichage', chanson_id=chanson.id) }}">{{chanson.titre_fr}}, <em>{{ chanson.titre_brz }}</em></a></li>
+            <li><a href="{{ url_for('affichage', chanson_id=chanson.id) }}">{{chanson.title_fr}}, <em>{{ chanson.title_brz }}</em></a></li>
             
             {% else %}
             
