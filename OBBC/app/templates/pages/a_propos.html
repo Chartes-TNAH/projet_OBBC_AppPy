@@ -18,21 +18,23 @@
             <p>&nbsp;Cette application web à été développée dans le cadre du cours de développement applicatif du master "Technologies numériques appliquées à l'histoire" de l'École nationale des chartes.</p>
             <p>&nbsp;La consigne initiale était de développer une application utilisant des fichiers XML-TEI pour présenter le corpus.</p>
             <p>&nbsp;Les données sont majoritairement issues de Wikimedia. Il a été décidé, pour les besoins de l'exercice, de ne choisir que dix chansons parmi les quatre thèmes qui composent l'édition de 1846 du <em>Barzaz Breiz</em>.</p>
-            <p>&nbsp;L'application web s'appuie sur Python 3.x, le micro-framework Flask et les langages du web tels que HTML, CSS et Javascript. Le dataset XML est constitué de chansons encodées suivant les guidelines TEI. Le langage XSL est appelé dynamiquement pour transformer le fichier XML selon le contexte de navigation. Concernant l'habillage du site, nombres d'éléments proviennent du framework Bootstrap 4. Une base de données a été constituée à partir de SQLlite et est géré par Python grâce à l'ORM SQLAlchemy notamment pour la fonction de recherche plein-texte. Zotero a permis de générer la bibliographie en HTML.</p>
+            <p>&nbsp;L'application web s'appuie sur Python 3.x, le micro-framework Flask et les langages du web tels que HTML, CSS et Javascript. Le dataset XML est constitué de chansons encodées suivant les guidelines TEI. Le langage XSL est appelé dynamiquement pour transformer le fichier XML selon le contexte de navigation. Concernant l'habillage du site, nombres d'éléments proviennent du framework Bootstrap 4. Une base de données a été constituée à partir de SQLlite et est géré par Python grâce à l'ORM SQLAlchemy qui permet de faire le lien avec le dataset XML et utile pour la fonction de recherche plein-texte. Zotero a permis de générer la bibliographie en HTML.</p>
             <br>
             <h4>Installation de l'application</h4>
             <hr>
             <ul>
                 <ol style="text-align: justify">
-                    <li>Installer OBBC à partir du dépôt Github de l'application</li>
+                    <li>Installer OBBC à partir de la branche master du dépôt Github de l'application : <kbd>$ git clone https://github.com/Lucaterre/projet_OBBC_AppPy.git</kbd></li>
                     <br>
-                    <li>Installer Python via le <a href="https://www.python.org/downloads/" title="Python">site</a>. Pour rappel : sur la plupart des systèmes Linux, Python est pré-installé</li>
+                    <li>Installer Python via le <a href="https://www.python.org/downloads/" title="Python">site</a>. Pour rappel : la plupart des systèmes Linux, intègre déjà Python.</li>
                     <br>
-                    <li>Installer un environnement virtuel à l'aide de VirutalEnv. Dans votre terminal taper la commande<kbd>$ pip install virtualenv</kbd> pour installer VirtualEnv puis <kbd>$ virtualenv -p python3 env</kbd> ou <kbd>$virtualenv -p</kbd> puis <kbd>$env:python3 env</kbd>(sous Windows). Enfin pour activer l'environnement virtuel, on utilise la commande <kbd>$ source env/bin/activate</kbd>. Pour quitter l'environnement virtuel on utilise la commande <br><kbd>$ deactivate</kbd></li>
+                    <li>Créer un environnement virtuel à l'aide de VirtualEnv. Dans votre terminal taper la commande : <kbd>$ pip install virtualenv</kbd> pour installer VirtualEnv puis <kbd>$ virtualenv -p python3 env</kbd> ou sous Windows : <kbd>$ virtualenv -p</kbd> puis <kbd>$ env:python3 env</kbd>.
                     <br>
-                    <li>Dans le terminal, se placer au niveau du fichier "requirements.txt", puis installer les différents packages nécéssaires avec<br> la commande suivante : <kbd>$ pip install -r requirements.txt</kbd></li>
+                    <li>Activer l'environnement virtuel via la commande <kbd>$ source env/bin/activate</kbd>. Pour quitter l'environnement virtuel taper simplement <br><kbd>$ deactivate</kbd></li>
                     <br>
-                    <li>Dans le terminal rentrer la commande <kbd>$ cd OBBC/</kbd>. Une fois dans le dossier lancer l'application avec la commande <br><kbd>$ python run.py</kbd> ou <kbd>$ python3 run.py</kbd> via le serveur local</li>
+                    <li>Dans le terminal, se placer au niveau du fichier <kbd>requirements.txt</kbd>, puis installer les différents packages nécéssaires avec<br> la commande suivante : <kbd>$ pip install -r requirements.txt</kbd></li>
+                    <br>
+                    <li>Dans le terminal rentrer la commande <kbd>$ cd OBBC/</kbd>. Une fois dans le dossier lancer l'application avec la commande <br><kbd>$ python run.py</kbd> ou <kbd>$ python3 run.py</kbd> via le serveur local et selon votre version de python (<kbd>$ python --version ou -V`</kbd>)</li>
                 </ol>
             </ul>
             <br>

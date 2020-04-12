@@ -11,7 +11,7 @@ from sqlalchemy import or_
 from .app import app
 from .constantes import source_doc, xslt_transformer_1, \
     xslt_transformer_2, xslt_transformer_3
-from .chansonXML import chansonXmlTei
+from .chansonXML import Song2XmlTei
 from .modeles.donnees import SongsBB
 
 
@@ -137,19 +137,19 @@ def galerie():
 
 @app.route('/affichage/download/<int:chanson_id>')
 def affichage_XMLTEI(chanson_id):
-    return chansonXmlTei(chanson_id)
+    return Song2XmlTei(chanson_id)
 
 
 
 @app.route('/nav_carte_dialectes/affichage/download/<int:chanson_id>')
 def affichage_XMLTEI2(chanson_id):
-    return chansonXmlTei(chanson_id)
+    return Song2XmlTei(chanson_id)
 
 
 
 @app.route('/themes/affichage/download/<int:chanson_id>')
 def affichage_XMLTEI3(chanson_id):
-    return chansonXmlTei(chanson_id)
+    return Song2XmlTei(chanson_id)
 
 
 # Route pour la recherche plein-texte

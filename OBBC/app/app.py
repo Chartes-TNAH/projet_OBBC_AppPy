@@ -73,5 +73,5 @@ db = SQLAlchemy(app)
 from .routes import accueil, a_propos, contact, themes, \
     resultatTheme, resultatTheme_affichage, nav_carte_dialectes, \
     resultatDialectes, resultatDialectes_affichage, CGU, sommaire, \
-    affichage, chansonXmlTei, page_not_found, affichage_XMLTEI, \
+    affichage, Song2XmlTei, page_not_found, affichage_XMLTEI, \
     affichage_XMLTEI2, affichage_XMLTEI3, recherche, galerie

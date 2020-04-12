@@ -2,17 +2,17 @@
 Script donnees.py pour créer la base de données et la relier au dataset XML.
 
 Author : Lucas Terriel
-Date: 09/04/2020
+Date: 10/04/2020
 
 """
 
 
 from app.app import db
-import copy
+from copy import deepcopy
 from ..constantes import source_doc
 
 # On créé une class pour l'unique table SongBB qui hérite de db.Model
-# et on définit sa structure pour permettre le mapping de l'ORM SQLAlchemy
+# et on définit sa structure pour permettre le mapping par l'ORM SQLAlchemy
 
 
 class SongsBB(db.Model):
@@ -36,8 +36,8 @@ class SongsBB(db.Model):
         self.song_brz = song_brz
         self.MusicSheetPath = MusicSheetPath
 
-# Création de liste vide pour stocker par la suite le
-# contenu des noeuds récupéré par le xpath
+# Création des listes vides pour stocker par la suite les
+# contenus des noeuds récupérés par le xpath
 
 list_song_fr = []
 list_song_brz = []
@@ -85,33 +85,34 @@ def extraction_lyrics(list_song, list_lyrics):
     return verses
 
 
-# La boucle for itère sur le numéro des chansons
-# ceci est équivalent à liste = list(range(1,10))
+# La boucle for itère sur le numéro des chansons issu du xpath (@n)
+# qui est équivalent à liste = list(range(1,11)) (actuellement on compte
+# 10 chansons dans le corpus).
 # L'avantage d'itérer sur le xpath est de pouvoir modifier
-# le datasetXML, sans avoir a toucher à ce script, c'est-à-dire
+# le datasetXML, sans avoir a toucher au script de donnees, c'est-à-dire
 # d'éviter d'avoir a gérer les flux de la fonction range().
 # Chaque node vient récupérer la partie du dataset XML qui l'intéresse
-# selon la variable element.
+# selon la variable element qui varie selon la position du @n.
 
 for element in source_doc.xpath("//body/div/div/div[@type='chanson']/@n"):
     node_titre_fr = source_doc.xpath("//text/body/div/div/div[@type='chanson'][@n=" + str(
         element) + "]/div[@type='transcription']/head[@type='titre-français']/text()")
-    list_title_fr.append(copy.deepcopy(node_titre_fr[0]))
+    list_title_fr.append(deepcopy(node_titre_fr[0]))
     node_titre_brz = source_doc.xpath("//div/div/div[@type='chanson'][@n=" + str(
         element) + "]/div[@type='original']/head[@type='titre-breton']/text()")
-    list_title_brz.append(copy.deepcopy(node_titre_brz[0]))
+    list_title_brz.append(deepcopy(node_titre_brz[0]))
     node_dialecte = source_doc.xpath(
         "//body/div/div/div[@type='chanson'][@n=" + str(element) + "]/ancestor::div[@type='D']/head/text()")
-    list_dialect.append(copy.deepcopy(node_dialecte[0]))
+    list_dialect.append(deepcopy(node_dialecte[0]))
     node_theme = source_doc.xpath(
         "//body/div/div/div[@type='chanson'][@n=" + str(element) + "]/ancestor::div[@type='T']/head/text()")
-    list_theme.append(copy.deepcopy(node_theme[0]))
+    list_theme.append(deepcopy(node_theme[0]))
     node_chanson_fr = source_doc.xpath(
         "//div[@type='chanson'][@n='" + str(element) + "']/div[@type = 'transcription']/lg/l/text()")
-    list_song_fr.append(copy.deepcopy(node_chanson_fr))
+    list_song_fr.append(deepcopy(node_chanson_fr))
     node_chanson_brz = source_doc.xpath(
         "//div[@type='chanson'][@n='" + str(element) + "']/div[@type = 'original']/lg/l/text()")
-    list_song_brz.append(copy.deepcopy(node_chanson_brz))
+    list_song_brz.append(deepcopy(node_chanson_brz))
     list_verses_fr = extraction_lyrics(list_song_fr, list_lyricsFr)
     list_verses_brz = extraction_lyrics(list_song_brz, list_lyricsBrz)
 
@@ -122,9 +123,10 @@ for element in source_doc.xpath("//body/div/div/div[@type='chanson']/@n"):
 
     # la méthode add() permet d'ajouter des items, ici les contenus du
     # XML selon la position de la variable element, l'index d'une liste commençant
-    # à O, il est impératif de rajouter -1 pour ne pas décaler les données.
+    # à O, il est impératif de soustraire 1 à l'index pour ne pas décaler les données dans la table.
     # la méthode .join() permet de caster une liste en string et de ne pas récupérer seulement
-    # le première élément de la liste, c'est pour cela qu'on évite dans ce cas la méthode de l'index.
+    # le première élément de la liste, c'est pour cela qu'on évite la récupération
+    # du contenu de la liste par la méthode de l'index.
 
     db.session.add(
         SongsBB(
@@ -141,6 +143,6 @@ for element in source_doc.xpath("//body/div/div/div[@type='chanson']/@n"):
 
 # Enfin on indique à l'ORM via la méthode .commit()
 # de faire les requêtes nécéssaires pour finaliser les
-# opérations d'ajouts.
+# opérations d'ajouts dans la table.
 
 db.session.commit()

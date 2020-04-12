@@ -4,7 +4,7 @@ Script chansonXML.py pour la fonction chansonXmlTei()
 et la sous-fonction layoutDivP().
 
 Author : Lucas Terriel
-Date: 31/03/2020
+Date: 10/04/2020
 
 """
 
@@ -56,7 +56,7 @@ def layoutDivP(attributeContent, xpathElement, parent):
     # liste vide intermédiaire pour récupérer les élements
     # de la liste de la variable xpathElement
 
-    liste = []
+    list = []
 
     # première itération pour récupérer les élements  correpondants
     # au xpath de la liste issue de la méthode findall()
@@ -65,22 +65,22 @@ def layoutDivP(attributeContent, xpathElement, parent):
 
         # création d'un sous-élément <p> contenu dans <div>
 
-        paragraphe = ET.SubElement(div, 'p')
+        paragraph = ET.SubElement(div, 'p')
 
         # on ajoute à la liste intermédiaire les
         # éléments cotenus dans la liste générée par .findall()
 
-        liste.append(x.text)
+        list.append(x.text)
 
         # seconde itération afin de placer les éléments de la
         # liste intermédiaire dans l'élément <p> grâce à .text
 
-        for y in liste:
-            paragraphe.text = y
+        for y in list:
+            paragraph.text = y
 
 
 
-def chansonXmlTei(chanson_id):
+def Song2XmlTei(chanson_id):
     """ Fonction principale qui permet de générer
     dynamiquement un modèle XML, TEI compatible,
     avec le contenu spécifique d'une chanson extrait d'un dataset XML initial
@@ -103,9 +103,9 @@ def chansonXmlTei(chanson_id):
     # du dataset dans son entier pour l'injecter
     # dans le nouveau document XML
 
-    noeudTeiHeader = source_doc.findall('teiHeader')
+    nodeTeiHeader = source_doc.findall('teiHeader')
 
-    titres = source_doc.findall(
+    titles = source_doc.findall(
         "//div[@type='chanson'][@n='" + str(chanson_id) +
         "']/head")
 
@@ -117,7 +117,7 @@ def chansonXmlTei(chanson_id):
         "//div[@type='chanson'][@n='" + str(chanson_id) +
         "']/div[@type = 'transcription']/lg/*")
 
-    originaux = source_doc.findall(
+    originals = source_doc.findall(
         "//div[@type='chanson'][@n='" + str(chanson_id) +
         "']/div[@type = 'original']/lg/*")
 
@@ -146,10 +146,10 @@ def chansonXmlTei(chanson_id):
     TEI.set('xmlns',
             'http://www.tei-c.org/ns/1.0')
 
-    avertissementOBBC = ET.SubElement(
+    WarningOBBC = ET.SubElement(
         TEI, "p")
 
-    avertissementOBBC.text = \
+    WarningOBBC.text = \
         "INSTRUCTIONS : 1) CLIC DROIT DANS LE NAVIGATEUR POUR " \
         "AFFICHER LE CODE SOURCE ET RECUPERER " \
         "LE FICHIER EN XML/TEI ** " \
@@ -160,7 +160,7 @@ def chansonXmlTei(chanson_id):
 
     # TeiHeader
 
-    for elements in noeudTeiHeader:
+    for elements in nodeTeiHeader:
         TEI.append(deepcopy(elements))
 
     # Text
@@ -171,43 +171,43 @@ def chansonXmlTei(chanson_id):
 
     body = ET.SubElement(text, 'body')
 
-    divGenerale = ET.SubElement(body, 'div')
+    divGeneral = ET.SubElement(body, 'div')
 
-    divGenerale.set('type', 'chanson')
+    divGeneral.set('type', 'chanson')
 
     # Titre
 
-    head = ET.SubElement(divGenerale, 'head')
-    for titre in titres:
-        head.text = titre.text
+    head = ET.SubElement(divGeneral, 'head')
+    for title in titles:
+        head.text = title.text
 
     # Appelle de la sous-fonction de traitement layoutDivP()
 
     # div Argument
 
-    layoutDivP('argument', arguments, divGenerale)
+    layoutDivP('argument', arguments, divGeneral)
 
     # div transcription
 
-    layoutDivP('transcription', transcriptions, divGenerale)
+    layoutDivP('transcription', transcriptions, divGeneral)
 
     # div original
 
-    layoutDivP('original', originaux, divGenerale)
+    layoutDivP('original', originals, divGeneral)
 
     # div Notes et éclaircissements
 
-    layoutDivP('notes_et_éclaircissements', Ne, divGenerale)
+    layoutDivP('notes_et_éclaircissements', Ne, divGeneral)
 
     # methode .tostring() du module etree qui permet de décoder
     # une byte string en chaine de caractère unicode et
     # de produire un document xml lisible
 
-    XmlTeiChanson = ET.tostring(TEI,
+    Song2TEI = ET.tostring(TEI,
                                 encoding="UTF-8",
                                 method="xml",
                                 pretty_print=True,
                                 xml_declaration=True,
                                 standalone=True)
 
-    return XmlTeiChanson
+    return Song2TEI
