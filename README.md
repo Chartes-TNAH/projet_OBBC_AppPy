@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.com/Lucaterre/projet_OBBC_AppPy.svg?token=BV8Aycfaqc32oxNsVzFp&branch=master)](https://travis-ci.com/Lucaterre/projet_OBBC_AppPy)
 
-# OPEN BARZAZ BREIZ COLLECTION
+
+![Logo](Logo_OBBC.png)
 
 
 ## Présentation
