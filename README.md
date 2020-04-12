@@ -12,7 +12,7 @@ Open Barzaz Breiz Collection est une application web python-Flask de mise à dis
 
 L'application est conçue comme une édition numérique qui propose une navigation intéractive et une récupération au format XML-TEI des chansons du corpus. 
 
-Composé d'actuellement dix chansons, le but technique de l'application est de proposer l'ajout des chansons via le seul dataset XML sans avoir à modifier l'ensemble de la brique fonctionnelle  (transformations XSLT, ORM, ou Python-Flask).
+Composée d'actuellement dix chansons, le but technique de l'application est de proposer l'ajout des chansons via le seul dataset XML sans avoir à modifier l'ensemble de la brique fonctionnelle  (transformations XSLT, ORM, ou Python-Flask).
 
 ---
 
