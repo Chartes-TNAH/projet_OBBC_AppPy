@@ -7,7 +7,6 @@
 ## Présentation
 
 
-
 Open Barzaz Breiz Collection est une application web python-Flask de mise à disposition d'une collection de chants populaires bretons issus de l'ouvrage Barzaz Breiz (1846) de Théodore Hersart de La Villemarqué. 
 
 L'application est conçue comme une édition numérique qui propose une navigation intéractive et une récupération au format XML-TEI des chansons du corpus. 
@@ -33,6 +32,11 @@ Composée d'actuellement dix chansons, le but technique de l'application est de 
 
 6. Dans le terminal, rentrer la commande `$ cd OBBC/`, Une fois dans le dossier lancer l'application avec la commande `$ python run.py` ou `$ python3 run.py` via le serveur local et selon votre version de python (`$ python --version ou -V`).
 
+
+
+
 ---
 
-:point_right: [Lucas Terriel](mailto:ls.terriel@gmail.com)
+## Des questions ? 
+
+:point_right: [Lucas Terriel](mailto:ls.terriel@gmail.com), Master TNAH (ENC) & master dev OBBC
