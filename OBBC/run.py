@@ -11,6 +11,6 @@ from app.app import app
 if __name__ == '__main__':
     app.run(debug=True)
 
-    # Le paramètre debug permet de se mettre en mode dévellopement
+    # Le paramètre debug permet de se mettre en mode développement
 
     # port =  3000 (dev)
