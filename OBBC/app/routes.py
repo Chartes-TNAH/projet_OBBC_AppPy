@@ -261,9 +261,13 @@ def CGU():
 #  ROUTES PAGES ERREURS
 
 #  .errorhandler() pour retourner une page erreur,
-#  si le code de la réponse HTTP renvoyé est 404
+#  si le code de la réponse HTTP renvoyé est 404 (Not Found) ou 500 (Internal Server Error)
 
 
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('errors/404.html'), 404
+
+@app.errorhandler(500)
+def page_not_found(error):
+    return render_template('errors/500.html'), 500
