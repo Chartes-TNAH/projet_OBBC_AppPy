@@ -14,7 +14,6 @@ from .constantes import source_doc, xslt_transformer_1, \
 from .chansonXML import Song2XmlTei
 from .modeles.donnees import SongsBB
 
-
 # Route vers la page d'acceuil
 
 
