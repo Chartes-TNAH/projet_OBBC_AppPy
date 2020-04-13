@@ -35,3 +35,4 @@ Composée d'actuellement dix chansons, le but technique de l'application est de 
 
 ---
 
+:point_right: [Lucas Terriel](mailto:ls.terriel@gmail.com)
