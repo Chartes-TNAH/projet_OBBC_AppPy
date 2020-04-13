@@ -39,4 +39,4 @@ Composée d'actuellement dix chansons, le but technique de l'application est de 
 
 ## Des questions ? 
 
-:point_right: [Lucas Terriel](mailto:ls.terriel@gmail.com), Master TNAH (ENC) & master dev OBBC
+:point_right: [Lucas Terriel](mailto:ls.terriel@gmail.com), étudiant cursus Technologies numériques appliquées à l'histoire (ENC) & master dev OBBC
