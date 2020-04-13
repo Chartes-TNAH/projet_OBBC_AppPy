@@ -11,14 +11,15 @@
         <br />
         <h1 class="page_titre">{% block titre %}Recherche par dialectes bretons{% endblock titre %}</h1>
         <hr class="style-two" />
-        
-        <!--div pour la carte interactive -->
-        <div class="row justify-content-center">
-            <div class="container-map">
-                <div class="map" id="map">
+        <br>
 
+        <!--div pour la carte interactive -->
+
+        <div class="map" id="map">
+            <div class="container">
+                <div class="row justify-content-center">
                     <!-- div pour l'image de la carte -->
-                    <div class="col-4">
+                    <div class="col-sm">
                         <div class="map__image">
 
                             <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 580 400" class="stylesvg">
@@ -39,29 +40,37 @@
                             </svg>
                         </div>
 
-                        <!-- div pour la liste de la carte -->
-                        
                     </div>
-                    <div class="col-12">
-                        <h4>Accéder aux chansons par les différents dialectes bretons :</h4>
-                        <br style="line-height:0.2;">
-                        <div class="map__list">
-                            <ul>
-                                <li><a href="{{url_for('resultatDialectes', dialecte_id= 1)}}" id="list-C" class="titre-carte">Cornouaillais (Kerneveg)</a></li>
-                                <br style="line-height:0.2;">
-                                <li><a href="{{url_for('resultatDialectes', dialecte_id= 2)}}" id="list-L" class="titre-carte">Leonard (Leoneg)</a></li>
-                                <br style="line-height:0.2;">
-                                <li><a href="{{url_for('resultatDialectes', dialecte_id= 3)}}" id="list-T" class="titre-carte">Tregorrois (Tregerieg)</a></li>
-                                <br style="line-height:0.2;">
-                                <li><a href="{{url_for('resultatDialectes', dialecte_id= 4)}}" id="list-V" class="titre-carte">Vannetais (Gwenedeg)</a></li>
+                    <!-- div pour la liste de la carte -->
 
-                            </ul>
-                        </div>
+                
+                <div class="col-sm">
+                    <h4>Accéder aux chansons par les différents dialectes bretons :</h4>
+                    <br style="line-height:0.2;">
+                    <div class="map__list">
+                        <ul>
+                            <li><a href="{{url_for('resultatDialectes', dialecte_id= 1)}}" id="list-C" class="titre-carte">Cornouaillais (Kerneveg)</a></li>
+                            <br style="line-height:0.2;">
+                            <li><a href="{{url_for('resultatDialectes', dialecte_id= 2)}}" id="list-L" class="titre-carte">Leonard (Leoneg)</a></li>
+                            <br style="line-height:0.2;">
+                            <li><a href="{{url_for('resultatDialectes', dialecte_id= 3)}}" id="list-T" class="titre-carte">Tregorrois (Tregerieg)</a></li>
+                            <br style="line-height:0.2;">
+                            <li><a href="{{url_for('resultatDialectes', dialecte_id= 4)}}" id="list-V" class="titre-carte">Vannetais (Gwenedeg)</a></li>
+
+                        </ul>
                     </div>
                 </div>
+                </div>
             </div>
+
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 
 
