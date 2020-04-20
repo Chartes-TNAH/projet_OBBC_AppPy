@@ -2,7 +2,6 @@ import unittest
 from app.app import app
 
 
-
 class testMainRoads(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
@@ -53,10 +52,6 @@ class testMainRoads(unittest.TestCase):
             dialecte = self.app.get('/nav_carte_dialectes/0')
             self.assertEqual(dialecte.status, '404 NOT FOUND', 'error404 failed')
         print("... Test redirection OK!\n")
-
-    def testRecherche(self):
-        pass
-
 
 
 if __name__ == '__main__':
