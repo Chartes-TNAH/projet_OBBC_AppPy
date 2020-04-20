@@ -6,15 +6,10 @@ python:
 
 install:
   - pip install -r requirements.txt
-  - pip install nose pylint
-
-before_script:
-  - pylint --version
 
 script:
   - cd OBBC/
   - python -m unittest test_routes.py
-  - "nosetests && pylint"
 
 notifications:
   email:
