@@ -4,6 +4,18 @@
 <!-- TRANSFORMATION POUR L'AFFICHAGE DES CHANSONS -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+    <!-- ***********************************************************     -->
+    <!-- Version 1                                                       -->
+    <!-- Ce script                                                       -->
+    <!-- a été développé dans le cadre du projet                         -->
+    <!-- Open Barzaz Breiz Collection                                    -->
+    <!-- ***********************************************************     -->
+    <!-- Author :                                                        -->
+    <!-- @Github- Lucaterre                                              -->
+    <!-- ***********************************************************     -->
+    <!-- Ce script est libre à la réutilisation selon les termes         -->
+    <!-- de la Creative Commons Attribution license.                     -->
+    <!-- ***********************************************************     -->
     <xsl:output method="html" indent="yes"/>
     <xsl:param name="numero"/>
 
@@ -64,7 +76,9 @@
                 <xsl:value-of select="$numero"/>
             </xsl:attribute>
             <xsl:text>Affichage du code XML/TEI</xsl:text>
+
         </a>
+        <p><i><xsl:text>Après la redirection, clic-droit dans le navigateur</xsl:text></i></p>
     </xsl:template>
 
     <!--________________________-->

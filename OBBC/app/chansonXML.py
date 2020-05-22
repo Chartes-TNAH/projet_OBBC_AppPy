@@ -1,7 +1,7 @@
 """
 
-Script chansonXML.py pour la fonction chansonXmlTei()
-et la sous-fonction layoutDivP().
+Script pour permettre la création d'un document XML TEI valide
+pour récupérer une chanson du dataset Barzaz-Breiz.xml
 
 Author : Lucas Terriel
 Date: 10/04/2020
@@ -25,11 +25,7 @@ from .constantes import source_doc
 def layoutDivP(attributeContent, xpathElement, parent):
 
     """ Routine de la fonction chansonXmlTei() pour
-    construire une sous-arborescence en <div> avec
-    un @type (attributeContent) et un <p> à l'intérieur
-    d'un élément parent (parent) du nouveau
-    document XML afin de placer des contenus spécifiques (xpathElement)
-    extraits du dataset XML initial.
+    construire une sous-arborescence avec des éléments <div>.
 
     :param attributeContent: contenu de @type de <div>
     :type attributeContent: str
@@ -73,7 +69,7 @@ def layoutDivP(attributeContent, xpathElement, parent):
         list.append(x.text)
 
         # seconde itération afin de placer les éléments de la
-        # liste intermédiaire dans l'élément <p> grâce à .text
+        # liste intermédiaire dans l'élément <p> grâce à l'attribut .text
 
         for y in list:
             paragraph.text = y
@@ -127,6 +123,8 @@ def Song2XmlTei(chanson_id):
 
     #  Création de l'élément racine TEI et du conteneur XML-TEI
 
+    #  --- (Rappel :)
+
     #  Méthodes du module etree (lxml) :
 
     # .Element('nom_de_l'élément') : créer un élément
@@ -146,17 +144,12 @@ def Song2XmlTei(chanson_id):
     TEI.set('xmlns',
             'http://www.tei-c.org/ns/1.0')
 
-    WarningOBBC = ET.SubElement(
-        TEI, "p")
-
-    WarningOBBC.text = \
-        "INSTRUCTIONS : 1) CLIC DROIT DANS LE NAVIGATEUR POUR " \
-        "AFFICHER LE CODE SOURCE ET RECUPERER " \
-        "LE FICHIER EN XML/TEI ** " \
-        "2) Copier-coller le code dans un éditeur XML **" \
-        "3) Rajouter les schémas RNG TEI ALL " \
+    warning_comments = ET.Comment("INSTRUCTIONS : 1) Copier-coller le code dans un éditeur XML **" \
+        "2) Rajouter les schémas RelaxNG TEI ALL " \
         "pour obtenir un document valide  **" \
-        "4) Supprimer ce commentaire **"
+        "3) Supprimer ce commentaire **")
+
+    TEI.insert(1, warning_comments)
 
     # TeiHeader
 
