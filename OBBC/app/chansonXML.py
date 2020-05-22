@@ -1,7 +1,7 @@
 """
 
-Script chansonXML.py pour la fonction chansonXmlTei()
-et la sous-fonction layoutDivP().
+Script pour permettre la création d'un document XML TEI valide
+pour récupérer une chanson du dataset Barzaz-Breiz.xml
 
 Author : Lucas Terriel
 Date: 10/04/2020
@@ -25,11 +25,7 @@ from .constantes import source_doc
 def layoutDivP(attributeContent, xpathElement, parent):
 
     """ Routine de la fonction chansonXmlTei() pour
-    construire une sous-arborescence en <div> avec
-    un @type (attributeContent) et un <p> à l'intérieur
-    d'un élément parent (parent) du nouveau
-    document XML afin de placer des contenus spécifiques (xpathElement)
-    extraits du dataset XML initial.
+    construire une sous-arborescence avec des éléments <div>.
 
     :param attributeContent: contenu de @type de <div>
     :type attributeContent: str
@@ -73,7 +69,7 @@ def layoutDivP(attributeContent, xpathElement, parent):
         list.append(x.text)
 
         # seconde itération afin de placer les éléments de la
-        # liste intermédiaire dans l'élément <p> grâce à .text
+        # liste intermédiaire dans l'élément <p> grâce à l'attribut .text
 
         for y in list:
             paragraph.text = y
@@ -126,6 +122,8 @@ def Song2XmlTei(chanson_id):
         "']/div[@type = 'Ne']/*")
 
     #  Création de l'élément racine TEI et du conteneur XML-TEI
+
+    #  --- (Rappel :)
 
     #  Méthodes du module etree (lxml) :
 

@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+    <!-- ***********************************************************     -->
+    <!-- Version 1                                                       -->
+    <!-- Ce document XML-TEI comme format de stockage                    -->
+    <!-- a été développé dans le cadre du projet                         -->
+    <!-- Open Barzaz Breiz Collection                                    -->
+    <!-- ***********************************************************     -->
+    <!-- Author :                                                        -->
+    <!-- @Github- Lucaterre                                              -->
+    <!-- ***********************************************************     -->
 <TEI>
    <teiHeader>
       <fileDesc>

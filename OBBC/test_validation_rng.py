@@ -1,39 +1,44 @@
-import unittest
-from termcolor import colored
-from lxml import etree as ET
-from bs4 import BeautifulSoup as bs
+"""
+script de test : validation
+par un schéma RelaxNG de la source XML TEI
+
+schéma de validation : odd-OBBC.rng
+source rng : oddbyexample.xsl
+
+Author : Lucas Terriel
+Date : 22/05/2020
+"""
 
 import sys
 
-from app.app import app
+import unittest
+from lxml import etree as ET
+from bs4 import BeautifulSoup as bs
+from termcolor import colored
+
 
 def validator_rng(source_xml, schema_rng):
-    """ a little program to validate a xml source
-    with a RelaxNG schema
-    :param source_xml: source xml name to validate
+    """ Linter de validation XMLTEI
+    :param source_xml: document xml à valider
     :type source_xml: str
-    :param schema_rng: RNG schema for validate
+    :param schema_rng: schéma RelaxNG
     :type schema_rng: str
-    :returns: differents log messages for validation
-    :type returns: logs str
+    :returns: logs
+    :type returns: str
     """
 
     # STEP 1 : TEST SYNTAXE ET PARSAGE DE LA SOURCE XML
-
-    # (Option mettre ceci dans une fonction)
-
-
-
 
     try:
         ET.parse(source_xml)
 
     except ET.XMLSyntaxError:
-        c = 'Syntax Error'
         # S'il existe une erreur lxml, on renvoie un message de log, et
-        # la cause de cette erreur qui correspond au log du système
-        print(colored('Failed to Parse XML source, Error Syntax !\n Error log : %s', 'red') % sys.exc_info()[1])
-        # En cas d'erreur on quitte le programme
+        # la cause de cette erreur qui correspond au log du système récupéré
+        # le '%' est une autre méthode de formatage des chaines de caractères
+        print(colored('Failed to Parse XML source, Error Syntax !\n Error log : %s',
+                      'red') % sys.exc_info()[1])
+        # En cas d'erreur on quitte alors le programme
         sys.exit()
 
 
@@ -41,31 +46,27 @@ def validator_rng(source_xml, schema_rng):
 
     input_xml = ET.parse(source_xml)
 
-    # On ajoute le namespace
+    # Récupération du namespace tei dans l'élément racine
 
     root = input_xml.getroot()
 
-    root.attrib["xmlns"]="http://www.tei-c.org/ns/1.0"
+    root.attrib["xmlns"] = "http://www.tei-c.org/ns/1.0"
+
+    # --- (issue :) création d'une soupe Beautifulsoup pour
+    # récupérer la déclaration XML
 
     final = ET.tostring(input_xml, pretty_print=True, xml_declaration=True)
 
-
-
-
     soup = bs(final, 'xml')
 
-    soup_TEI = soup.prettify()
+    soup_tei = soup.prettify()
 
-    with open('test.xml', 'w') as f:
-        f.write(soup_TEI)
+    with open('xml_tei_test.xml', 'w') as file:
+        file.write(soup_tei)
 
-    input_2 = ET.parse('test.xml')
+    # On parse de nouveau le document xml contenant la déclaration
 
-
-
-
-
-
+    input_xml_valid = ET.parse('xml_tei_test.xml')
 
 
     # STEP 3 : ON PARSE LE SCHEMA RNG
@@ -73,47 +74,43 @@ def validator_rng(source_xml, schema_rng):
     relaxng_doc = ET.parse(schema_rng)
     relaxng = ET.RelaxNG(relaxng_doc)
 
-    # STEP 4a : SI LE PARSAGE DE LA SOURCE XML PAR LE RNG RENVOIE TRUE, ALORS
+    # STEP 4a : SI LE RESULTAT DU PARSAGE DE LA SOURCE XML PAR LE SCHEMA RENVOIE TRUE, ALORS
     # LE DOCUMENT EST VALIDE
 
-    if relaxng(input_2):
+    if relaxng(input_xml_valid):
         validation = 'RNG OK'
         print(colored('Great Job ! Your document is valid !', 'green'))
 
-    # STEP 4b : SI LE PARSAGE DE LA SOURCE XML PAR LE RNG RENVOIE FALSE, ALORS
+    # STEP 4b : SI LE RESULTAT DU PARSAGE DE LA SOURCE XML PAR LE SCHEMA RENVOIE FALSE, ALORS
     # LE DOCUMENT EST INVALIDE
 
-    if not relaxng(input_2):
+    if not relaxng(input_xml_valid):
         print(colored('Sorry, your document is invalid !', 'red'))
-        b = 'Bad'
         # On stocke le message d'erreur rng
         try:
             relaxng.assertValid(input_xml)
-        # On renvoie le message d'erreur
+        # On lève le message d'erreur
         except ET.DocumentInvalid:
             print(colored('Error log : %s', 'red') % sys.exc_info()[1])
 
     return validation
 
 
-
-
-
-#validator_rng('./app/data_xml-xslt/Barzaz-Breiz.xml', './odd-OBBC.rng')
-
-
-class testRNGvalidation(unittest.TestCase):
+class TestRngValidation(unittest.TestCase):
+    """classe pour la validation de la source xml TEI
+    """
     def setUp(self):
         """ Initialisation du test"""
 
         self.xml = './app/data_xml-xslt/Barzaz-Breiz.xml'
         self.rng = './odd-OBBC.rng'
+
     print("Initialisation des tests RNG...\n")
 
-    def testRNG(self):
+    def test_rng(self):
+        """ On teste le retour du linter RNG"""
         self.assertEqual(validator_rng(self.xml, self.rng), 'RNG OK')
 
 
 if __name__ == '__main__':
     unittest.main()
-

@@ -3,6 +3,20 @@
 <!-- TRANSFORMATION POUR AFFICHER LES RESULTATS CHANSONS PAR DIALECTES -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+    <!-- ***********************************************************     -->
+    <!-- Version 1                                                       -->
+    <!-- Ce script                                                       -->
+    <!-- a été développé dans le cadre du projet                         -->
+    <!-- Open Barzaz Breiz Collection                                    -->
+    <!-- ***********************************************************     -->
+    <!-- Author :                                                        -->
+    <!-- @Github- Lucaterre                                              -->
+    <!-- ***********************************************************     -->
+    <!-- Ce script est libre à la réutilisation selon les termes         -->
+    <!-- de la Creative Commons Attribution license.                     -->
+    <!-- ***********************************************************     -->
+
     <xsl:output method="html" indent="yes"/>
     <xsl:param name="dialecteXsl"/>
 
