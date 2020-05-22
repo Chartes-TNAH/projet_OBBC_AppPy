@@ -60,6 +60,9 @@ class TestMainRoads(unittest.TestCase):
         """ Tests de redirections par variation de l'id du XML TEI
         """
         print("Test pour les redirections ...")
+
+        # 1 <= id <= 4 : correspond aux thèmes et aux dialectes qui reste au nombre de 4
+
         for id in self.liste:
             page_theme = self.app.get('/themes/'+str(id))
             page_dialecte = self.app.get('/nav_carte_dialectes/'+str(id))
@@ -67,6 +70,9 @@ class TestMainRoads(unittest.TestCase):
             print("page dialectes : {} => OK ! ".format(id))
             assert page_theme.status == '200 OK', 'themes failed'
             assert page_dialecte.status == '200 OK', 'dialectes failed'
+
+            # On teste les cas où l'index est en-dehors de la liste (out of range)
+
             theme = self.app.get('/themes/5')
             self.assertEqual(theme.status, '404 NOT FOUND', 'error404 failed')
             dialecte = self.app.get('/nav_carte_dialectes/5')
@@ -75,6 +81,7 @@ class TestMainRoads(unittest.TestCase):
             self.assertEqual(theme.status, '404 NOT FOUND', 'error404 failed')
             dialecte = self.app.get('/nav_carte_dialectes/0')
             self.assertEqual(dialecte.status, '404 NOT FOUND', 'error404 failed')
+
         print("... Test redirection OK!\n")
 
 

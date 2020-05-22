@@ -1,5 +1,5 @@
 """
-Script routes.py pour définir les différentes routes URL de l'application OBBC.
+Définition des différentes routes URL empruntées par l'application OBBC.
 
 Author : Lucas Terriel
 Date: 31/03/2020
@@ -9,8 +9,8 @@ Date: 31/03/2020
 from flask import render_template, request, send_file
 from sqlalchemy import or_
 from .app import app
-from .constantes import source_doc, xslt_transformer_1, \
-    xslt_transformer_2, xslt_transformer_3
+from .constantes import SOURCE_DOCUMENT, XSLT_TRANSFORMER_1, \
+    XSLT_TRANSFORMER_2, XSLT_TRANSFORMER_3
 from .chansonXML import Song2XmlTei
 from .modeles.donnees import SongsBB
 
@@ -27,7 +27,7 @@ def accueil():
 
 @app.route('/themes')
 def themes():
-    themes = source_doc.xpath("//body/div[@type]/head")
+    themes = SOURCE_DOCUMENT.xpath("//body/div[@type]/head")
     return render_template('pages/recherche_par_themes.html', themes=themes)
 
 
@@ -38,7 +38,7 @@ def themes():
 @app.route("/themes/<int:theme_id>")
 def resultatTheme(theme_id):
     if (theme_id <= 4 and theme_id != 0):
-        output_doc = xslt_transformer_2(source_doc, themeXsl=str(theme_id))
+        output_doc = XSLT_TRANSFORMER_2(SOURCE_DOCUMENT, themeXsl=str(theme_id))
         return render_template('pages/resultats_theme.html',
                            resultattheme=str(output_doc),
                            theme_id=theme_id)
@@ -69,7 +69,7 @@ def nav_carte_dialectes():
 @app.route("/nav_carte_dialectes/<int:dialecte_id>")
 def resultatDialectes(dialecte_id):
     if (dialecte_id <= 4 and dialecte_id != 0):
-        output_doc = xslt_transformer_3(source_doc, dialecteXsl=str(dialecte_id))
+        output_doc = XSLT_TRANSFORMER_3(SOURCE_DOCUMENT, dialecteXsl=str(dialecte_id))
         return render_template('pages/resultats_dialectes.html',
                                resultatDialecte=str(output_doc),
                                dialecte_id=dialecte_id)
@@ -89,8 +89,8 @@ def resultatDialectes_affichage(dialecte_id):
 
 @app.route('/sommaire')
 def sommaire():
-    titres = source_doc.xpath("//div[@type='chanson']/head")
-    numeros = source_doc.xpath("//div[@type='chanson']/@n")
+    titres = SOURCE_DOCUMENT.xpath("//div[@type='chanson']/head")
+    numeros = SOURCE_DOCUMENT.xpath("//div[@type='chanson']/@n")
     return render_template("pages/sommaire.html",
                            titres=titres,
                            n=numeros)
@@ -101,7 +101,7 @@ def sommaire():
 @app.route("/affichage/<int:chanson_id>")
 def affichage(chanson_id):
     if(chanson_id != 0):
-        output_doc = xslt_transformer_1(source_doc,
+        output_doc = XSLT_TRANSFORMER_1(SOURCE_DOCUMENT,
                                         numero=str(chanson_id))
         return render_template('pages/affichage.html',
                                chanson=str(output_doc),

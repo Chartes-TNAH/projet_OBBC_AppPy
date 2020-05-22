@@ -9,16 +9,28 @@ Author : Lucas Terriel
 Date : 22/05/2020
 """
 
+# Import du package built-in sys pour intéragir avec
+# les retours système
+
 import sys
 
+# Bibliothèque standard de test
+
 import unittest
+
+# Modules pour traitement XML, RNG, XSLT
+
 from lxml import etree as ET
 from bs4 import BeautifulSoup as bs
+
+# Pour colorer la sortie du terminal
+
 from termcolor import colored
 
 
 def validator_rng(source_xml, schema_rng):
     """ Linter de validation XMLTEI
+
     :param source_xml: document xml à valider
     :type source_xml: str
     :param schema_rng: schéma RelaxNG
@@ -27,7 +39,7 @@ def validator_rng(source_xml, schema_rng):
     :type returns: str
     """
 
-    # STEP 1 : TEST SYNTAXE ET PARSAGE DE LA SOURCE XML
+    # STEP 1 : TEST DE LA SYNTAXE XML PAR LE PARSEUR
 
     try:
         ET.parse(source_xml)
@@ -40,7 +52,6 @@ def validator_rng(source_xml, schema_rng):
                       'red') % sys.exc_info()[1])
         # En cas d'erreur on quitte alors le programme
         sys.exit()
-
 
     # STEP 2 : SI LE PARSAGE OK, ON STOCKE SON CONTENU DANS UNE VARIABLE
 
@@ -68,20 +79,19 @@ def validator_rng(source_xml, schema_rng):
 
     input_xml_valid = ET.parse('xml_tei_test.xml')
 
-
     # STEP 3 : ON PARSE LE SCHEMA RNG
 
     relaxng_doc = ET.parse(schema_rng)
     relaxng = ET.RelaxNG(relaxng_doc)
 
-    # STEP 4a : SI LE RESULTAT DU PARSAGE DE LA SOURCE XML PAR LE SCHEMA RENVOIE TRUE, ALORS
+    # STEP 4a : SI LE RESULTAT DU PARSEUR DE LA SOURCE XML PAR LE SCHEMA RENVOIE TRUE, ALORS
     # LE DOCUMENT EST VALIDE
 
     if relaxng(input_xml_valid):
         validation = 'RNG OK'
         print(colored('Great Job ! Your document is valid !', 'green'))
 
-    # STEP 4b : SI LE RESULTAT DU PARSAGE DE LA SOURCE XML PAR LE SCHEMA RENVOIE FALSE, ALORS
+    # STEP 4b : SI LE RESULTAT DU PARSEUR DE LA SOURCE XML PAR LE SCHEMA RENVOIE FALSE, ALORS
     # LE DOCUMENT EST INVALIDE
 
     if not relaxng(input_xml_valid):

@@ -1,5 +1,5 @@
 """
-Script donnees.py pour créer la base de données et la relier au dataset XML.
+Création de la base de données et lien avec le dataset XML TEI.
 
 Author : Lucas Terriel
 Date: 10/04/2020
@@ -9,9 +9,9 @@ Date: 10/04/2020
 
 from app.app import db
 from copy import deepcopy
-from ..constantes import source_doc
+from ..constantes import SOURCE_DOCUMENT
 
-# On créé une class pour l'unique table SongBB qui hérite de db.Model
+# On créé une classe pour l'unique table SongBB qui hérite de db.Model
 # et on définit sa structure pour permettre le mapping par l'ORM SQLAlchemy
 
 
@@ -45,8 +45,7 @@ list_title_fr = []
 list_title_brz = []
 list_dialect = []
 list_theme = []
-list_lyricsFr = []
-list_lyricsBrz = []
+
 
 # Une exception : le choix a été fait, sûrement discutable, de remplir
 # les chemins vers les images à la main. Cependant, on pourra par la suite
@@ -65,7 +64,7 @@ list_MusicSheetPath = ['<img src="/static/images/img_partitions/chansonPR.jpg">'
                        '<img src="/static/images/img_partitions/chansonParadis.jpg">']
 
 
-def extraction_lyrics(list_song, list_lyrics):
+def extraction_lyrics(list_song):
     """ fonction extraction_lyrics permet de récupérer
     l'ensemble des paroles pour une chanson.
 
@@ -78,54 +77,55 @@ def extraction_lyrics(list_song, list_lyrics):
         :return: paroles de la chanson
         :rtype : list
         """
-    for song in list_song:
-        list_lyrics.append(song)
-        for verse in list_lyrics:
-            verses = verse
+    # liste en compréhension : on itère sur une liste de chanson pour récupérer une chanson, et on récupère
+    # les vers en itérant sur la chanson qu'on stockent dans une liste
+
+    verses = [verse for song in list_song for verse in song]
+
     return verses
 
 
 # La boucle for itère sur le numéro des chansons issu du xpath (@n)
-# qui est équivalent à liste = list(range(1,11)) (actuellement on compte
+# qui est équivalent au parcours d'une liste qui va de 1 a 10 (range(11)) (actuellement on compte
 # 10 chansons dans le corpus).
 # L'avantage d'itérer sur le xpath est de pouvoir modifier
 # le datasetXML, sans avoir a toucher au script de donnees, c'est-à-dire
 # d'éviter d'avoir a gérer les flux de la fonction range().
 # Chaque node vient récupérer la partie du dataset XML qui l'intéresse
-# selon la variable element qui varie selon la position du @n.
+# selon la variable element qui varie selon la position de l'attribut @n dans le dataset.
 
-for element in source_doc.xpath("//body/div/div/div[@type='chanson']/@n"):
-    node_titre_fr = source_doc.xpath("//text/body/div/div/div[@type='chanson'][@n=" + str(
+for element in SOURCE_DOCUMENT.xpath("//body/div/div/div[@type='chanson']/@n"):
+    node_titre_fr = SOURCE_DOCUMENT.xpath("//text/body/div/div/div[@type='chanson'][@n=" + str(
         element) + "]/div[@type='transcription']/head[@type='titre-français']/text()")
     list_title_fr.append(deepcopy(node_titre_fr[0]))
-    node_titre_brz = source_doc.xpath("//div/div/div[@type='chanson'][@n=" + str(
+    node_titre_brz = SOURCE_DOCUMENT.xpath("//div/div/div[@type='chanson'][@n=" + str(
         element) + "]/div[@type='original']/head[@type='titre-breton']/text()")
     list_title_brz.append(deepcopy(node_titre_brz[0]))
-    node_dialecte = source_doc.xpath(
+    node_dialecte = SOURCE_DOCUMENT.xpath(
         "//body/div/div/div[@type='chanson'][@n=" + str(element) + "]/ancestor::div[@type='D']/head/text()")
     list_dialect.append(deepcopy(node_dialecte[0]))
-    node_theme = source_doc.xpath(
+    node_theme = SOURCE_DOCUMENT.xpath(
         "//body/div/div/div[@type='chanson'][@n=" + str(element) + "]/ancestor::div[@type='T']/head/text()")
     list_theme.append(deepcopy(node_theme[0]))
-    node_chanson_fr = source_doc.xpath(
+    node_chanson_fr = SOURCE_DOCUMENT.xpath(
         "//div[@type='chanson'][@n='" + str(element) + "']/div[@type = 'transcription']/lg/l/text()")
     list_song_fr.append(deepcopy(node_chanson_fr))
-    node_chanson_brz = source_doc.xpath(
+    node_chanson_brz = SOURCE_DOCUMENT.xpath(
         "//div[@type='chanson'][@n='" + str(element) + "']/div[@type = 'original']/lg/l/text()")
     list_song_brz.append(deepcopy(node_chanson_brz))
-    list_verses_fr = extraction_lyrics(list_song_fr, list_lyricsFr)
-    list_verses_brz = extraction_lyrics(list_song_brz, list_lyricsBrz)
+    list_verses_fr = extraction_lyrics(list_song_fr)
+    list_verses_brz = extraction_lyrics(list_song_brz)
 
     # Pour éviter de créer la table à chaque nouveau démarage du serveur :
 
     db.drop_all()
     db.create_all()
 
-    # la méthode add() permet d'ajouter des items, ici les contenus du
+    # la méthode .add() permet d'ajouter des items, ici les contenus du
     # XML selon la position de la variable element, l'index d'une liste commençant
     # à O, il est impératif de soustraire 1 à l'index pour ne pas décaler les données dans la table.
-    # la méthode .join() permet de caster une liste en string et de ne pas récupérer seulement
-    # le première élément de la liste, c'est pour cela qu'on évite la récupération
+    # la méthode .join() permet de caster une liste en chaine de caractère et de ne pas récupérer seulement
+    # le premier élément de la liste, c'est pour cela qu'on évite la récupération
     # du contenu de la liste par la méthode de l'index.
 
     db.session.add(

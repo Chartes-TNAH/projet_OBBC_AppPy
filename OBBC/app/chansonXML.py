@@ -19,7 +19,7 @@ from copy import deepcopy
 
 # Import de la source XML (dataset) qui contient l'emsemble des chansons
 
-from .constantes import source_doc
+from .constantes import SOURCE_DOCUMENT
 
 
 def layoutDivP(attributeContent, xpathElement, parent):
@@ -99,25 +99,25 @@ def Song2XmlTei(chanson_id):
     # du dataset dans son entier pour l'injecter
     # dans le nouveau document XML
 
-    nodeTeiHeader = source_doc.findall('teiHeader')
+    nodeTeiHeader = SOURCE_DOCUMENT.findall('teiHeader')
 
-    titles = source_doc.findall(
+    titles = SOURCE_DOCUMENT.findall(
         "//div[@type='chanson'][@n='" + str(chanson_id) +
         "']/head")
 
-    arguments = source_doc.findall(
+    arguments = SOURCE_DOCUMENT.findall(
         "//div[@type='chanson'][@n='" + str(chanson_id) +
         "']/div[@type = 'argument']/*")
 
-    transcriptions = source_doc.findall(
+    transcriptions = SOURCE_DOCUMENT.findall(
         "//div[@type='chanson'][@n='" + str(chanson_id) +
         "']/div[@type = 'transcription']/lg/*")
 
-    originals = source_doc.findall(
+    originals = SOURCE_DOCUMENT.findall(
         "//div[@type='chanson'][@n='" + str(chanson_id) +
         "']/div[@type = 'original']/lg/*")
 
-    Ne = source_doc.findall(
+    Ne = SOURCE_DOCUMENT.findall(
         "//div[@type='chanson'][@n='" + str(chanson_id) +
         "']/div[@type = 'Ne']/*")
 
