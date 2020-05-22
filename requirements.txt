@@ -1,5 +1,5 @@
 Flask==1.1.2
 Flask-SQLAlchemy==2.4.1
-lxml==4.5.0
+lxml==4.5.1
 termcolor
 bs4
