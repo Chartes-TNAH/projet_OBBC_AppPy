@@ -9,7 +9,7 @@ install:
 
 script:
   - cd OBBC/
-  - python -m unittest test_routes.py
+  - python -m unittest test_routes.py test_validation_rng.py
 
 notifications:
   email:

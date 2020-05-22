@@ -39,8 +39,8 @@ class testMainRoads(unittest.TestCase):
         for id in self.liste:
             page_theme = self.app.get('/themes/'+str(id))
             page_dialecte = self.app.get('/nav_carte_dialectes/'+str(id))
-            print("page themes :", id, "=> OK ! ")
-            print("page dialectes :", id, "=> OK ! ")
+            print("page themes : {} => OK ! ".format(id))
+            print("page dialectes : {} => OK ! ".format(id))
             assert page_theme.status == '200 OK', 'themes failed'
             assert page_dialecte.status == '200 OK', 'dialectes failed'
             theme = self.app.get('/themes/5')

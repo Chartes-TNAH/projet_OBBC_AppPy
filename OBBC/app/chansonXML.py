@@ -146,17 +146,12 @@ def Song2XmlTei(chanson_id):
     TEI.set('xmlns',
             'http://www.tei-c.org/ns/1.0')
 
-    WarningOBBC = ET.SubElement(
-        TEI, "p")
-
-    WarningOBBC.text = \
-        "INSTRUCTIONS : 1) CLIC DROIT DANS LE NAVIGATEUR POUR " \
-        "AFFICHER LE CODE SOURCE ET RECUPERER " \
-        "LE FICHIER EN XML/TEI ** " \
-        "2) Copier-coller le code dans un éditeur XML **" \
-        "3) Rajouter les schémas RNG TEI ALL " \
+    warning_comments = ET.Comment("INSTRUCTIONS : 1) Copier-coller le code dans un éditeur XML **" \
+        "2) Rajouter les schémas RelaxNG TEI ALL " \
         "pour obtenir un document valide  **" \
-        "4) Supprimer ce commentaire **"
+        "3) Supprimer ce commentaire **")
+
+    TEI.insert(1, warning_comments)
 
     # TeiHeader
 

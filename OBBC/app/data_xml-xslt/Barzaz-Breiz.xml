@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <TEI>
-   <!--  xmlns="http://www.tei-c.org/ns/1.0" -->
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -73,41 +73,41 @@
    <text>
 
 
-      <!-- 
-         DATASET ACTUEL : 
-         
+      <!--
+         DATASET ACTUEL :
+
          = THEMES =
          T1 : Chants mythologiques, heroiques et historiques
          T2 : Chants historiques
          T3 : Chants domestiques et chants d'amour
          T4 : Légendes et chants religieux
-         
+
          = DIALECTES =
          D1 : Cornouaillais
          D2 : Leonard
          D3 : Trégorois
          D4 : Vannetais
-         
-         = CHANSONS = 
-         
-         T1 = 
+
+         = CHANSONS =
+
+         T1 =
          chanson_PdG : Prédiction de Gwenc'hlan
          chanson_LmA : La marche d'Arthur
          chanson_LR : Le Rossignol
-         
-         T2 = 
+
+         T2 =
          chanson_SG : Le siège de Guincamp
          chanson_OL : L'orpheline de Lannion
          chanson_Cpe : Chant du prêtre exilé
-         
-         T3 = 
+
+         T3 =
          chanson_An : L'Aire neuve
          chanson_H : Les Hirondelles
-         
-         T4 = 
+
+         T4 =
          chanson_e : L'enfer
          chanson_p : Le Paradis
-         
+
       -->
 
 
@@ -143,7 +143,7 @@
                   <div type="transcription" xml:lang="fr">
                      <head type="titre-français">Prédiction de Gwenc'hlan</head>
                      <lg>
-                        <p type="couplet" n="I">I.</p>
+                        <l type="couplet" n="I">I.</l>
                         <l>Quand le soleil se couche, quand la mer s’enfle, je chante sur le seuil
                            de ma porte.</l>
                         <l>Quand j’étais jeune, je chantais ; devenu vieux, je chante encore.</l>
@@ -157,7 +157,7 @@
                         <l>Il faut que tous meurent trois fois, avant de se reposer enfin.</l>
                      </lg>
                      <lg>
-                        <p type="couplet" n="II">II.</p>
+                        <l type="couplet" n="II">II.</l>
                         <l>Je vois le sanglier qui sort du bois ; il boite beaucoup ; il a le pied
                            blessé,</l>
                         <l>La gueule béante et pleine de sang, et le crin blanchi par l’âge ;</l>
@@ -183,7 +183,7 @@
                            fort ! frappe ! —</l>
                      </lg>
                      <lg>
-                        <p type="couplet" n="III">III.</p>
+                        <l type="couplet" n="III">III.</l>
                         <l>Comme j’étais doucement endormi dans ma froide tombe, j’entendis l’aigle
                            appeler au milieu de la nuit.</l>
                         <l>Il appelait ses aiglons et tous les oiseaux du ciel,</l>
@@ -208,7 +208,7 @@
                   <div type="original" xml:lang="br">
                      <head type="titre-breton">Diougan Gwenc’hlan</head>
                      <lg>
-                        <p type="couplet" n="I">I.</p>
+                        <l type="couplet" n="I">I.</l>
                         <l>Pa guz ann heol, pa goenv ar mor.</l>
                         <l>Me oar kana war dreuz ma dor.</l>
                         <l>Pa oann iaouank me a gane ;</l>
@@ -229,7 +229,7 @@
                         <l>Kent evid arzao enn-divez.</l>
                      </lg>
                      <lg>
-                        <p type="couplet" n="II">II.</p>
+                        <l type="couplet" n="II">II.</l>
                         <l>Me wel ann hoc’h ’tont doc’h ar c’hoad,</l>
                         <l>Hag hen gwall-gamm, gwallet he droad ;</l>
                         <l>He vek digor ha leun a c’hoad,</l>
@@ -257,7 +257,7 @@
                         <l>Darc’h gand he benn, darc’h mat ’ta, darc’h. —</l>
                      </lg>
                      <lg>
-                        <p type="couplet" n="III">III.</p>
+                        <l type="couplet" n="III">III.</l>
                         <l>Pa oann em bez ien, hunet dous,</l>
                         <l>’Kleviz ann er ’c’hervel, enn nouz.</l>
                         <l>He erigou hen a c’halve ;</l>
@@ -648,15 +648,19 @@
                         <p>Li autre fut un bachelier.</p>
                         <p>Bien ert (était) connu entre ses pairs.</p>
                      </div>
-                     <p>. . . . . . . . . . . . . . . . . . . . . . . . .</p>
-                     <p>. . . . . . . . . . . . . . . . . . . . . . . . .</p>
+                     <div>
+                        <p>. . . . . . . . . . . . . . . . . . . . . . . . .</p>
+                        <p>. . . . . . . . . . . . . . . . . . . . . . . . .</p>
+                     </div>
                      <div>
                         <p>La femme à son voisin aima,</p>
                         <p>Tant la requit, tant la pria.</p>
                         <p>Et tant parut en lui grand bien,</p>
                         <p>Qu’elle l’aima sur toute rien (par-dessus tout).</p>
                      </div>
-                     <p>. . . . . . . . . . . . . . . . . . . . . . . . .</p>
+                     <div>
+                        <p>. . . . . . . . . . . . . . . . . . . . . . . . .</p>
+                     </div>
                      <div>
                         <p>Longuement se sont entr’aimés.</p>
                         <p>Tant que ce vint à un été.</p>
@@ -770,6 +774,7 @@
                         <p>Un lai en firent les Bretons,</p>
                         <p>Et le Eostik l’appelle-t-on.</p>
                      </div>
+                     <div>
                      <p>La fidélité de cette imitation ne permet pas de douter que Marie de France
                         n’ait traduit sur l’original. Les fleurs qu’elle a cru devoir y broder, et
                         les traits charmants qu’elle omet, ne prouveraient pas le contraire. Si elle
@@ -782,12 +787,14 @@
                         occupe. On le jugerait encore, à certaines manières de dire qu’offre
                         très-souvent notre ballade, comme tous nos chants populaires, et qu’elle
                         reproduit :</p>
+                     </div>
                      <div>
                         <p>Quand le sire ouït ce qu’elle dit, etc.</p>
                         <p>Quand le éostik eurent pris, etc.</p>
                         <p>Quand la dame l’a entendu, etc.</p>
                         <p>Quand tout lui a dit et montré, etc.</p>
                      </div>
+                     <div>
                      <p>On le verrait surtout par la forme rhthmique de sa pièce, forme identique à
                         celle de l’original, et dont les vers pourraient se diviser, de même, en
                         distiques formant un sens complet, et se chanter sur l’air breton. Je vais
@@ -800,6 +807,7 @@
                         ballade charmante mériterait d’être rajeunie par un de nos poètes. » Nous
                         regrettons qu’il ne l’ait pas traduite lui-même ; le sujet est tout à fait
                         digne de son gracieux talent.</p>
+                     </div>
                   </div>
                </div>
             </div>

@@ -64,7 +64,9 @@
                 <xsl:value-of select="$numero"/>
             </xsl:attribute>
             <xsl:text>Affichage du code XML/TEI</xsl:text>
+
         </a>
+        <p><i><xsl:text>Après la redirection, clic-droit dans le navigateur</xsl:text></i></p>
     </xsl:template>
 
     <!--________________________-->
