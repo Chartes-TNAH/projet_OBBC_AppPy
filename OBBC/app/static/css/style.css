@@ -36,8 +36,9 @@
 
 .page-footer {
     background-color: black;
-    position: absolute;
+    position: relative;
     width: 100%;
+    bottom: 0;
 }
 
 .h6-footer {

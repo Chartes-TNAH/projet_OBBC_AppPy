@@ -1,0 +1,4248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ***********************************************************     -->
+<!-- Version 1                                                       -->
+<!-- Ce document XML-TEI comme format de stockage                    -->
+<!-- a &#233;t&#233; d&#233;velopp&#233; dans le cadre du projet                         -->
+<!-- Open Barzaz Breiz Collection                                    -->
+<!-- ***********************************************************     -->
+<!-- Author :                                                        -->
+<!-- @Github- Lucaterre                                              -->
+<!-- ***********************************************************     -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+ <teiHeader>
+  <fileDesc>
+   <titleStmt>
+    <title type="titre">
+     Barzaz Breiz, chants populaires de la Bretagne
+    </title>
+    <title type="sous-titre">
+     recueillis et publiés avec une traduction française, des
+               éclaircissements, des notes et les mélodies originales par Th. de La
+               Villemarqué
+    </title>
+    <author>
+     <forename>
+      Théodore
+     </forename>
+     <surname>
+      Hersart de La Villemarqué
+     </surname>
+    </author>
+    <editor>
+     <forename>
+      Albert
+     </forename>
+     <surname>
+      Franck
+     </surname>
+    </editor>
+    <respStmt>
+     <resp>
+      Edition en XML-TEI du Barzaz Breiz dans le cadre de l'Open Barzaz Breiz
+                  Project
+     </resp>
+     <persName>
+      <forename>
+       Lucas
+      </forename>
+      <surname>
+       Terriel
+      </surname>
+     </persName>
+    </respStmt>
+   </titleStmt>
+   <publicationStmt>
+    <publisher>
+     <forename>
+      Albert
+     </forename>
+     <surname>
+      Franck
+     </surname>
+    </publisher>
+    <pubPlace>
+     <address>
+      <addrLine>
+       69, rue de Richelieu
+      </addrLine>
+      <addrLine>
+       Paris
+      </addrLine>
+     </address>
+    </pubPlace>
+    <date when-iso="1846">
+     1846
+    </date>
+    <distributor facs="https://fr.wikisource.org/wiki/Barzaz_Breiz/1846">
+     Wikisource
+    </distributor>
+    <availability>
+     <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">
+      Licence
+                  Creative Commons Attribution-partage dans les mêmes conditions
+     </licence>
+    </availability>
+   </publicationStmt>
+   <sourceDesc>
+    <bibl>
+     <author>
+      <forename>
+       Théodore
+      </forename>
+      <surname>
+       Hersart de La Villemarqué
+      </surname>
+     </author>
+     <editor>
+      <forename>
+       Albert
+      </forename>
+      <surname>
+       Franck
+      </surname>
+     </editor>
+     <edition>
+      édition de
+      <date when-iso="1846">
+       1846
+      </date>
+     </edition>
+     <distributor facs="https://fr.wikisource.org/wiki/Barzaz_Breiz/1846">
+      Wikisource
+     </distributor>
+     <pubPlace>
+      <address>
+       <addrLine>
+        69, rue de Richelieu
+       </addrLine>
+       <addrLine>
+        Paris
+       </addrLine>
+      </address>
+     </pubPlace>
+     <availability>
+      <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">
+       Licence
+                     Creative Commons Attribution-partage dans les mêmes conditions
+      </licence>
+     </availability>
+    </bibl>
+   </sourceDesc>
+  </fileDesc>
+ </teiHeader>
+ <text>
+  <!--
+         DATASET ACTUEL :
+
+         = THEMES =
+         T1 : Chants mythologiques, heroiques et historiques
+         T2 : Chants historiques
+         T3 : Chants domestiques et chants d'amour
+         T4 : L&#233;gendes et chants religieux
+
+         = DIALECTES =
+         D1 : Cornouaillais
+         D2 : Leonard
+         D3 : Tr&#233;gorois
+         D4 : Vannetais
+
+         = CHANSONS =
+
+         T1 =
+         chanson_PdG : Pr&#233;diction de Gwenc'hlan
+         chanson_LmA : La marche d'Arthur
+         chanson_LR : Le Rossignol
+
+         T2 =
+         chanson_SG : Le si&#232;ge de Guincamp
+         chanson_OL : L'orpheline de Lannion
+         chanson_Cpe : Chant du pr&#234;tre exil&#233;
+
+         T3 =
+         chanson_An : L'Aire neuve
+         chanson_H : Les Hirondelles
+
+         T4 =
+         chanson_e : L'enfer
+         chanson_p : Le Paradis
+
+      -->
+  <body>
+   <div n="1" type="T">
+    <head>
+     Chants mythologiques, héroïques et historiques
+    </head>
+    <div n="1" type="D">
+     <head>
+      Dialecte Cornouaillais (Kerneveg)
+     </head>
+     <div n="1" type="chanson">
+      <head type="titre_général">
+       PRÉDICTION DE GWENC’HLAN (DIOUGAN GWENC’HLAN)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        Comme nous l’avons dit dans l’introduction de ce recueil, il est, parmi les
+                        chants populaires de la Bretagne, une pièce qu’on intitule : « Prédiction de
+                        Gwenc’hlan, » et que l’on attribue au barde de ce nom. Nous avons cité tout
+                        ce que les sources écrites nous ont fourni d’indications au sujet du barde.
+                        Voyons maintenant celles que nous offre la tradition actuelle.
+       </p>
+       <p>
+        Gwenc’hlan, disent les paysans bretons, fut longtemps poursuivi par un
+                        prince étranger qui en voulait à sa vie. Ce prince, s’étant rendu maître de
+                        sa personne, lui fit crever les yeux, le jeta dans un cachot, où il le
+                        laissa mourir, et tomba lui-même, peu de temps après, sur un champ de
+                        bataille, sous les coups des Bretons, victime de l’imprécation prophétique
+                        du poëte.
+       </p>
+       <p>
+        Vraie ou fausse, cette tradition s’accorde à merveille avec le chant
+                        suivant, que Gwenc’hlan passe pour avoir composé dans sa prison, quelques
+                        jours avant de mourir. Quoique ce chant appartienne au dialecte de
+                        Tréguier,je ne l’ai entendu qu’en Cornouaille ; il m’a été chanté, dans la
+                        paroisse de Melgven, par un mendiant appelé Guillou Ar Gall ; cependant il
+                        est aussi connu dans le nord de la basse Bretagne, où M. J. de Penguern a
+                        recueilli plusieurs fragments poétiques attribués au même barde, et
+                        quelques-uns de ceux qu’on va lire.
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        Prédiction de Gwenc'hlan
+       </head>
+       <lg>
+        <l n="I" type="couplet">
+         I.
+        </l>
+        <l>
+         Quand le soleil se couche, quand la mer s’enfle, je chante sur le seuil
+                           de ma porte.
+        </l>
+        <l>
+         Quand j’étais jeune, je chantais ; devenu vieux, je chante encore.
+        </l>
+        <l>
+         Je chante la nuit, je chante le jour, et je suis chagrin pourtant.
+        </l>
+        <l>
+         Si j’ai la tête baissée, si je suis chagrin, ce n’est pas sans motif.
+        </l>
+        <l>
+         Ce n’est pas que j’aie peur ; je n’ai pas peur d’être tué ;
+        </l>
+        <l>
+         Ce n’est pas que j’aie peur ; assez longtemps j’ai vécu.
+        </l>
+        <l>
+         Quand on ne me cherchera pas, on me trouvera ; et quand on me cherche, on
+                           ne me trouve pas.
+        </l>
+        <l>
+         Pou importe ce qui arrivera : ce qui doit être sera.
+        </l>
+        <l>
+         Il faut que tous meurent trois fois, avant de se reposer enfin.
+        </l>
+       </lg>
+       <lg>
+        <l n="II" type="couplet">
+         II.
+        </l>
+        <l>
+         Je vois le sanglier qui sort du bois ; il boite beaucoup ; il a le pied
+                           blessé,
+        </l>
+        <l>
+         La gueule béante et pleine de sang, et le crin blanchi par l’âge ;
+        </l>
+        <l>
+         Il est entouré de ses marcassins, qui grognent de faim.
+        </l>
+        <l>
+         Je vois le cheval de mer venir à sa rencontre, à faire trembler le rivage
+                           d’épouvante.
+        </l>
+        <l>
+         Il est aussi blanc que la neige brillante : il porte au front des cornes
+                           d’argent.
+        </l>
+        <l>
+         L’eau bouillonne sous lui, au feu du tonnerre de ses naseaux.
+        </l>
+        <l>
+         Des chevaux marins l’entourent, aussi pressés que l’herbe au bord d’un
+                           étang.
+        </l>
+        <l>
+         — Tiens bon ! tiens bon ! cheval de mer ; frappe-le à la tête; frappe
+                           fort, frappe !
+        </l>
+        <l>
+         Les pieds nus glissent dans le sang ! Plus fort encore ! frappe donc !
+                           plus fort encore !
+        </l>
+        <l>
+         Je vois le sang comme un ruisseau ! Frappe fort! frappe donc ! plus fort
+                           encore !
+        </l>
+        <l>
+         Je vois le sang lui monter au genou ! Je vois le sang comme une mare
+                           !
+        </l>
+        <l>
+         Plus fort encore ! frappe donc ! plus fort encore ! Tu le reposeras
+                           demain.
+        </l>
+        <l>
+         Frappe fort ! frappe fort, cheval de mer ! Frappe-le à la tête ! frappe
+                           fort ! frappe ! —
+        </l>
+       </lg>
+       <lg>
+        <l n="III" type="couplet">
+         III.
+        </l>
+        <l>
+         Comme j’étais doucement endormi dans ma froide tombe, j’entendis l’aigle
+                           appeler au milieu de la nuit.
+        </l>
+        <l>
+         Il appelait ses aiglons et tous les oiseaux du ciel,
+        </l>
+        <l>
+         Et il leur disait en les appelant : — Levez-vous vite sur vos deux ailes
+                           !
+        </l>
+        <l>
+         Ce n’est pas de la chair pourrie de chiens ou de brebis ; c’est de la
+                           chair chrétienne qu’il nous faut ! —
+        </l>
+        <l>
+         — Vieux corbeau de mer, écoute ; dis-moi : que tiens-lu là ?
+        </l>
+        <l>
+         — Je tiens la tête du chef d’armée; je veux avoir ses deux yeux
+                           rouges.
+        </l>
+        <l>
+         Je lui arrache les yeux, parce qu’il a arraché les tiens.
+        </l>
+        <l>
+         — Et toi, renard, dis-moi, que tiens-tu là ?
+        </l>
+        <l>
+         — Je tiens son cœur, qui était aussi faux que le mien.
+        </l>
+        <l>
+         Qui a désiré ta mort, et t’a fait mourir depuis longtemps.
+        </l>
+        <l>
+         — Et toi, dis-moi, crapaud, que fais-tu là, au coin de sa bouche ?
+        </l>
+        <l>
+         — Moi, je me suis mis ici pour attendre son âme au passage.
+        </l>
+        <l>
+         Elle demeurera en moi tant que je vivrai,en punition du crime qu’il a
+                           commis
+        </l>
+        <l>
+         Contre le Barde qui n’habite plus entre Roch-allaz et Porz-gwenn.
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Diougan Gwenc’hlan
+       </head>
+       <lg>
+        <l n="I" type="couplet">
+         I.
+        </l>
+        <l>
+         Pa guz ann heol, pa goenv ar mor.
+        </l>
+        <l>
+         Me oar kana war dreuz ma dor.
+        </l>
+        <l>
+         Pa oann iaouank me a gane ;
+        </l>
+        <l>
+         Pa’z onn deut koz, me gan ive.
+        </l>
+        <l>
+         Me gan enn noz, me gan enn de ;
+        </l>
+        <l>
+         Ha keuziet onn koulskoude.
+        </l>
+        <l>
+         Mar ’d eo gan-in stouet ma bek,
+        </l>
+        <l>
+         Mar ’m euz keun ne ket heb abek.
+        </l>
+        <l>
+         Evid aoun me n’am euz ket,
+        </l>
+        <l>
+         Meuz ked aoun da vout lazet ;
+        </l>
+        <l>
+         Evid aoun me n’am euz ket ;
+        </l>
+        <l>
+         Amzer awalc’h ez onn-me bet.
+        </l>
+        <l>
+         Pa vinn ket klasket, vinn kavet ;
+        </l>
+        <l>
+         Ha pa ’z onn klasket ne’z onn ket.
+        </l>
+        <l>
+         Na vern petra a c’hoarvezo :
+        </l>
+        <l>
+         Pez a zo dleet, a vezo.
+        </l>
+        <l>
+         Red eo d’ann holl mervel teir gwes,
+        </l>
+        <l>
+         Kent evid arzao enn-divez.
+        </l>
+       </lg>
+       <lg>
+        <l n="II" type="couplet">
+         II.
+        </l>
+        <l>
+         Me wel ann hoc’h ’tont doc’h ar c’hoad,
+        </l>
+        <l>
+         Hag hen gwall-gamm, gwallet he droad ;
+        </l>
+        <l>
+         He vek digor ha leun a c’hoad,
+        </l>
+        <l>
+         Hag he reun louet gand ann oad ;
+        </l>
+        <l>
+         Hag he vorc’higou tro-war-dro,
+        </l>
+        <l>
+         Gand ann naon braz o sorc’ho.
+        </l>
+        <l>
+         Me wel ar morvarc’h enep tont,
+        </l>
+        <l>
+         Ken a gren ann aot gand ar spont.
+        </l>
+        <l>
+         Hen ken gwenn evel ann erc’h gann ;
+        </l>
+        <l>
+         Enn he benn kerniou argant.
+        </l>
+        <l>
+         Ann dour dindan han o firvi,
+        </l>
+        <l>
+         Gand ann tan daran euz he fri ; Morgezeg enn dro d’han ker stank
+        </l>
+        <l>
+         Hag ar geot war lez ar stank.
+        </l>
+        <l>
+         — Dalc’h mat ’ta ! dalc’h mat ’ta ! morvarc’h ;
+        </l>
+        <l>
+         Darc’h gand he benn ; darc’h mat ’ta, darc’h !
+        </l>
+        <l>
+         Ken a risk er goad ann treid noaz !
+        </l>
+        <l>
+         Gwas-oc’h-was ! darc’h ’ta! gwas-oc’h-was !
+        </l>
+        <l>
+         Me wel ar goad evel eur waz !
+        </l>
+        <l>
+         Darc’h mat ’ta ! darc’h ’ta ! gwas-oc’h-was !
+        </l>
+        <l>
+         Me wel ar goad hed penn he c’hlin !
+        </l>
+        <l>
+         Me wel ar goad evel eul linn !
+        </l>
+        <l>
+         Gwas-oc’h-was ! darc’h ’ta, gwas-oc’h-was !
+        </l>
+        <l>
+         Arzaoi a ri benn arc’hoaz.
+        </l>
+        <l>
+         Darc’h mat ’ta ! darc’h mat ’ta morvac’h,
+        </l>
+        <l>
+         Darc’h gand he benn, darc’h mat ’ta, darc’h. —
+        </l>
+       </lg>
+       <lg>
+        <l n="III" type="couplet">
+         III.
+        </l>
+        <l>
+         Pa oann em bez ien, hunet dous,
+        </l>
+        <l>
+         ’Kleviz ann er ’c’hervel, enn nouz.
+        </l>
+        <l>
+         He erigou hen a c’halve ;
+        </l>
+        <l>
+         Hag ann holl evned euz ann ne ;
+        </l>
+        <l>
+         Hen lavare dre he c’hervel :
+        </l>
+        <l>
+         — Savet prim war ho tiou-askel !
+        </l>
+        <l>
+         Ne ket kik brein chas pe zenved,
+        </l>
+        <l>
+         Kik kristen renkomp da gaouet ! —
+        </l>
+        <l>
+         — Morvran goz, leo ; lavar d’i-me :
+        </l>
+        <l>
+         Petra c’hoari gen-oud aze ?
+        </l>
+        <l>
+         — Tal ar penn-lu [1] c’hoari gan-in ;
+        </l>
+        <l>
+         He zaoulagad ru a fel d’in ;
+        </l>
+        <l>
+         He zaoulagad a grapann net,
+        </l>
+        <l>
+         Abek d’az re en deuz tennet.
+        </l>
+        <l>
+         — Na te, louarn, lavar d’i-me
+        </l>
+        <l>
+         Petra c’hoari gen-oud aze ?
+        </l>
+        <l>
+         — He galon a c’hoari gan-i
+        </l>
+        <l>
+         Oa ken diwir ha ma hani,
+        </l>
+        <l>
+         E deuz c’hoantaet da lazo,
+        </l>
+        <l>
+         E deuz da lazet a bell zo.
+        </l>
+        <l>
+         — Na te lavar d’i-me, tousek,
+        </l>
+        <l>
+         Petra rez aze ’korn he vek ?
+        </l>
+        <l>
+         — Me a zo ama ’n em laket,
+        </l>
+        <l>
+         ’C’hortoz he ene da zonet.
+        </l>
+        <l>
+         Gan-i-me vo tra vinn er bed,
+        </l>
+        <l>
+         Enn damant glan oc’h he dorfed
+        </l>
+        <l>
+         E kever ar Barz na jomm ken
+        </l>
+        <l>
+         Etre Roc’h-allaz ha Porz-gwenn. —
+        </l>
+       </lg>
+      </div>
+      <div n="1" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        Cette pièce est tout à fait dans le goût des poésies des plus anciens bardes
+                        gallois. Il nous semble nécessaire de le prouver par des citations :
+       </p>
+       <p>
+        1° Comme Taliesin, Gwenc’hlan paraît croire aux trois cercles d’existence de
+                        la théologie druidique, et au dogme de la métempsycose : « Je suis né trois
+                        fois, dit Taliesin... j’ai été mort, j’ai été vivant ; je suis tel que
+                        j’étais... J’ai été biche sur la montagne... j’ai été coq tacheté... j’ai
+                        été daim de couleur fauve ; maintenant je suis Taliesin.
+       </p>
+       <p>
+        2° Comme Lywarc’h-Hen, il se plaint de la vieillesse, il est triste ; comme
+                        lui, il est fataliste: « Si ma destinée avait été d’être heureux, s’écrie le
+                        poète cambrien s’adressant à son fils qui a été tué, tu aurais échappé à la
+                        mort... Avant que je marchasse à l’aide de béquilles, j’étais beau... je
+                        suis vieux, je suis seul, je suis décrépit... Malheureuse destinée qui a été
+                        infligée à Lywarc’h, la nuit de sa naissance : de longues peines sans fin
+                        !
+       </p>
+       <p>
+        3° De même que Gwenc’hlan représente le prince étranger sous la figure d’un
+                        sanglier, et le prince breton, sous celle d’un cheval marin, Taliesin,
+                        parlant d’un chef gallois, l’appelle le « cheval de guerre».
+       </p>
+       <p>
+        4° L’histoire du barde d’Armorique chantant dans les fers son chant de mort,
+                        offre quelque analogie avec celle d’Aneurin qui, ayant été fait prisonnier à
+                        la bataille de Kaltraez, composa son poème de Gododin durant sa captivité: «
+                        Dans ma maison de terre, malgré la chaîne de fer qui lie mes deux genoux,
+                        moi, Aneurin, je chanterai, dit-il, le chant de Gododin avant le lever de
+                        l’aurore. » Le même poème offre un vers qui se retrouve presque
+                        littéralement dans le chant armoricain : « On voit une mare de sang monter
+                        jusqu’au genou.»
+       </p>
+       <p>
+        5° Le sens des strophes 3e, 24° et 25e du chant breton est exactement le
+                        même que celui de deux stances d’une élégie de Lywarc’h-Hen, où le barde
+                        décrit les suites d’un combat : « J’entends cette nuit les aigles d’Eli...
+                        Ils sont ensanglantés ; ils sont dans le bois... Les aigles de Pengwern
+                        appellent au loin cette nuit on les voit dans le sang humain (1). » Mais les
+                        bardes que nous venons de citer étaient tous plus ou moins chrétiens, et
+                        l’on doit croire que Gwenc’hlan ne l’était pas, en voyant la complaisance
+                        avec laquelle il dévoue la « chair chrétienne » aux aigles et aux corbeaux :
+                        on se rappelle qu’une tradition populaire lui fait dire : « Un jour viendra
+                        où les prêtres du Christ seront poursuivis; on les huera comme des bêtes
+                        fauves (2). » Le carnage qu’on en fera, ajoute-t-il, sera tel « qu’ils
+                        mourront tous par bandes, sur le Menez-Bré ; par bataillons (3). » Dans ce
+                        temps-là, dit-il encore, « la roue du moulin moulera menu : le sang des
+                        moines lui servira d’eau (4). » « Ces choses arriveront bien avant la fin du
+                        monde ; alors la plus mauvaise terre rapportera le meilleur blé (5).»
+       </p>
+       <p>
+        (1) Erer Eli a glevann henoes. . . . . . . . . . . . . . Erer Pengwern pell
+                        galv hed henoes. . . . . . . . . . . . . . Er goad gwir gweler.
+       </p>
+       <p>
+        (2) Tud Jezus-Krist a wallgasor ; Evel gouezed ho argador.
+       </p>
+       <p>
+        (3) M’az marvint holl a strolladou, War menez Bie, a vagadou.
+       </p>
+       <p>
+        (4) Rod ar vilin a valo flour, Gand goad ar venec’h eleac’h dour.
+       </p>
+       <p>
+        (5) Abarz ma vezo fin ar bed ; Falla douar ar gwella éd.
+       </p>
+       <p>
+        Enfin, la pièce, comme celles des bardes gallois, était primitivement
+                        allitérée. Elle offre des traces trop multipliées de ce système rhythmique,
+                        pour que ce soit l’effet du hasard. Nous avons dit que le peuple l’attribue
+                        à Gwenc’hlan ; les deux derniers vers confirment celle opinion. « Gwenc’hian
+                        marque au commencement de ses prédictions, dit le P. Grégoire de Rostrenen,
+                        qu’il demeurait entre Roc’h-allaz et le Porz-gwenn, au diocèse de Tréguier.
+                        » Mais s’il est l’auteur de la pièce, évidemment elle est rajeunie dans
+                        l’expression. C’est une observation que j’aurai souvent lieu de faire, et
+                        que je fais, ici, une fois pour toutes.
+       </p>
+      </div>
+     </div>
+     <div n="2" type="chanson">
+      <head type="titre_général">
+       LA MARCHE D’ARTHUR (BALE ARZUR)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        La popularité dont jouit en Bretagne le nom d’Arthur est un des phénomènes
+                        les plus curieux de l’histoire de la fidélité bretonne. Ce nom,
+                        primitivement porté par une divinité guerrière, le fut, au sixième siècle,
+                        par un chef illustre, mort en défendant sa patrie, et auquel on attribua
+                        plusieurs des vertus surhumaines de son homonyme adoré. Les pères
+                        invoquaient le dieu en allant au combat ; les fils chantèrent l’homme
+                        déifié, le jour de la bataille. Ni la défaite ni l’exil ne purent faire
+                        oublier Arthur aux Bretons. Sa renommée magique, traversant la mer avec eux,
+                        reçut en Armorique une vie toute nouvelle : il y devint, comme il l’était
+                        dans l’île de Bretagne, un symbole armé de la liberté nationale ; et le
+                        peuple, à toutes les époques, depuis le sixième siècle jusqu’à nos jours, y
+                        répéta, en les adaptant aux circonstances, les traditions et les bardits
+                        dont il était le sujet. Ainsi, toutes les fois qu’une guerre se prépare, on
+                        voit, en signe avant-coureur, l’armée d’Arthur défiler à l’aube du jour au
+                        sommet des montagnes noires, et l’on y répète encore le bardit suivant, qui
+                        s’est retrouvé, après douze cents ans, dans la bouche des Bretons armés pour
+                        défendre leurs autels et leurs foyers. Je l’ai appris d’un vieux montagnard
+                        appelé Mikel Floc’h, de Leuhan, qui l’a souvent chanté, m’a-t-il dit, en
+                        marchant à l’ennemi, dans les dernières guerres de l’Ouest.
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        La marche d'Arthur
+       </head>
+       <lg>
+        <l>
+         Allons, allons, allons au combat ! allons parent, allons fils. allons
+                           fils, allons père ! allons ! allons ! allons tous ! allons donc, hommes
+                           de cœur !
+        </l>
+        <l>
+         Le fils du guerrier disait à son père un matin : — Des cavaliers au
+                           sommet de la montagne !
+        </l>
+        <l>
+         Des cavaliers qui passent montés sur des coursiers gris qui reniflent de
+                           froid !
+        </l>
+        <l>
+         Rangs serrés six par six ; rangs serres trois par trois ; mille lances
+                           brillant au soleil !
+        </l>
+        <l>
+         Rangs serrés deux par deux , suivant les drapeaux que balance le vent de
+                           la Mort.
+        </l>
+        <l>
+         Neuf longueurs d’un jet de fronde depuis leur tête jusqu’à leur
+                           queue.
+        </l>
+        <l>
+         C’est l’armée d’Arthur, je le sais ; Arthur marche à leur tête au haut de
+                           la montagne.
+        </l>
+        <l>
+         — Si c’est Arthur, vite à nos arcs et à nos flèches vives ! et en avant à
+                           sa suite, et que le dard s’agite ! —
+        </l>
+        <l>
+         Il n’avait pas fini de parler, que le cri de guerre retentit d'un bout à
+                           l’autre des montagnes.
+        </l>
+        <l>
+         — « Cœur pour œil ! tête pour bras ! et mort pour blessure, dans la
+                           vallée comme sur la montagne ! et père pour mère, et mère pour fille
+                           !
+        </l>
+        <l>
+         « Étalon pour cavale, et mule pour âne ! chef de guerre pour soldat, et
+                           homme pour enfant ! sang pour larmes, et flammes pour chaleur !
+        </l>
+        <l>
+         « Et trois pour un, c’est ce qu’il fait, dans la vallée comme sur la
+                           montagne, jour et nuit, s’il se peut, jusqu’à ce que les vallées roulent
+                           des flots de sang.
+        </l>
+        <l>
+         « Si nous tombons percés dans le combat, nous nous baptiserons avec notre
+                           sang, et nous mourrons, le cœur joyeux.
+        </l>
+        <l>
+         « Si nous mourons comme doivent mourir des chrétiens des Bretons, jamais
+                           nous ne mourrons trop tôt ! » —
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Bale Azur
+       </head>
+       <lg>
+        <l>
+         — Deomp, deomp, deomp, deomp, deomp, deomp, d’ar gad !
+        </l>
+        <l>
+         Deomp, kar, deomp, breur, deomp, map, deomp, tad !
+        </l>
+        <l>
+         Deomp ! deomp ! deomp holl ! deomp ’ta, tud vad !
+        </l>
+        <l>
+         Mab ar c’hadour a lavare,
+        </l>
+        <l>
+         Lavare d’he dad, eur beure :
+        </l>
+        <l>
+         — Marc’hegerien war lein ar bre !
+        </l>
+        <l>
+         Marc’hegerien o vont e-biou,
+        </l>
+        <l>
+         Mirc’hed adan-he, glaz ho liou,
+        </l>
+        <l>
+         Oc’h hinteal gand ar riou !
+        </l>
+        <l>
+         Stank-ha-stank, c’houec’h-ha-c’houec’h, e ri ;
+        </l>
+        <l>
+         Skank ha stank, e ri tri-ha-tri ;
+        </l>
+        <l>
+         Mil goaf oc’h ann heol o lintri ;
+        </l>
+        <l>
+         Stank-ha-stank, e ri, daou-ha-daou,
+        </l>
+        <l>
+         O vont da heul ar banielaou
+        </l>
+        <l>
+         Hag a vransell glan ann Ankaou.
+        </l>
+        <l>
+         Nao ban rong ann daou benn anhe ;
+        </l>
+        <l>
+         Bagad Arzur, e goarann, e ;
+        </l>
+        <l>
+         Arzur a-rok lein ar mene. —
+        </l>
+        <l>
+         — Mar ma Arzur ann hini eo,
+        </l>
+        <l>
+         Prim d’hor gwarek ha d’hor gwall veo !
+        </l>
+        <l>
+         Ha’rok d’he heul, ha flimm ra freo ! —
+        </l>
+        <l>
+         Oa ked he c’her losket a-grenn,
+        </l>
+        <l>
+         Pa drouzkrozaz ar iouc’hadenn
+        </l>
+        <l>
+         Hed ar meneziou penn-d’ar-benn :
+        </l>
+        <l>
+         — Kalon am lagad ! penn am brec’h !
+        </l>
+        <l>
+         « Ha laz am blons, ha traon ha krec’h !
+        </l>
+        <l>
+         « Ha tad am map, ha mamm am merc’h !
+        </l>
+        <l>
+         « Marc’h am kazek, ha mul am as !
+        </l>
+        <l>
+         « Penn-lu am mael, ha den am goas !
+        </l>
+        <l>
+         « Goad am daerou, ha tan am grouaz !
+        </l>
+        <l>
+         « Ha tri am unan, evit mad !
+        </l>
+        <l>
+         « Traon ha krec’h, noz-de, mar gell pad,
+        </l>
+        <l>
+         « Ken a redo enn traoniou goad !
+        </l>
+        <l>
+         « Er stourmat treuzet mar kouezomp,
+        </l>
+        <l>
+         « Gand hor goad en em badezfomp,
+        </l>
+        <l>
+         « Ha laouen galon a varfomp.
+        </l>
+        <l>
+         « Mar marvomp evel ma dleet
+        </l>
+        <l>
+         « D’ar gristenien, d’ar Vretoned,
+        </l>
+        <l>
+         « Morse na varvimp re abred ! » —
+        </l>
+       </lg>
+      </div>
+      <div n="2" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        Cette dernière strophe, dont les sentiments sont aussi beaux que clairement
+                        rendus, mais modernes, a dû contribuer à sauver de l’oubli la Marche
+                        d’Arthur. Elle était toujours, m’a-t-on dit, répétée trois fois par les
+                        chanteurs, qu’elle enthousiasmait. Les autres ne leur offraient probablement
+                        aucun sens ; la lettre et l’esprit sont si loin de la manière de parler et
+                        de penser d’aujourd’hui ! Je ne les aurais pas toutes comprises moi-même, je
+                        l’avoue, sans les lumières d’un savant gallois de mes amis, qui croit le
+                        chant passé du dialecte cambrien dans le dialecte armoricain, au septième
+                        siècle, à la séparation de l’un et de l’autre peuple. La pièce offre
+                        effectivement plusieurs tournures grammaticales elliptiques, un grand nombre
+                        d’expressions étrangères au dialecte du continent, et la forme ternaire des
+                        poèmes bardiques gallois. J’ajouterai que les connaisseurs s’accordent à
+                        trouver à la mélodie, qui est éminemment énergique et martiale, un caractère
+                        tout particulier d’antiquité.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div n="2" type="D">
+     <head>
+      Dialecte de Léon (Leoneg)
+     </head>
+     <div n="3" type="chanson">
+      <head type="titre_général">
+       LE ROSSIGNOL (ANN EOSTIK)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        Cette ballade étant connue de Marie de France, et déjà populaire à l’époque
+                        où vivait ce trouvère, qui l’a imitée, nous n’hésitons pas à la croire
+                        antérieure au treizième siècle. Nous l’avons entendu chanter en Cornouaille,
+                        entre autres personnes, il une vieille paysanne nommée Loiza Glodiner, du
+                        village de Kerloiou, dans les montagnes d’Arez ; mais elle a dû être
+                        composée en Léon, car elle appartient au dialecle de ce pays. L’événement
+                        qui en est le sujet est peu important en lui-même. Le chanteur breton ne
+                        fait que l’indiquer, Marie de France le délaye.
+       </p>
+       <p>
+        Une dame de Saint-Malo aime un jeune homme et en est aimée ; elle se lève
+                        souvent la nuit, pour aller causer avec lui à la fenêtre, et les rues de la
+                        ville sont tellement élroites, les pignons tellement rapprochés, qu’elle
+                        peut lui parler à voix basse. Mais le mari, qui est un vieillard et un peu
+                        jaloux, comme beaucoup le sont, se doute de quelque chose, prend l’éveil et
+                        interroge sa jeune femme. Celle-ci répond qu’elle se lève pour écouter un
+                        rossignol qui chante dans le jardin. Feignant de donner dans le piège, le
+                        vieux mari fait tendre des lacs : par le plus grand hasard, un rossignol s’y
+                        trouve pris ; il l’apporte à sa femme, l’étouffe sous ses yeux, et lui ôte
+                        ainsi tout prétexte de se lever à l’avenir.
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        Le Rossignol
+       </head>
+       <lg>
+        <l>
+         La jeune épouse de Saint-Malo pleurait, hier à sa fenêtre élevée :
+        </l>
+        <l>
+         — Hélas ! hélas ! je suis perdue ! mon pauvre rossignol est tué !
+        </l>
+        <l>
+         — Dites-moi, ma nouvelle épouse, pourquoi donc vous levez-vous si
+                           souvent,
+        </l>
+        <l>
+         Si souvent d’auprès de moi, au milieu de la nuit, de votre lit,
+        </l>
+        <l>
+         Nu-tête et nu-pieds ? Pourquoi vous levez-vous ainsi ?
+        </l>
+        <l>
+         — Si je me lève ainsi, cher époux, au milieu de la nuit, de mon lit,
+        </l>
+        <l>
+         C’est que j’aime à voir, tenez, les grands vaisseaux aller et venir.
+        </l>
+        <l>
+         — Ce n’est sûrement pas pour un vaisseau que vous allez si souvent à la
+                           fenêtre ;
+        </l>
+        <l>
+         Ce n’est point pour des vaisseaux, ni pour deux, ni pour trois,
+        </l>
+        <l>
+         Ce n’est point pour les regarder, non plus que la lune et les
+                           étoiles.
+        </l>
+        <l>
+         Madame, dites-le-moi, pourquoi chaque nuit vous levez-vous ?
+        </l>
+        <l>
+         — Je me lève pour aller regarder mou petit enfant dans son berceau.
+        </l>
+        <l>
+         — Ce n’est pas davantage pour regarder, pour regarder dormir un enfant
+                           ;
+        </l>
+        <l>
+         Ce ne sont point des contes qu’il me faut : pourquoi vous levez-vous
+                           ainsi ?
+        </l>
+        <l>
+         — Mon vieux petit homme, ne vous fâchez pas, je vais vous dire la vérité
+                           :
+        </l>
+        <l>
+         C’est On rossignol que j’entends chanter toutes les nuits dans le jardin,
+                           sur un rosier ;
+        </l>
+        <l>
+         C’est un rossignol que j’entends toutes les nuits ; il chante si
+                           gaiement, il chante si doucement ;
+        </l>
+        <l>
+         Il chante si doucement, si merveilleusement, si harmonieusement. toutes
+                           les nuits, toutes les nuits, lorsque la mer s’apaise ! —
+        </l>
+        <l>
+         Quand le vieux seigneur l’entendit, il réfléchit au fond de son cœur
+                           ;
+        </l>
+        <l>
+         Quand le vieux seigneur l’entendit, il se parla ainsi à lui-même :
+        </l>
+        <l>
+         — Que ce soit vrai, ou que ce soit faux, le rossignol sera pris ! —
+        </l>
+        <l>
+         Le lendemain matin, en se levant, il alla trouver le jardinier.
+        </l>
+        <l>
+         — Bon jardinier, écoutez-moi ; il y a une chose qui me donne du souci
+                           :
+        </l>
+        <l>
+         Il y a dans le clos un rossignol qui ne fait que chanter, la nuit ;
+        </l>
+        <l>
+         Qui ne fait, toute la nuit, que chanter, si bien qu’il me réveille.
+        </l>
+        <l>
+         Si tu l’as pris ce soir, je te donnerai un sou d’or. —
+        </l>
+        <l>
+         Le jardinier, l’ayant écouté, tendit un lacet dans le jardin ;
+        </l>
+        <l>
+         Et il prit un rossignol, et il le porta à son seigneur ;
+        </l>
+        <l>
+         Et le seigneur, quand il le tint, se mit à rire de tout son cœur.
+        </l>
+        <l>
+         Et il l’étouffa, et le jeta dans le blanc giron de la pauvre dame.
+        </l>
+        <l>
+         — Tenez, tenez, ma jeune épouse, voici votre joli rossignol ;
+        </l>
+        <l>
+         C’est pour vous que je l’ai attrapé ; je suppose, ma belle, qu’il vous
+                           fera plaisir. —
+        </l>
+        <l>
+         En apprenant la nouvelle, le jeune servant d’amour de la dame disait bien
+                           tristement :
+        </l>
+        <l>
+         — Nous voilà pris, ma douce et moi ; nous ne pourrons plus nous voir,
+        </l>
+        <l>
+         Au clair de la lune, à la fenêtre, selon notre habitude. —
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Ann Eostik
+       </head>
+       <lg>
+        <l>
+         Greg iaouang a Zant-Malo, deac’h,
+        </l>
+        <l>
+         D’he frenestr a oele, d’ann neac’h :
+        </l>
+        <l>
+         — Sioaz ! sioaz ! me zo tizet !
+        </l>
+        <l>
+         Va eostik paour a zo lazet !
+        </l>
+        <l>
+         — Livirit d’in va greg nevez,
+        </l>
+        <l>
+         Perak ’ta savit kelliez,
+        </l>
+        <l>
+         Kelliez diouz va c’hostez-me,
+        </l>
+        <l>
+         E kreiz ann noz, diouz ho kwele,
+        </l>
+        <l>
+         Diskabel-kaer ha diarc’henn,
+        </l>
+        <l>
+         Perak ’ta savit evelhenn ?
+        </l>
+        <l>
+         — Mar zavann, den ker, evel-se,
+        </l>
+        <l>
+         E kreiz ann noz, diouz va gwele,
+        </l>
+        <l>
+         Da eo gan-in, setu, gwelet
+        </l>
+        <l>
+         Al listri braz mont ha donet.
+        </l>
+        <l>
+         — N’ed eo ket, vad, evid eul lestr,
+        </l>
+        <l>
+         Az it kelliez d’ar prenestr ;
+        </l>
+        <l>
+         N’ed eo ked evid al listri,
+        </l>
+        <l>
+         Nag evid daou nag evit tri ;
+        </l>
+        <l>
+         N’ed eo ked evid ho gwelet,
+        </l>
+        <l>
+         Ken-nebeud al loar, ar stered.
+        </l>
+        <l>
+         Va itronez, d’in livirit,
+        </l>
+        <l>
+         Da berak bep noz e savit ?
+        </l>
+        <l>
+         — Sevel a rann da vont da zell
+        </l>
+        <l>
+         Ouz va bugel enn he gavel.
+        </l>
+        <l>
+         — N’ed eo ket ken evit sellet,
+        </l>
+        <l>
+         Sellet ouz eur bugel kousket ;
+        </l>
+        <l>
+         N’ed eo ket gevier a fell d’e.
+        </l>
+        <l>
+         Da berak savit evelse ?
+        </l>
+        <l>
+         — Va denik koz, ma na derez,
+        </l>
+        <l>
+         Me lavaro ar wirionez :
+        </l>
+        <l>
+         Eunn eostig a glevann bep noz,
+        </l>
+        <l>
+         Er jardin war eur bodik-roz ;
+        </l>
+        <l>
+         Eunn eostik bep noz a glevann ;
+        </l>
+        <l>
+         Ken ge e kan, ken dous e kan !
+        </l>
+        <l>
+         Ken dous e kan, ker kaer, ken flour,
+        </l>
+        <l>
+         Bep noz, bep noz, pa zioul ar mour ! —
+        </l>
+        <l>
+         Ann aotrou koz dal’m’ he c’hlevaz,
+        </l>
+        <l>
+         Enn he galoun a brederiaz ;
+        </l>
+        <l>
+         Ann aotrou koz dalm’ he c’hlevaz,
+        </l>
+        <l>
+         Enn he galoun a lavaraz :
+        </l>
+        <l>
+         — Pe mar ma gwir, pe ma ne ket,
+        </l>
+        <l>
+         Ann eostig a vezo paket ! —
+        </l>
+        <l>
+         Antronoz-beure, pa zavaz,
+        </l>
+        <l>
+         Da gaout ar jardinour a eaz.
+        </l>
+        <l>
+         — Jardinour mad, sentit ouz-in ;
+        </l>
+        <l>
+         Eunn dra zo a ra glac’har d’in :
+        </l>
+        <l>
+         E’r garz a zo eunn eostik-noz
+        </l>
+        <l>
+         Ne ra nemet kana enn noz ;
+        </l>
+        <l>
+         Hed ann noz ne ra met kana,
+        </l>
+        <l>
+         Ken e ma ounn dihunet gant-ha.
+        </l>
+        <l>
+         Mar ’ma paket fenoz gan-id,
+        </l>
+        <l>
+         Eur gwenneg aour a roinn-me d’id. —
+        </l>
+        <l>
+         Ar jardinour pa’n deuz klevet ;
+        </l>
+        <l>
+         Eunn ulmenig en deuz leket,
+        </l>
+        <l>
+         Hag ann eostig en deuz paket,
+        </l>
+        <l>
+         Ma d’he aotrou neuz hen kaset.
+        </l>
+        <l>
+         Hag ann aotrou, pa hen dalc’haz,
+        </l>
+        <l>
+         Awalc’h he galoun a c’hoarzaz,
+        </l>
+        <l>
+         Hag he vougaz, hag he daolaz,
+        </l>
+        <l>
+         War barlen wenn ann itron geaz.
+        </l>
+        <l>
+         — Dalit, dalit, va greg iaouank ;
+        </l>
+        <l>
+         Setu aman hoc’h eostik koant :
+        </l>
+        <l>
+         Me ’m euz hen paket evid hoc’h ;
+        </l>
+        <l>
+         Me chans, va dous, e plijo d’hoc’h. —
+        </l>
+        <l>
+         He den iaouank dal’ ma klevaz,
+        </l>
+        <l>
+         Gand glac’har vraz a lavaraz :
+        </l>
+        <l>
+         — Setu ma dous ha me tizet ;
+        </l>
+        <l>
+         Ne hallfomp mui en em welet,
+        </l>
+        <l>
+         Da sklerder loar, d’ar prenester, ’Vel ma oamp boazet da ober. -
+        </l>
+       </lg>
+      </div>
+      <div n="3" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        Voulant mettre le lecteur à même de voir comment le poète français a
+                        paraphrasé l’œuvre du poëte breton, nous citerons presque en entier la pièce
+                        de Marie de France. Seulement, on nous permettra d’en rajeunir quelques mots
+                        pour la rendre plus intelligible; l’original ayant été publié par Roquefort,
+                        il sera facile d’y recourir.
+       </p>
+       <div>
+        <p>
+         Une aventure vous dirai
+        </p>
+        <p>
+         Dont les Bretons firent un lai ;
+        </p>
+        <p>
+         Eostik a nom, ce m’est avis,
+        </p>
+        <p>
+         Si (ainsi) l’appellent en leur pays.
+        </p>
+        <p>
+         Ce est rossignol en français,
+        </p>
+        <p>
+         Et nightingale eu droit anglais.
+        </p>
+       </div>
+       <div>
+        <p>
+         A Saint-Malo, en la contrée,
+        </p>
+        <p>
+         Est une ville renommée ;
+        </p>
+        <p>
+         Deux chevaliers illec (là) manaient (demeuraient),
+        </p>
+        <p>
+         Et deux forez (voisines) maisons avaient.
+        </p>
+        <p>
+         L’un avait femme épousée,
+        </p>
+        <p>
+         Sage, courtoise, moult acemée (spirituelle),
+        </p>
+        <p>
+         Li autre fut un bachelier.
+        </p>
+        <p>
+         Bien ert (était) connu entre ses pairs.
+        </p>
+       </div>
+       <div>
+        <p>
+         . . . . . . . . . . . . . . . . . . . . . . . . .
+        </p>
+        <p>
+         . . . . . . . . . . . . . . . . . . . . . . . . .
+        </p>
+       </div>
+       <div>
+        <p>
+         La femme à son voisin aima,
+        </p>
+        <p>
+         Tant la requit, tant la pria.
+        </p>
+        <p>
+         Et tant parut en lui grand bien,
+        </p>
+        <p>
+         Qu’elle l’aima sur toute rien (par-dessus tout).
+        </p>
+       </div>
+       <div>
+        <p>
+         . . . . . . . . . . . . . . . . . . . . . . . . .
+        </p>
+       </div>
+       <div>
+        <p>
+         Longuement se sont entr’aimés.
+        </p>
+        <p>
+         Tant que ce vint à un été.
+        </p>
+        <p>
+         Que bois et prés sont reverdis.
+        </p>
+        <p>
+         Et que les vergers sont fleuris,
+        </p>
+        <p>
+         Et qu’oiselets par grand’ douceur
+        </p>
+        <p>
+         Mènent leur joie parmi les fleurs.
+        </p>
+        <p>
+         Qui aimer a à son talent ;
+        </p>
+        <p>
+         N’est merveille s’il y entend.
+        </p>
+        <p>
+         Du chevalier vous dirai voir (vérité),
+        </p>
+        <p>
+         Il y entend à son pouvoir ;
+        </p>
+        <p>
+         Et la dame de l’autre part
+        </p>
+        <p>
+         Et du parler et du regard.
+        </p>
+       </div>
+       <div>
+        <p>
+         Les nuits quand la lune luisait,
+        </p>
+        <p>
+         Et son sire couché était,
+        </p>
+        <p>
+         D’auprès de lui souvent levait,
+        </p>
+        <p>
+         Et de son mantel s’affublait,
+        </p>
+        <p>
+         A la fenêtre ester (s’asseoir) venait
+        </p>
+        <p>
+         Pour son ami qu’elle y savait.
+        </p>
+        <p>
+         Tant elle y fut, tant se leva.
+        </p>
+        <p>
+         Que son sire s’en courrouça.
+        </p>
+        <p>
+         Et maintes fois lui demanda
+        </p>
+        <p>
+         Pourquoi levait et où alla ?
+        </p>
+        <p>
+         — Sire, la dame lui i-épond.
+        </p>
+        <p>
+         Il n’en a de joie en ce mond’
+        </p>
+        <p>
+         Qui n’ouït le éostik chanter ;
+        </p>
+        <p>
+         Pour ce me vois ici ester.
+        </p>
+        <p>
+         Tant doucement l’ouïs la nuit.
+        </p>
+        <p>
+         Que moult me semble grand déduit (plaisir).
+        </p>
+       </div>
+       <div>
+        <p>
+         Quand li sire ouït ce qu’elle dit,
+        </p>
+        <p>
+         De ire (colère) et mal talent (pitié) en rit.
+        </p>
+        <p>
+         De une chose pourpensa (résolut),
+        </p>
+        <p>
+         Que le éostik engluera (prendra)
+        </p>
+        <p>
+         Il n’eut valet en sa maison
+        </p>
+        <p>
+         (qui) Ne fît engins, rets, ou laçon.
+        </p>
+        <p>
+         Puis les mettent par le verger ;
+        </p>
+        <p>
+         Ni eut coudre (coudrier) ni châtaignier
+        </p>
+        <p>
+         Où ils ne mettent lacs ou glu.
+        </p>
+        <p>
+         Tant que pris l’ont et retenu.
+        </p>
+       </div>
+       <div>
+        <p>
+         Quand le éostik ils eurent pris.
+        </p>
+        <p>
+         Au seigneur fut rendu tout vif.
+        </p>
+        <p>
+         Moult est joyeux quand il le tient.
+        </p>
+        <p>
+         A chambre la dame s’envient ;
+        </p>
+        <p>
+         — Dame, fait-il, où êtes-vous?
+        </p>
+        <p>
+         Venez avant parler à nous.
+        </p>
+        <p>
+         Je ai le éostik englué. !
+        </p>
+        <p>
+         Pour qui vous avez tant veillé :
+        </p>
+        <p>
+         Desor (désormais), pouvez dormir en paix,
+        </p>
+        <p>
+         Il ne vous éveillera mais. —
+        </p>
+       </div>
+       <div>
+        <p>
+         Quand la dame l’a entendu,
+        </p>
+        <p>
+         Dolente et courroucée en fut ;
+        </p>
+        <p>
+         A son seigneur l’a demandé,
+        </p>
+        <p>
+         El il l’occit par engresté (mauvaise humeur).
+        </p>
+        <p>
+         Le col lui rompt od (avec) ses deux mains
+        </p>
+        <p>
+         (De ce fit-il que trop vilain !)
+        </p>
+        <p>
+         Sur la dame le corps jeta,
+        </p>
+        <p>
+         Si (bien) que son cainse (corsage) ensanglanta
+        </p>
+        <p>
+         Un peu dessus le sein devant.
+        </p>
+        <p>
+         De la chambre sort à l’instant.
+        </p>
+       </div>
+       <div>
+        <p>
+         La dame prend le corps petit,
+        </p>
+        <p>
+         Durement et pleure et maudit
+        </p>
+        <p>
+         Tous ceux qui le éostik trahirent.
+        </p>
+        <p>
+         Et les engins et lacets firent.
+        </p>
+        <p>
+         Car moult l’ont irritée grand hait (vivement).
+        </p>
+        <p>
+         — Hélas! fait-elle, mal m’estuet (m’arrive) !
+        </p>
+        <p>
+         Ne pourrai plus la nuit lever,
+        </p>
+        <p>
+         Aller a la fenêtre ester.
+        </p>
+        <p>
+         Où je soûlais mon ami voir,
+        </p>
+        <p>
+         Il pensera que je me feigne (moque) :
+        </p>
+        <p>
+         De ce faut-il que conseil prenne :
+        </p>
+        <p>
+         Le éostik lui transmetterai,
+        </p>
+        <p>
+         L’aventure lui manderai. —
+        </p>
+       </div>
+       <div>
+        <p>
+         En une pièce de samit (taffetas)
+        </p>
+        <p>
+         A or brodé et tout écrit,
+        </p>
+        <p>
+         A l’oiselet enveloppé,
+        </p>
+        <p>
+         Un sien valet a appelé,
+        </p>
+        <p>
+         Son message lui a chargé,
+        </p>
+        <p>
+         A son ami l’a envoyé.
+        </p>
+        <p>
+         Il est au chevalier venu,
+        </p>
+        <p>
+         Par sa dame lui dit salut.
+        </p>
+        <p>
+         Tout son message lui conta,
+        </p>
+        <p>
+         Et le éostik lui présenta.
+        </p>
+        <p>
+         Quand tout lui a dit et montré,
+        </p>
+        <p>
+         (Et il l’avait bien écouté),
+        </p>
+        <p>
+         De l’aventure était dolent,
+        </p>
+        <p>
+         Mais ne fut pas vilain ni lent,
+        </p>
+        <p>
+         Un vasselet (petit vase) a fait forger
+        </p>
+        <p>
+         Où il n’y eut fer ni acier ;
+        </p>
+        <p>
+         Tout fut d’or fin à bonnes pierres
+        </p>
+        <p>
+         Moult précieuses et moult chères,
+        </p>
+        <p>
+         Couvercle y eut très bien assis,
+        </p>
+        <p>
+         Et le éostik a dedans mis ;
+        </p>
+        <p>
+         Puis fit la châsse bien sceller,
+        </p>
+        <p>
+         Et toujours avec lui porter.
+        </p>
+       </div>
+       <div>
+        <p>
+         Cette aventure fut contée.
+        </p>
+        <p>
+         Ne put être longtemps celée (cachée) ;
+        </p>
+        <p>
+         Un lai en firent les Bretons,
+        </p>
+        <p>
+         Et le Eostik l’appelle-t-on.
+        </p>
+       </div>
+       <div>
+        <p>
+         La fidélité de cette imitation ne permet pas de douter que Marie de France
+                        n’ait traduit sur l’original. Les fleurs qu’elle a cru devoir y broder, et
+                        les traits charmants qu’elle omet, ne prouveraient pas le contraire. Si elle
+                        juge nécessaire d’apprendre au lecteur que rossignol se dit éostik en
+                        breton, et nightingale en anglais, évidemment elle veut lui montrer qu’elle
+                        sait les langues bretonne et anglaise. Quand même elle n’aurait pas eu cette
+                        intention, on devinerait qu’elle entendait et parlait le breton à plusieurs
+                        expressions bretonnes ou francisées dont elle sème ses écrits, au mot
+                        enkrez, par exemple, qu’elle francise en engresté, dans la pièce qui nous
+                        occupe. On le jugerait encore, à certaines manières de dire qu’offre
+                        très-souvent notre ballade, comme tous nos chants populaires, et qu’elle
+                        reproduit :
+        </p>
+       </div>
+       <div>
+        <p>
+         Quand le sire ouït ce qu’elle dit, etc.
+        </p>
+        <p>
+         Quand le éostik eurent pris, etc.
+        </p>
+        <p>
+         Quand la dame l’a entendu, etc.
+        </p>
+        <p>
+         Quand tout lui a dit et montré, etc.
+        </p>
+       </div>
+       <div>
+        <p>
+         On le verrait surtout par la forme rhthmique de sa pièce, forme identique à
+                        celle de l’original, et dont les vers pourraient se diviser, de même, en
+                        distiques formant un sens complet, et se chanter sur l’air breton. Je vais
+                        plus loin ( et ceci me porte à croire que notre version est bien publiée
+                        dans son dialecte naturel ) Marie a très-probablement traduit d’après le
+                        dialecte de Léon, car c’est le seul où rossignol se soit toujours écrit et
+                        prononcé éostik ; en Cornouaille, en Tréguier et en Vannes, on a constamment
+                        écrit estik ou est. Un critique breton, M. Hippolyte Lucas, dans un compte
+                        rendu bienveillant de ce recueil, a dit, en parlant du Rossignol : « Cette
+                        ballade charmante mériterait d’être rajeunie par un de nos poètes. » Nous
+                        regrettons qu’il ne l’ait pas traduite lui-même ; le sujet est tout à fait
+                        digne de son gracieux talent.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div n="2" type="T">
+    <head>
+     Chants historiques
+    </head>
+    <div n="3" type="D">
+     <head>
+      Dialecte Trégorois (Tregerieg)
+     </head>
+     <div n="4" type="chanson">
+      <head type="titre_général">
+       LE SIEGE DE GUINGAMP (SEZIZ GWENGAMP)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        La Bretagne, en l’année 1488, était tombée dans le plus déplorable état :
+                        attaquée au dehors, divisée au dedans, trahie par quelques-uns des siens,
+                        réduite à créer une monnaie de cuir marquée d’un point d’or, pour remédier à
+                        la ruine de ses finances, et sans autre chef qu’une enfant. Mais toute
+                        vaincue et misérable qu’elle était, elle pouvait se relever, car, bien que
+                        gouvernée, depuis plusieurs siècles, par des princes de race étrangère, elle
+                        n’était pas encore tombée sous l’autorité immédiate des rois de France, et
+                        elle les repoussait toujours. A la tête des déserteurs de la cause nationale
+                        se trouvait le vicomte de Rohan ; il vint assiéger Guingamp, en qualité de
+                        lieutenant général des armées du roi en Bretagne.
+       </p>
+       <p>
+        « Mais, dit d’Argentré, les habitants de Guingamp firent response que de
+                        mettre la ville ny autres villes entre ses mains, ils ne devoient le faire,
+                        ne devant ignorer ledit seigneur qu’elles ne fussent à la Duchesse, à
+                        laquelle du vivant du feu Duc son père et depuis son décès, ils avoient fait
+                        serment de les garder ; par ainsi le prioient de les tenir pour excusés de
+                        faire autre response jusques à savoir l’intention de la Duchesse. »
+       </p>
+       <p>
+        Rolland Gouiket, ou Gouyquet, commandait dans la ville ; la garnison était
+                        peu nombreuse : il arma tous les jeunes gens, les posta dans le fort
+                        Saint-Léonard, au faubourg de Tréguier, et le premier assaut des Français
+                        fut repoussé vigoureusement. Le lendemain ils revinrent a la charge,
+                        battirent le fort en brèche, et s’emparèrent des faubourgs. Gouiket fit une
+                        sortie et les repoussa encore. Le troisième jour, le vicomte de Rohan donne
+                        l’assaut à la ville même ; Gouiket est blessé sur la brèche ; on l’emporte :
+                        sa femme le remplace, fait un massacre horrible des Français, et les force à
+                        demander une suspension d’armes. Le vicomte de Rohan profite du sursis,
+                        prend la ville par trahison et la livre au pillage. Mais il n’en jouit pas
+                        longtemps ; Gouiket, à peine guéri de sa blessure, s’étant annoncé avec un
+                        renfort considérable, les Français prirent l’alarme et abandonnèrent la
+                        ville. Cet événement historique est le sujet d’un chant populaire
+                        très-répandu ; j’en dois une copie à l’obligeance de madame de
+                        Saint-Prix.
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        Le siège de Guincamp
+       </head>
+       <lg>
+        <l>
+         — Portier, ouvrez celle porte ! C’est le sire de Rohan qui est ici, et
+                           douze mille hommes avec lui, prêts à mettre le siège devant Guingamp.
+        </l>
+        <l>
+         — Celle porte ne sera ouverte ni à vous ni a personne sans ordre de la
+                           duchesse Anne, à qui appartient cette ville.
+        </l>
+        <l>
+         — Ouvrira-t-on ces portes au prince déloyal qui est ici avec douze mille
+                           hommes, prêts à mettre le siège devant Guingamp ?
+        </l>
+        <l>
+         — Mes portes sont verrouillées, mes murailles crénelées ; je rougirais de
+                           les écouter ; la ville de Guingamp ne sera point prise.
+        </l>
+        <l>
+         Quand ils passeraient là dix-huit mois, ils ne la prendraient pas ;
+                           chargez votre canon ; çà ! du courage ! et voyons qui se repentira !
+        </l>
+        <l>
+         — Il y a ici trente boulets, trente boulets pour le charger ; de poudre,
+                           nous n’en manquons pas, non plus que de plomb ou d’étain. —
+        </l>
+        <l>
+         Comme il revenait et montait, il fut blessé d’un coup de feu, d’un coup
+                           de feu par un soldat du camp nommé Gwazgaram.
+        </l>
+        <l>
+         La duchesse Anne dit alors à l’épouse du canonnier : —
+        </l>
+        <l>
+         — Seigneur Dieu ! que faire ? voilà votre pauvre mari blessé !
+        </l>
+        <l>
+         — Quand même mon mari serait mort, je saurais bien le remplacer ! Son
+                           canon, je le chargerai, feu et tonnerre ! et nous verrons ! —
+        </l>
+        <l>
+         Comme elle disait ces mots, les murailles furent brisées, les portes
+                           enfoncées ; la ville était pleine de soldats.
+        </l>
+        <l>
+         — A vous, soldats, les jolies filles, et à moi l’or et l’argent, tous les
+                           trésors de la ville de Guingamp, et de plus, la ville elle-même ! —
+        </l>
+        <l>
+         La duchesse Anne se jeta à deux genoux, en l’entendant parler ainsi : —
+                           Notre-Dame de Bon-Secours, je vous en supplie, venez à notre aide! —
+        </l>
+        <l>
+         La duchesse Anne, en l’entendant, courut à l’église, et se jeta à deux
+                           genoux sur la terre froide et nue :
+        </l>
+        <l>
+         — Voudriez-vous, vierge Marie ! voir votre maison changée en écurie,
+                           votre sacristie en cellier, et votre maître-autel en table de cuisine ?
+                           —
+        </l>
+        <l>
+         Elle parlait encore, qu’une grande épouvante s’était emparé de la ville :
+                           un coup de canon venait d’être tiré, et neuf cents hommes étaient tués
+                           ;
+        </l>
+        <l>
+         Et c’était le plus affreux vacarme ; et les maisons tremblaient, et
+                           toutes les cloches sonnaient tumultueusement, sonnaient d’elles-mêmes
+                           dans la ville.
+        </l>
+        <l>
+         — Page, page, petit page, tu es léger, gaillard et vif ; monte vite au
+                           haut de la tour plate, pour voir qui met les cloches en branle.
+        </l>
+        <l>
+         Tu portes une épée au côté ; si tu trouves quelqu’un là ; si tu trouves
+                           quelqu’un qui sonne, plonge-lui ton épée au cœur. —
+        </l>
+        <l>
+         En montant, il chantait gaiement ; en descendant, il tremblait fort — Je
+                           suis monté jusqu’au haut de la tour plate, et je n’ai vu personne ;
+        </l>
+        <l>
+         Et je n’y ai vu personne que la Vierge bénie, que la Vierge et son fils,
+                           vraiment ; ce sont eux qui mettent les cloches en branle. —
+        </l>
+        <l>
+         Le prince déloyal dit alors à ses soldats : — Sellons nos chevaux, et en
+                           route ! et laissons leurs maisons aux saints ! —
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Seziz Gwengamp
+       </head>
+       <lg>
+        <l>
+         — Porzer, digoret ann nor-man !
+        </l>
+        <l>
+         Ann otro Rohan zo aman,
+        </l>
+        <l>
+         Ha daouzek mil soudard gant-han,
+        </l>
+        <l>
+         Da lakat seziz war Gwengamp.
+        </l>
+        <l>
+         — Ann nor-man na vo digoret
+        </l>
+        <l>
+         Na d’hoc’h na da zen-all e-bed,
+        </l>
+        <l>
+         Ken na laro dukez Anna,
+        </l>
+        <l>
+         A zo mestrez war ar ger-ma.
+        </l>
+        <l>
+         — Digoret vo ar perzier-ma
+        </l>
+        <l>
+         D’ar prens diwirion zo ama,
+        </l>
+        <l>
+         Ha daouzek mil soudard gant-han,
+        </l>
+        <l>
+         Da lakat seziz war Gwengamp ?
+        </l>
+        <l>
+         — Ma dorio a zo moraillet,
+        </l>
+        <l>
+         Va mogerio zo krenvaet,
+        </l>
+        <l>
+         Fe ve gan-in deuz ho c’hlevet :
+        </l>
+        <l>
+         Gwengamp na vo ket kemeret.
+        </l>
+        <l>
+         Na pa vent triouec’h miz aze,
+        </l>
+        <l>
+         Na ve ket kemeret gant-he ;
+        </l>
+        <l>
+         Karget ho kanol ! poan ha hec’h !
+        </l>
+        <l>
+         Ha gwelomp piou en devo nec’h !
+        </l>
+        <l>
+         — Tregont bolod a zo aman,
+        </l>
+        <l>
+         Tregont bolod ’vit he gargan ;
+        </l>
+        <l>
+         Poultr na vank, na plomb tamm e-bed,
+        </l>
+        <l>
+         Na stin da ober ken-neubet. —
+        </l>
+        <l>
+         Tre m’ed’o tistroi ha pignet,
+        </l>
+        <l>
+         Gand eunn tenn poultr-gwenn oe tihet.
+        </l>
+        <l>
+         Gand eunn tenn poultr demeuz ar c’hamp,
+        </l>
+        <l>
+         Gand eunn den hanvet Gwazgaram.
+        </l>
+        <l>
+         Dukez Anna a lavare
+        </l>
+        <l>
+         Da c’hreg ar c’hanolier neuze ;
+        </l>
+        <l>
+         — Otro Doue ! petra vo gret ?
+        </l>
+        <l>
+         Chetu ho pried paour tihet !
+        </l>
+        <l>
+         — Na pa ve ma fried maro,
+        </l>
+        <l>
+         Me refe ma-eunn enn he dro !
+        </l>
+        <l>
+         Hag he ganol me he gargo,
+        </l>
+        <l>
+         Tan ha kurun ! ha ni welo ! —
+        </l>
+        <l>
+         Oa ked he ger peurachuet,
+        </l>
+        <l>
+         Ar mogerio zo bet frezet,
+        </l>
+        <l>
+         Ann orio a zo bet torret ;
+        </l>
+        <l>
+         Ha leun ar ger a zoudarded.
+        </l>
+        <l>
+         — D’hoch, soudarded, ar merc’hed koant,
+        </l>
+        <l>
+         Ha d’in ann aour hag ann argant,
+        </l>
+        <l>
+         Hag holl tensorio ker Gwengamp,
+        </l>
+        <l>
+         Hag ouspenn ar ger he eunan ! —
+        </l>
+        <l>
+         Dukez Anna en em strinkaz
+        </l>
+        <l>
+         War he daou-lin, pa he glevaz :
+        </l>
+        <l>
+         — Itron Varia-Gwir-zikour,
+        </l>
+        <l>
+         Ma plijfe gen-hoc’h, hor sikour ! —
+        </l>
+        <l>
+         Dukez Anna dal’ ma glevaz,
+        </l>
+        <l>
+         Trezeg ann iliz a redaz ;
+        </l>
+        <l>
+         Ha war he daou-lin ’nem stouaz,
+        </l>
+        <l>
+         Ha war ann douar ien ha noaz :
+        </l>
+        <l>
+         — Ha c’hui garfe, gwerc’hez Vari,
+        </l>
+        <l>
+         Gwelet ho ti da varchosi,
+        </l>
+        <l>
+         Ho sakristiri da gao gwin,
+        </l>
+        <l>
+         Hoc’h oter vraz da dol kegin ? —
+        </l>
+        <l>
+         Ne oa ket peurlaret he c’her,
+        </l>
+        <l>
+         Ma teuaz eur spont braz e ker ;
+        </l>
+        <l>
+         Gand eunn tenn kanol oa losket
+        </l>
+        <l>
+         Ha nao c’hant den a oa lazet ;
+        </l>
+        <l>
+         Ha gand ar strak ann heuzusa,
+        </l>
+        <l>
+         Ha gand ann tier o krena ;
+        </l>
+        <l>
+         Ha gand son-vrell ann holl gleier,
+        </l>
+        <l>
+         O sini ho eunan e ker.
+        </l>
+        <l>
+         — Pachik, pachik, pachik bihan,
+        </l>
+        <l>
+         Te zo skanv, ha drant, ha buhan,
+        </l>
+        <l>
+         Kerz timad da veg ann tour-plad,
+        </l>
+        <l>
+         Da c’hout piou zo o vransellat.
+        </l>
+        <l>
+         Euz ta goste zo eur c’hleze,
+        </l>
+        <l>
+         Mar kaez den-bennag aze,
+        </l>
+        <l>
+         Mar kaez den bennag o son,
+        </l>
+        <l>
+         Plant da gleze enn he galon ! —
+        </l>
+        <l>
+         O vont d’al lae, hen gane ge,
+        </l>
+        <l>
+         O tont d’ann traon, hen grene tre :
+        </l>
+        <l>
+         — Beg ann tour-plad ed-onn-me bet,
+        </l>
+        <l>
+         Ha den e-bet n’em euz gwelet ;
+        </l>
+        <l>
+         Ha den eno n’em euz gwelet,
+        </l>
+        <l>
+         Nemed ar Werc’hez venniget,
+        </l>
+        <l>
+         Ar Werc’hez hag he mab, a-vad,
+        </l>
+        <l>
+         Re ze a zo vransellat. —
+        </l>
+        <l>
+         Ar prens diwirion lavare
+        </l>
+        <l>
+         D’he zoudarded, pa he gleve :
+        </l>
+        <l>
+         — Sternomp hor c’hesek, ha d’ann hent !
+        </l>
+        <l>
+         Ha loskomp ho zier gand ar zent. —
+        </l>
+       </lg>
+      </div>
+      <div n="4" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        Si le chant qu’on vient de lire est parfaitement d’accord avec l'histoire
+                        pour le fond et même pour certains détails, par exemple, la sommation faite
+                        à la ville par le vicomte de Rohan, et son refus, qui se retrouvent presque
+                        littéralement dans Bouchard et d’Argentré, il en diffère essentiellement par
+                        d’autres. Ainsi Gouiket (le canonnier ou le portier, comme l’auteur
+                        l’appelle) fut blessé non d’un coup de feu, mais d’un coup de pique à la
+                        cuisse, et ce n’est pas au moment où on l’emporta du lieu du combat, et où
+                        sa femme prit sa place, que l’ennemi s’empara de Guingamp, mais plusieurs
+                        mois après ; enfin la duchesse Anne ne se trouvait point dans la ville, et
+                        ce fut la nouvelle de l’approche du capitaine Gouiket, lequel avait trouvé
+                        moyen de sortir de Guingamp pour aller chercher du secours, qui, jetant
+                        l’épouvante parmi les Français, leur fit sonner le tocsin et abandonner leur
+                        conquête Ces erreurs, très-naturelles et très-concevables, du reste, nous
+                        portent à croire que le chant n’a pas été composé sur les lieux, car le
+                        poëte populaire, lorsqu’il décrit ce qu’il a vu, est toujours de la plus
+                        minutieuse exactitude. Le vicomte de Rohan, ce « prince félon » (digwirion),
+                        est demeuré l’objet de l’exécration du peuple. D’un parjure, d’un traître,
+                        d’un homme qui a vendu son honneur et qui s’est souillé de quelque lâcheté
+                        honteuse, le montagnard breton dit proverbialement : « Il mange à l’auge
+                        comme Rohan. »
+       </p>
+       <p>
+        Dibri a ra enn neo evel ma ra Rohan.
+       </p>
+       <p>
+        Cette auge, en 1488, était la table du roi de France. La ville de Guingamp a
+                        élevé une statue au brave Gouiket : cette statue le représentait la tête
+                        nue, les cheveux longs, armé de toutes pièces, avec une épée à la main. La
+                        révolution l’a détruite ; tous les Bretons forment des vœux pour qu’on la
+                        rétablisse. L’épouse de Gouiket a pris rang à côté de Jeanne de Montfort,
+                        cette autre héroïne bretonne ; les paysans l’appellent Tomina Al-Léan, noms
+                        que des titres de famille ont francisés en Thomine le Moine. La mère de
+                        celui qui écrit ces lignes est leur dernier descendant.
+       </p>
+      </div>
+     </div>
+     <div n="5" type="chanson">
+      <head type="titre_général">
+       L’ORPHELINE DE LANNION (EMZIVADEZ LANNION)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        « Il y a trois sortes de personnes, dit un ancien proverbe breton, qui
+                        n’arriveront point au paradis, tout droit, par le grand chemin ; c’est à
+                        savoir : les tailleurs (sauf votre respect), dont il faut neuf pour faire un
+                        homme, qui passent leurs journées assis, et qui ont les mains blanches ; les
+                        sorciers, qui jettent des sorts, soufflent le mauvais vent, et ont fait
+                        pacte avec le diable ; les maitôtiers (les percepteurs des contributions),
+                        qui ressemblent aux mouches aveugles, lesquelles sucent le sang des animaux.
+                        »
+       </p>
+       <p>
+        Le maltôtier est d’ordinaire querelleur, bavard, bel esprit, beau parleur ;
+                        il est même facétieux, et assaisonne volontiers de gros sel ses vexations.
+                        On rapporte qu’un cabaretier arrivait un jour à la foire, avec deux
+                        barriques de cidre dans sa charrette ; le maltôtier se présente et exige le
+                        droit : l’autre résiste. « Comment, malheureux, lui dit l’employé, vous osez
+                        murmurer ! Saint Mathieu n’était- il pas chef des maltôtiers ? Ne le
+                        voyait-on pas, en Judée, percevoir de chacun la taxe sur le vin et le tabac
+                        tous les jours de l’année ? » Au nom de saint Mathieu, le paysan resta
+                        confondu.
+       </p>
+       <p>
+        Mais toutes les histoires de maltôtiers ne sont pas aussi naïves ; il en est
+                        d’affreuses. En voici une que nous avons entendu chanter à des laveuses de
+                        Lannion, où l’événement s’est passé.
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        L’Orpheline de Lannion
+       </head>
+       <lg>
+        <l>
+         En cette année mil six cent quatre-vingt-treize, est arrivé un malheur
+                           dans la petite ville de Lannion ;
+        </l>
+        <l>
+         Dans la petite ville de Lannion, en une hôtellerie, à Perinaïk Mignon qui
+                           y était servante.
+        </l>
+        <l>
+         — Donnez-nous à souper, hôtesse : tripes fraîches, viande rôtie, et bon
+                           vin à boire ! —
+        </l>
+        <l>
+         Quand chacun d’eux eut bu et mangé tout son soûl :
+        </l>
+        <l>
+         — Voici de l’argent, hôtesse, comptez, blancs et deniers ;
+        </l>
+        <l>
+         Voici de l’argent, hôtesse ; votre servante et une lanterne pour nous
+                           reconduire chez nous ! —
+        </l>
+        <l>
+         Quand ils furent un peu loin sur le grand chemin, ils se mirent à parler
+                           bas, en regardant la jeune fille.
+        </l>
+        <l>
+         — Belle enfant, vos dents, votre front et vos joues sont blancs comme
+                           l’écume des flots, sur la rive.
+        </l>
+        <l>
+         — Maltôtiers, je vous prie, laissez-moi comme je suis ; laissez-moi comme
+                           Dieu m’a faite ;
+        </l>
+        <l>
+         Quand je serais cent fois plus belle ; oui-da ! cent fois plus belle
+                           encore ; je ne serais pas pour vous, messieurs, je ne serais ni mieux ni
+                           pire.
+        </l>
+        <l>
+         — A en juger par vos gentilles paroles, mon enfant, l’on dirait que vous
+                           êtes ailée à l’école de ceux de Bégar, ou d’habiles clercs ;
+        </l>
+        <l>
+         A en juger par vos gentilles paroles, mon enfant, l'on dirait que vous
+                           êtes allée apprendre à parler avec les moines en leur couvent.
+        </l>
+        <l>
+         — Je ne suis allée ni au couvent de Bégar, apprendre à parler, ni
+                           ailleurs, croyez-moi, avec les clercs ; Mais chez moi, au foyer de mon
+                           père, j’ai eu, messieurs, bien des bonnes pensées.
+        </l>
+        <l>
+         — Jetez là votre lanterne, et éteignez-en la lumière ; voici une bourse
+                           pleine ; elle est à vous, si vous le voulez.
+        </l>
+        <l>
+         — Je ne suis point de ces filles que l’on voit par les rues des villes, à
+                           qui l’on donne douze blancs et dix-huit deniers !
+        </l>
+        <l>
+         J’ai pour frère un prêtre de la ville de Lannion ; s’il entendait ce que
+                           vous dites, son cœur se briserait.
+        </l>
+        <l>
+         Je vous en prie, messieurs, faites-moi la grâce de me précipiter au fond
+                           de la mer, plutôt que de me faire un pareil affront !
+        </l>
+        <l>
+         Je vous en supplie, messieurs, plutôt que de me faire un pareil chagrin,
+                           enterrez-moi toute vive. —
+        </l>
+        <l>
+         Perina avait une maîtresse pleine de bonté, qui resta sur le foyer à
+                           attendre sa servante ;
+        </l>
+        <l>
+         Elle resta sur le foyer, sans se coucher, jusqu’à ce que sonnèrent deux
+                           heures, deux heures après minuit.
+        </l>
+        <l>
+         — Levez-vous donc, paresseux ! levez-vous donc, sénéchal, pour aller
+                           secourir une jeune fille qui nage dans son sang. —
+        </l>
+        <l>
+         On la trouva morte près de la croix de Saint-Joseph ; sa lanterne était
+                           auprès d’elle, et la lumière vivait toujours.
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Emzivadez Lannion
+       </head>
+       <lg>
+        <l>
+         Er bloavez-ma mil c’houec’h kant pevar-ugent-trizek,
+        </l>
+        <l>
+         Er gerig a Lannion zo eur gwalleur c’houarvet ;
+        </l>
+        <l>
+         Er gerig a Lannion enn eunn hostaliri,
+        </l>
+        <l>
+         Da Berinaik Mignon a oe matez enn hi.
+        </l>
+        <l>
+         — Aozet d’omp-ni, hostizez, peb tra evit koanian :
+        </l>
+        <l>
+         Stlipo fresk, ha kik rostet, ha gwin mad da evan ! —
+        </l>
+        <l>
+         P’ho doe debret hag evet peb hini leiz he ler :
+        </l>
+        <l>
+         — Setu arc’hant, hostizez, kontet blank ha diner ;
+        </l>
+        <l>
+         Setu arc’hant, hostizez, kontet blank ha diner ;
+        </l>
+        <l>
+         Ho matez gand eul letern, da zont d’hon c’has d’ar ger ! —
+        </l>
+        <l>
+         Pa oant-hi war ann hent braz eur pennadik mad eet,
+        </l>
+        <l>
+         Eur gomz kuz warbenn ar plac’h tre-n-he oa bet laret.
+        </l>
+        <l>
+         — Plac’hik koant, ho tentigo, ho tal hag ho tiou-jod,
+        </l>
+        <l>
+         A zo gwenn evel ton ar c’hoummo, war ann od.
+        </l>
+        <l>
+         — Maltoterien, me ho ped, em lezet evel on,
+        </l>
+        <l>
+         Evel laket gand Doue, laket gand Doue on ;
+        </l>
+        <l>
+         Ha pa venn kant gwech braoc’h, ia kant gwech braoc’h c’hoaz,
+        </l>
+        <l>
+         Na venn ’vid hoc’h, otronez, na venn na well na was.
+        </l>
+        <l>
+         — Hervez ho komzo mignon, va merc’hik, me a gred,
+        </l>
+        <l>
+         Em hoc’h bet gand re Begar, pe gand kloer desket ;
+        </l>
+        <l>
+         Hervez ho komzo mignon, va merc’hik, me a gret,
+        </l>
+        <l>
+         D’ar govant o tiski preek gand menec’h em hoc’h bet.
+        </l>
+        <l>
+         — D’ar govant o tiski preeg e Begar n’em on bet,
+        </l>
+        <l>
+         Na ken nebeut e leac’h all, avad, gand kloarek ’bed ;
+        </l>
+        <l>
+         Hogen, ebarz em zi-me ha war oaled va zad,
+        </l>
+        <l>
+         Em euz gret, va otronez, bep seurt mennozio mad.
+        </l>
+        <l>
+         — Tolet aze ho letern, ha c’houeet ho koulo ;
+        </l>
+        <l>
+         Setu’r ialc’h leun a arc’hant, ma hoc’h euz c’hoant, he po.
+        </l>
+        <l>
+         — Ne ket me eo’r femelen, a ve dre ruio ker,
+        </l>
+        <l>
+         O kemeret daouzek blank ha c’hoaz triouec’h tiner !
+        </l>
+        <l>
+         Me meuz da vreur ur beleg er ger a Lannion ;
+        </l>
+        <l>
+         Mar klefe pez a leret, rannafe he galon.
+        </l>
+        <l>
+         Me ho ped, maltoterien, pezet ar vadelez,
+        </l>
+        <l>
+         D’am zeurel e-kreiz ar mor kent eit kement c’hloez !
+        </l>
+        <l>
+         Me ho ped, ma otronez, kent eit kement c’hlac’har,
+        </l>
+        <l>
+         Kemeret ar vadelez, d’am lakat beo enn douar. —
+        </l>
+        <l>
+         Perinan doe eur vestrez karget a vadelez
+        </l>
+        <l>
+         A jomaz war ann oaled da c’hortoz he matez,
+        </l>
+        <l>
+         A jomaz war ann oaled, heb kemeret paouez,
+        </l>
+        <l>
+         Ken a zonaz ann diou heur, diou heur kent hag ann dez.
+        </l>
+        <l>
+         — Savet ta, tra dibreder, savet ta, senesal,
+        </l>
+        <l>
+         O vont da zikour eur plac’h, enn he goad o neuial. —
+        </l>
+        <l>
+         E kichen kroaz Sant-Josef oa bet kavet maro ;
+        </l>
+        <l>
+         He letern enn he c’hichen, ha beo he goulo.
+        </l>
+       </lg>
+      </div>
+      <div n="5" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        L’auberge où servait la pauvre jeune fille se nommait l’hôtellerie du
+                        Pélican blanc. Elle était orpheline ; sa maîtresse lui tenait lieu de mère ;
+                        son frère était vicaire dans la ville. Ce fut lui qui conduisit le cortège
+                        funèbre ; toute la ville de Lannion assistait à l’enterrement : des jeunes
+                        demoiselles des premières familles, vêtues de blanc, tenaient les cordons du
+                        poêle. Perinaïk fut regardée comme une martyre. Le sénéchal fit arrêter les
+                        deux coupables, qu’on trouva ivres et endormis, le lendemain ; ils furent
+                        condamnés à être pendus. L’un sifflait en se rendant au lieu du supplice, et
+                        demanda un biniou pour faire danser la foule ; l’autre, moins audacieux,
+                        pleurait, et le peuple lui jetait des pierres; il se cramponna, dit-on, si
+                        fortement avec le pied au pilier de la potence, que le bourreau dut le lui
+                        couper d’un coup de hache.
+       </p>
+       <p>
+        Longtemps après l’assassinat de Perinaïk, on voyait trembler a minuit une
+                        petite lumière près de la croix de Saint-Joseph ; une nuit, on vit la
+                        lumière paraître comme à l’ordinaire, et puis grandir, grandir encore,
+                        prendre une forme humaine, une tête, des bras, un corps vêtu d’une robe
+                        lumineuse, deux ailes, et s’envoler au ciel.
+       </p>
+       <p>
+        Le temps où la jeune fille eût cessé de vivre, si elle fût restée sur la
+                        terre, était arrivé.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div n="4" type="D">
+     <head>
+      Dialecte Vannetais (Gwenedeg)
+     </head>
+     <div n="6" type="chanson">
+      <head type="titre_général">
+       CHANT DU PRÊTRE EXILÉ (KANAOUEN AR BELEK
+                     FORBANNET)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        C'est une sorte de royauté sainte que le sacerdoce en Bretagne ; on dirait
+                        que les descendants des anciens Celtes ont conservé aux prêtres catholiques
+                        la vénération que leurs pères avaient pour leurs druides. Mais, a ce
+                        sentiment, le christianisme en joint un autre que lui seul pouvait inspirer
+                        : l’attachement réciproque des fidèles et du prêtre. Si, en effet, ceux-là
+                        aiment leur pasteur comme un père (l’expression n’est pas trop forte),
+                        celui-ci leur dévoue sa vie, et reporte sur eux la tendresse qu’il eût vouée
+                        a des enfants selon la chair. Cet attachement mutuel éclata surtout pendant
+                        la révolution. Nous allons, tout a l’heure, entendre les paysans bretons
+                        s’écrier qu’ils « se sont levés pour détendre leur pays et leurs prêtres ; »
+                        écoutons d’abord le prêtre lui-même.
+       </p>
+       <p>
+        Parmi les ecclésiastiques bretons que le refus de serment à la constitution
+                        civile du clergé jeta sur les côtes d’Angleterre, d’Espagne ou de Portugal,
+                        se trouvait l’abbé Nourri, recteur de la paroisse de Bignan, dans l’évêché
+                        de Vannes ; il composa, sur son exil et les malheurs de son pays, une élégie
+                        touchante qu’il adressa à ses paroissiens. Son chant n’est point, il est
+                        vrai, conçu dans la forme ordinaire des poésies populaires ; mais, comme il
+                        jouit d’une extrême popularité, on ne l’exclura pas de ce recueil.
+       </p>
+       <p>
+        Il m’a été chanté par une vieille femme de Bignan. Les imprimeurs bretons
+                        l’ont tronqué, selon leur habitude, dans les versions qu’ils en ont données
+                        au public.
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        Chant du prêtre exilé
+       </head>
+       <lg>
+        <l>
+         Écoutez un recteur de l’évêché de Vannes, exilé pour la foi, loin du
+                           royaume ; son corps est loin de vous, mais sa pensée comme son cœur ne
+                           vous ont pas quittés.
+        </l>
+        <l>
+         Depuis l’instant cruel où des ordres impitoyables m’ont éloigné de vous,
+                           je vous ai toujours devant les yeux, et je pleure nuit et jour en
+                           songeant à vos peines.
+        </l>
+        <l>
+         O jour plein de douleur ! ô jour plein de deuil, qui m’a séparé de vous,
+                           mes enfants ! désolant adieu ! Tant que je vivrai je me souviendrai de
+                           toi ; je ne l’oublierai jamais !
+        </l>
+        <l>
+         Semblable à Jérémie ou aux malheureux Juifs , pendant leur longue
+                           captivité à Babylone, chaque jour, en songeant à toutes vos peines, je
+                           mêle mes larmes aux flots de la mer.
+        </l>
+        <l>
+         Assis sur un rocher, seul au bord du rivage, je pleure amèrement, et
+                           j’inonde mes joues, j’inonde, hélas ! mes joues de larmes, en pensant à
+                           vous, qui êtes par delà les mers.
+        </l>
+        <l>
+         O bon peuple béni ! où est le temps heureux où vous me trouviez chaque
+                           jour pour vous parler de Dieu, pour décharger vos cœurs, et pour vous
+                           soutenir par la communion !
+        </l>
+        <l>
+         Ah! mes chers enfants, dans quel état êtes-vous ? Vous me cherchez tous
+                           les jours, et vous ne me trouvez plus ; moi, je vous cherche aussi ; mais
+                           hélas ! vous n’avez plus de père, et je n’ai plus d’enfants !
+        </l>
+        <l>
+         Chères petites brebis, qu’allez-vous devenir ? Qui vous assistera, qui
+                           vous portera secours ? Jésus, bon Pasteur ! ne les oubliez pas, et
+                           tendez-leur en tout temps la main.
+        </l>
+        <l>
+         Esprits heureux, saints et saintes, et vous, reine du ciel, ne les
+                           quittez jamais ; donnez-leur aide en leurs devoirs et consolation dans
+                           leurs maux.
+        </l>
+        <l>
+         terre de Bretagne ! ô mon pays désolé ! dans quelle mer d’affliction
+                           as-tu été précipité ? Autrefois tu étais beau, tu étais joyeux et gai ;
+                           maintenant, hélas ! te voilà navré de douleur !
+        </l>
+        <l>
+         Une troupe de traîtres, sans foi ni loi, l’ont ébranché et bouleversé ;
+                           ils ont ravi toutes les joies du cœur ; ils ont chassé évêques, moines et
+                           prêtres.
+        </l>
+        <l>
+         Évêques, prêtres, moines, ont été chassés ; les religieuses ont abandonné
+                           le pays ; plus de messe, plus de sacrements ; les ronces croissent dans
+                           nos églises !
+        </l>
+        <l>
+         Les nappes d’autel, la croix et le calice ont été profanés, et les
+                           cloches volées dans toutes les paroisses ; l’église est veuve et
+                           dépouillée de ses biens ; le cher Jésus a été exilé du tabernacle ;
+        </l>
+        <l>
+         L’église est profanée ; elle est changée en écurie, et le maître-autel en
+                           table à manger ; les vrais chrétiens, les honnêtes gens pleurent ;
+                           partout, partout les méchants les oppriment !
+        </l>
+        <l>
+         O mon Dieu ! vous êtes irrité par nos péchés ; c’est nous qui sommes les
+                           auteurs de tous les maux qui nous accablent. Quand nous vous sommes
+                           fidèles, vous nous êtes fidèle ; nous nous sommes éloignés de vous, vous
+                           vous éloignez de nous.
+        </l>
+        <l>
+         Dans votre colère pourtant, vous êtes plein de miséricorde, et de l’abîme
+                           de nos afflictions vous faites sortir le bonheur. Pitié ! mon Dieu !
+                           pitié ! nous sommes vos enfants ; pardonnez nous le mal que nous avons
+                           fait !
+        </l>
+        <l>
+         À tout le royaume, à l’Église désolée, rendez, mon Dieu, rendez bien vite
+                           vos bontés. Ayez pitié de nous, ô Dieu d’amour ! Rendez-nous la paix,
+                           rendez-nous la foi !
+        </l>
+        <l>
+         Quand serons-nous, pasteurs et troupeaux, tous réunis, pour chanter vos
+                           louanges ? Quand viendra le jour qui séchera nos larmes, et où nous
+                           pourrons chanter votre gloire au milieu de nos temples ?
+        </l>
+        <l>
+         Ô jour de félicité ! ô jour plein de douceur ! je songe à toi à toute
+                           heure, à tout moment ; ô Dieu de bonté ! hâtez l’instant où je pourrai
+                           revoir mes enfants !
+        </l>
+        <l>
+         Va, chant de tristesse, consolation de mon cœur, va, et dis à mon peuple
+                           combien est grande ma douleur. Portez-le sur vos ailes, bons anges, et
+                           dites-leur bien que jour et nuit je pense à eux.
+        </l>
+        <l>
+         Tourterelle, petit rossignol, quand revient le temps nouveau, vous allez
+                           chanter à la porte de mes enfants. Ah ! que ne puis-je y voler comme vous
+                           ! Que ne puis-je voler, par delà la mer, jusqu’à mon pays, comme vous
+                           !
+        </l>
+        <l>
+         Ah ! dites-leur, connue je ferais ; chantez-leur de toutes vos forces : —
+                           Conservez bien la Foi ; conservez votre loi ; — et faites-leur vous
+                           répondre : — Oui ! nous conserverons la Foi ! plutôt souffrir mille morts
+                           que d’oublier notre Dieu ! —
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Kanaouen ar belek Forbannet
+       </head>
+       <lg>
+        <l>
+         Cheleuet ur person a eskopti Gwenned,
+        </l>
+        <l>
+         Pell doc’h er roanteleah eit er fe forbannet :
+        </l>
+        <l>
+         Pell eu a gorf doh hoc’h, mez he impinion
+        </l>
+        <l>
+         A zou perpet gen-hoc’h kerklous ’el he galon.
+        </l>
+        <l>
+         A oude enn amzer kri ha diskonfortuz
+        </l>
+        <l>
+         Ma on pellet doh hoc’h dre urzeu truehuz,
+        </l>
+        <l>
+         Dirak men deu-leged perpet holl hon kwelann,
+        </l>
+        <l>
+         Hag ar hou poenieu de ha noz e wilann.
+        </l>
+        <l>
+         O de lan a c’hlac’har, o de lan a driste !
+        </l>
+        <l>
+         En dez me distaget doh hoc’h, me bugale ;
+        </l>
+        <l>
+         O kimiad glac’haruz ! Keit ha me veveinn
+        </l>
+        <l>
+         M’em bou sonj ann e-oud ; biken ned ankoueinn !
+        </l>
+        <l>
+         Aval doh Jeremi pe doh er geh Juived,
+        </l>
+        <l>
+         Er ger a Vabilon pel amzer sklavehet,
+        </l>
+        <l>
+         Pamde, enn ur zonjal e holl hou poenieu,
+        </l>
+        <l>
+         Get houlenneu er mor e kaijan men dareu.
+        </l>
+        <l>
+         Ar ur roc’h azeet, me unon, tal enn od,
+        </l>
+        <l>
+         E ouilan get glac’har, ha gluban men deu-chod,
+        </l>
+        <l>
+         Ha gluban men deu-chod, siouah, get men dareu,
+        </l>
+        <l>
+         Enn ur zonj anehoc’h em oc’h trez er morieu.
+        </l>
+        <l>
+         O tud vad benniget ! men ema oet arze
+        </l>
+        <l>
+         Enn amzer euruz hont ha me c’havec’h bamde,
+        </l>
+        <l>
+         Eit kleuet konz Doue, ha diskarg hou kalon,
+        </l>
+        <l>
+         Hag eit hou konfortein dre er gomunion !
+        </l>
+        <l>
+         Ha mem bugale geh ! e pe stad e hoc’h-hui ?
+        </l>
+        <l>
+         Hui em goulen bamde ha n’em c’havet ket mui ;
+        </l>
+        <l>
+         M’ hou koulan a me zu ; mez, o peh hun drue !
+        </l>
+        <l>
+         Ne c’houez ket mui a dad, na me a vugale !
+        </l>
+        <l>
+         O keh devedigeu ! petra vou a ann e-hoc’h ?
+        </l>
+        <l>
+         Piue hou konforto, piue rei sikour d’hoc’h ?
+        </l>
+        <l>
+         O Jezus ! bugul mad, hou pet sonj anehe,
+        </l>
+        <l>
+         Hag astennet ho torn e bep amzer d’e-he.
+        </l>
+        <l>
+         Isprideu euruz, o sent ha sentezed,
+        </l>
+        <l>
+         Ha hui rouanez enn nean, chomet get he berpet !
+        </l>
+        <l>
+         Reit hu d’ehe sikour enn hou oberieu,
+        </l>
+        <l>
+         Ha reit konfort d’ehe e holl hou zrebileu.
+        </l>
+        <l>
+         O deuar a Vreih-izel, o va bro glac’haret !
+        </l>
+        <l>
+         E pe mor a gloe e oud-de bet tolet ?
+        </l>
+        <l>
+         Gwech-arall e ouez brao, joeuz, ha leuen ;
+        </l>
+        <l>
+         Breman e ez mantret, siouah ! ged enn anken !
+        </l>
+        <l>
+         Ur vanden treitourien hemp fe hag hemp lezen,
+        </l>
+        <l>
+         E dez de zorblet ha laket peb-eil-benn ;
+        </l>
+        <l>
+         Lammet hou dez gen-id holl joieu de galon ;
+        </l>
+        <l>
+         Forbannet eskobed, menec’h ha beleion.
+        </l>
+        <l>
+         Eskobed, beleion ha menec’h, forbannet ;
+        </l>
+        <l>
+         Ged el leanezed er vro holl dilezet ;
+        </l>
+        <l>
+         Tamm oferen bet mui, na tamm sakramanteu,
+        </l>
+        <l>
+         Hag enn drein e kreskein ebarh hun ilizieu !
+        </l>
+        <l>
+         Licherieu enn oter, kroez ha kaliz sotret,
+        </l>
+        <l>
+         Ha get-he ar c’hlehier e pep parrez leret ;
+        </l>
+        <l>
+         Enn iliz e begin, a he madeu forhet ;
+        </l>
+        <l>
+         Hag enn armel santel keh Jezuz forbannet ;
+        </l>
+        <l>
+         Sotret e enn iliz ; leket d’ur marchosi,
+        </l>
+        <l>
+         Kouls hag enn oter-vraz de ur dol a zibri ;
+        </l>
+        <l>
+         Er gwir krechenion, enn dud vad e welein,
+        </l>
+        <l>
+         Hag ar re fall bep le, bep le oc’h ho goanein !
+        </l>
+        <l>
+         O men Doue, fachet oc’h a-c’hoz d’hun pec’hedeu !
+        </l>
+        <l>
+         Ni unan zou kiriek de holl hun poenieu ;
+        </l>
+        <l>
+         Pa vemp fidel d’e-hoc’h, e vec’h fidel d’e-omp,
+        </l>
+        <l>
+         Pelleit omp-ni doh hoc’h, ha hui bella doh omp,
+        </l>
+        <l>
+         Enn hou gourdrouz, neoah, leun oc’h a vadeleah,
+        </l>
+        <l>
+         Hag e-kreih hon anken hui genik d’imp er peah.
+        </l>
+        <l>
+         True ! men Doue ! true ! ni zou hou pugale,
+        </l>
+        <l>
+         Deuz enn droug hun ez groet distolet d’imp arze !
+        </l>
+        <l>
+         D’er roanteleah holl, d’enn iliz glaharet,
+        </l>
+        <l>
+         Dakoret, men Doue, hou madeleah, abred.
+        </l>
+        <l>
+         Hou pet true doh omp, o Doue a garante,
+        </l>
+        <l>
+         Dakoret d’imp er peah, dakoret d’imp er fe.
+        </l>
+        <l>
+         Pe gourz e vehemp-ni, bugulion ha deved,
+        </l>
+        <l>
+         Eit hou melein, men Doue, el a-gent, dastumet ?
+        </l>
+        <l>
+         Pe gourz e tei enn de sehein hun dareu,
+        </l>
+        <l>
+         Ha de ganein gloer d’hoc’h enn hun ilizieu ?
+        </l>
+        <l>
+         O de a eurusted ! o de lan a zouzter !
+        </l>
+        <l>
+         Me sonj a zou gen-id peb heur ha peb amzer.
+        </l>
+        <l>
+         O Doue a vadeleah hastet enn termen-ze,
+        </l>
+        <l>
+         Eit ma hellin-me hoah gwelet mem bugale !
+        </l>
+        <l>
+         Ke, kanen hirvouduz, konfort a me spired,
+        </l>
+        <l>
+         Ke, ha lar de me fobl, holl me glac’har kalet.
+        </l>
+        <l>
+         Douget-hi, eled mad, ha leret mad d’e-he,
+        </l>
+        <l>
+         E ma ha de ha noz holl me sonjeu get-he.
+        </l>
+        <l>
+         Turhunel, estik-noz, ged enn amzer neue,
+        </l>
+        <l>
+         E iehet de ganein doh dor mem bugale ;
+        </l>
+        <l>
+         Ha perak ne hallan neinjal eue gen-hoc’h,
+        </l>
+        <l>
+         Eit monet, dreist er mor, bed hon bro, avel hoc’h ?
+        </l>
+        <l>
+         Ah ! groeit aoel em lec’h, kanet a bouiz hou penn :
+        </l>
+        <l>
+         — Dalc’het mad doh er Fe, dalc’het doh hou lezen !
+        </l>
+        <l>
+         Ha groeit d’ehe reskont : — Ni zalc’ho doh er Fe !
+        </l>
+        <l>
+         Kentoc’h meruel mil gwech eid ankoueat hun Doue ! —
+        </l>
+       </lg>
+      </div>
+      <div n="6" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        Le jour où le recteur de Bignan reparut dans son bourg, fut pour le pays un
+                        jour de fête. Les cloches que l'on avait sauvées de la fonte furent mises en
+                        branle ; on accourait du plus loin qu'on apprenait la nouvelle ; chacun le
+                        voulait voir, toucher sa soutane, lui baiser les mains. Le bon recteur,
+                        attendri jusqu’aux larmes, s’avançait suivi de la foule : son front était
+                        pâle, ses joues amaigries, ses cheveux avaient blanchi dans l’exil ; on eût
+                        dit un de ces premiers chrétiens sortant des catacombes.
+       </p>
+       <p>
+        Le lendemain, il chanta la messe. L’église avait été dépavée, les saints
+                        décapités ; les murs étaient revêtus d’un enduit verdâtre, et le sol couvert
+                        de débris : mais tous les fronts étaient joyeux. Tandis que le prêtre
+                        officiait, le vent venait par les vitraux brisés faire frissonner la nappe
+                        de l’autel, et agiter sa chevelure blanche ; il portait de vieux ornements :
+                        mais il avait le front joyeux comme ses paroissiens ; ceux-ci revoyaient
+                        leur père, et leur consolateur ; il retrouvait son Dieu, sa patrie, ses
+                        enfants.
+       </p>
+       <p>
+        M. l’abbé Le Joubioux a consacré une intéressante notice bretonne à la
+                        mémoire du saint recteur : on regrette seulement qu’il se soit cru forcé
+                        d’obéir à certains préjugés de forme dont la critique a fait justice ; il
+                        termine par cette pathétique apostrophe aux paroissiens de l’abbé Nourri à
+                        l’élégie duquel il emprunte, avec bonheur, une citation :
+       </p>
+       <p>
+        « Habitants de Bignan, où est voire pasteur et votre père ? Hélas ! Son
+                        corps est loin de vous, mais sa pensée comme son cœur ne vous ont pas
+                        quittés !
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div n="3" type="T">
+    <head>
+     Chants domestiques et chants d'amour
+    </head>
+    <div n="1" type="D">
+     <head>
+      Dialecte Cornouaillais (Kerneveg)
+     </head>
+     <div n="7" type="chanson">
+      <head type="titre_général">
+       L'AIRE NEUVE (SON LEUR-NEVEZ)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        L’aire neuve est par excellence la fête de l’agriculture. Lorsque la surface
+                        de l’aire n’est plus unie, et que les cailloux et les crevasses défendent au
+                        rouleau qui doit y recueillir le blé de glisser aisément, le laboureur fait
+                        publier une aire neuve. La veille du jour indiqué, quelques heures avant
+                        minuit, on voit des charrettes, chargées de terre glaise et de barriques
+                        d’eau, se diriger en silence vers son habitation, et chercher derrière les
+                        arbres une position telle, qu’elles puissent, au coup de minuit, s’élancer
+                        dans l’aire, et gagner des rubans qui sont destinés aux premiers rendus.
+       </p>
+       <p>
+        Dès que l’aurore se lève, chaque cultivateur vient, à tour de rôle, déposer
+                        sur l’aire la terre dont sa charrette est pleine ; puis ou y verse de l’eau,
+                        et l’on fait galoper en cercle, parmi le mortier que produit ce mélange, des
+                        chevaux dont les crins sont ornés de rubans aux couleurs éclatantes. Il est
+                        des cantons où l’on dresse une table au centre de l’aire ; sur cette table
+                        on place un fauteuil ; on enlève la plus belle jeune fille de l’assemblée ;
+                        on l’y fait asseoir, et on ne la délivre que sur la promesse de quelque
+                        gracieuse rançon.
+       </p>
+       <p>
+        Huit jours après, quand l’aire, suffisamment foulée par les pieds des
+                        chevaux, est séchée, on y danse pour l’aplanir, et la fête recommence.
+                        Quelquefois des jeunes filles, portant sur la tête des vases remplis de lait
+                        ou de fleurs, ouvrent ces danses par une ronde ; puis le biniou sonne, la
+                        bombarde y mène ses notes plus sonores, et les chaînes des danseurs ne
+                        tardent pas à se mouvoir. Ces chaînes s’allongent insensiblement, se
+                        déploient, se croisent au gré des instruments, s’enlacent, se replient sur
+                        elles-mêmes, se fuient, reviennent, se fuient encore, se déroulent et
+                        s’élancent avec une mesure parfaite.
+       </p>
+       <p>
+        Vers le soir, on se rend, au son de la musique, dans le verger n’auraient
+                        pas été de force, disent les historiens, à le disputer aux Bretons. Les
+                        seigneurs avaient aussi leurs lutteurs, qu’ils faisaient jouter les uns
+                        contre les autres dans les grandes cérémonies.
+       </p>
+       <p>
+        Les luttes terminées, ou revient danser, et l’on ne se retire qu’au coucher
+                        du soleil.
+       </p>
+       <p>
+        Il est rare que l’aire neuve ne fournisse pas aux poètes bretons le sujet
+                        d’une chanson nouvelle ; nous en avons vu un exemple dans la ballade du
+                        marquis de Guérand. Nous allons en donner une autre, mais d’une nature
+                        différente ; elle se chante en haute Cornouaille.
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        L’Aire neuve
+       </head>
+       <lg>
+        <l>
+         Les miens étaient allés à l’aire neuve ; et moi d’aller aussi avec eux, à
+                           la fête !
+        </l>
+        <l>
+         Ils étaient allés à une aire neuve, au manoir ; ce n’est pas moi qui
+                           serais resté à la maison !
+        </l>
+        <l>
+         Les jeunes garçons n’y manquaient point, croyez-le, ni les jolies filles
+                           non plus.
+        </l>
+        <l>
+         Mon cœur bondissait d’entendre les sonneurs sonner.
+        </l>
+        <l>
+         Alors je vis danser une jeune fille. Elle était aussi éveillée qu’une
+                           tourterelle ;
+        </l>
+        <l>
+         Ses yeux brillaient comme des gouttes de rosée sur une fleur d’épine
+                           blanche, à l’aurore,
+        </l>
+        <l>
+         Et ils étaient bleus comme la fleur du lin ; ses dents aussi belles que
+                           des pierres fines ;
+        </l>
+        <l>
+         Son air vif et joyeux ; et elle de me regarder,
+        </l>
+        <l>
+         El moi de la regarder, et moi d’aller, un peu après, l’inviter,
+        </l>
+        <l>
+         L’inviter pouf un jabadao, et nous voilà en danse !
+        </l>
+        <l>
+         Comme nous dansions, je pressai sa petite main blanche ;
+        </l>
+        <l>
+         Et elle de sourire, de sourire aussi doucement qu’un ange du paradis
+                           ;
+        </l>
+        <l>
+         Et moi de lui sourire ; et je n’aime plus qu’elle.
+        </l>
+        <l>
+         J’irai la voir, ce soir, et lui porterai un velours et une croix.
+        </l>
+        <l>
+         Un velours noir avec sa croix, que j’ai achetés à la foire de
+                           Saint-Nicolas,
+        </l>
+        <l>
+         De Saint-Nicolas, notre grand patron ; cela fera bien sur son petit cou
+                           nu ;
+        </l>
+        <l>
+         Et de plus je lui porterai une bague d’argent pour mettre à son joli
+                           petit doigt,
+        </l>
+        <l>
+         Pour passer à son doigt, afin qu’elle pense à moi quelquefois.
+        </l>
+        <l>
+         En m’en revenant de chez ma douce, le vieux tailleur m’a rencontré ;
+        </l>
+        <l>
+         J’ai rencontré le vieux tailleur, et il a fait cette chanson.
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Son Leur-Nevez
+       </head>
+       <lg>
+        <l>
+         Ma zud oa oet d’al leur-neve ;
+        </l>
+        <l>
+         Ha me d’ho heul d’ar fest ive !
+        </l>
+        <l>
+         D’al leur-ne oant oet d’ar maner,
+        </l>
+        <l>
+         Fe vie bet gan-in chom er ger !
+        </l>
+        <l>
+         Potred eno na vanke ket,
+        </l>
+        <l>
+         Na merc’hed koant, — ho ! — ken-neubed ;
+        </l>
+        <l>
+         Dridal a ree ma c’halon
+        </l>
+        <l>
+         O kleout ar zonerien son.
+        </l>
+        <l>
+         Pa weliz eur plac’h o tansal,
+        </l>
+        <l>
+         Ken drant evel eunn durzunal ;
+        </l>
+        <l>
+         He daoulagad evel glizin
+        </l>
+        <l>
+         War ar bleun spern-gwenn, da vintin,
+        </l>
+        <l>
+         Hag he ker glaz evel bleun-lin ;
+        </l>
+        <l>
+         He dent ker kaer evel mein-fin ;
+        </l>
+        <l>
+         He neuz ken drant ha ker laouen :
+        </l>
+        <l>
+         Hag hi mont da zellet ouz-en,
+        </l>
+        <l>
+         Ha me mont da zellet out-hi.
+        </l>
+        <l>
+         Ha me mont goude d’hi fedi,
+        </l>
+        <l>
+         D’hi fedi’vid eur jabadaou,
+        </l>
+        <l>
+         Ha ni war ann dachen hon daou !
+        </l>
+        <l>
+         Trema oamp gand ann abaden,
+        </l>
+        <l>
+         Me waske war hi dornik gwenn ;
+        </l>
+        <l>
+         Hag hi c’hoarzin, c’hoarzin ken douz,
+        </l>
+        <l>
+         Hag eunn el euz ar baradouz ;
+        </l>
+        <l>
+         Ha me mont da c’hoarzin out-hi ;
+        </l>
+        <l>
+         Ha ne garann mui nemet-hi.
+        </l>
+        <l>
+         Me ielo d’hi gwelet henoaz,
+        </l>
+        <l>
+         Eur voulouz gan-in, hag eur groaz ;
+        </l>
+        <l>
+         Eur voulouzen du hag he c’hroaz,
+        </l>
+        <l>
+         Prenet e foar Sant-Nikolaz,
+        </l>
+        <l>
+         Sant-Nicolaz, hor patron braz,
+        </l>
+        <l>
+         A vo brao war hi gougik noaz ;
+        </l>
+        <l>
+         Hag ouspen, eur walen argant
+        </l>
+        <l>
+         Da vouta war hi bezik koant,
+        </l>
+        <l>
+         Da lakat war-n-han da vijou,
+        </l>
+        <l>
+         Ma zonjo d’i-me wechigou.
+        </l>
+        <l>
+         O tont endro a di ma dous,
+        </l>
+        <l>
+         Digouet gan-e ’r c’hemener kouz ; ’R c’hemener em euz kavet,
+        </l>
+        <l>
+         Hag ar zon-man en deuz savet.
+        </l>
+       </lg>
+      </div>
+      <div n="7" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        Le bienheureux saint Nicolas, patron des enfants dans toute la France, l’est
+                        en Bretagne des amoureux : ceux-ci lui font mille neuvaines pour qu’il les
+                        exauce ; ils lui enfoncent aussi, par dévotion, des épingles sans nombre
+                        dans les pieds, et ils ont l’habitude d’en remplir sa fontaine.
+       </p>
+       <p>
+        Le bon saint n’accepterait d’eux aucun présent plus considérable, car il
+                        sait, disent de vieilles rimes bretonnes, « que leur bourse est aussi vide
+                        d’argent que leur cœur plein d’amour. » D’ailleurs, leur épingle a bien
+                        quelque valeur : sans elle, comme le remarque naïvement un poëte populaire,
+                        le jeune homme ne peut souvent fumer sa pipe, le seul bien qu’il ait en ce
+                        monde ; et, quant à la jeune fille, l’épingle qu’elle offre ferme sa
+                        collerette.
+       </p>
+       <p>
+        La chanson qu’on vient de lire est une satire, quoiqu’elle n’ait pas l’air
+                        d’en être une ; mais les traits malicieux du vieux tailleur sont trop légers
+                        pour avoir pu faire de profondes blessures.
+       </p>
+      </div>
+     </div>
+     <div n="8" type="chanson">
+      <head type="titre_général">
+       LES HIRONDELLES (AR GWENNILIED)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        Cette charmante chansonnette, qui couronnera la seconde partie de ces chants
+                        populaires, pourra servir de contraste à la ballade du poëte Loéiz Kam, et,
+                        comme elle, prouver que le génie poétique, si vivace encore parmi les
+                        classes supérieures qui savent le breton et qui écrivent en cette langue,
+                        est loin d’être éteint parmi le peuple des campagnes.
+       </p>
+       <p>
+        On l'attribue à deux jeunes paysannes, deux sœurs. Toutes deux pourtant, si
+                        on les interroge, se défendent d’abord vivement de l’avoir composée (c’est
+                        l’usage) ; puis, si on continue de les presser de questions, elles s’en
+                        attribuent l’une à l’autre l’honneur, et, si on les presse davantage, elles
+                        finissent par avouer, en rougissant, qu’elles l’ont faite ensemble. « On ne
+                        saurait trop admirer leur œuvre, dit un poète anglais (M. Milmann), bon juge
+                        en pareille matière ; elle semble une espèce de reproche délicat fait à un
+                        fils de famille qui va chercher des plaisirs, et peut-être former des liens
+                        loin du pays natal.».
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        Les Hirondelles
+       </head>
+       <lg>
+        <l>
+         Il y a un petit sentier qui conduit du manoir à mon village,
+        </l>
+        <l>
+         Un sentier blanc sur le bord duquel on trouve un buisson d’aubépine
+        </l>
+        <l>
+         Chargé de fleurs qui plaisent au fils du seigneur du manoir.
+        </l>
+        <l>
+         Je voudrais être fleur d’aubépine, qu’il me cueillit de sa main
+                           blanche.
+        </l>
+        <l>
+         Qu’il me cueillit de sa petite main blanche, plus blanche que la fleur
+                           d’aubépine.
+        </l>
+        <l>
+         Je voudrais être fleur d’aubépine, pour qu’il me plaçât sur son cœur.
+        </l>
+        <l>
+         Il s’éloigne de nous, quand l’hiver entre dans la maison :
+        </l>
+        <l>
+         Il s’en va vers le pays de France, comme l’hirondelle qui vole.
+        </l>
+        <l>
+         Quand revient le temps nouveau, il revient aussi vers nous ;
+        </l>
+        <l>
+         Quand les bluets naissent dans les prés, et que l’avoine fleurit dans les
+                           champs ;
+        </l>
+        <l>
+         Quand chantent les pinsons et les petits linots ;
+        </l>
+        <l>
+         Il revient avec les fêtes ; il revient à nos pardons.
+        </l>
+        <l>
+         Je voudrais voir des fleurs et des fêtes chez nous en chaque saison,
+        </l>
+        <l>
+         El voir les hirondelles voltiger par ici, toujours ;
+        </l>
+        <l>
+         Je voudrais les voir voltiger toujours au bout de notre cheminée.
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Ar Gwennilied
+       </head>
+       <lg>
+        <l>
+         Tre ma c’herig hag ar maner,
+        </l>
+        <l>
+         Eur vinojenig a gaver ;
+        </l>
+        <l>
+         A gaver eur vinojen wenn
+        </l>
+        <l>
+         A zo enn hi eur ween spern-gwenn ;
+        </l>
+        <l>
+         Hag hi karget a voukedou
+        </l>
+        <l>
+         Hag a blij da vab ann otrou.
+        </l>
+        <l>
+         Me garfe but bleun e spern-gwenn,
+        </l>
+        <l>
+         Ha but tapet gand he zorn gwenn,
+        </l>
+        <l>
+         But tapet gand he zornik gwenn,
+        </l>
+        <l>
+         Gwennoc’h evit bleun e spern-gwenn ;
+        </l>
+        <l>
+         Me garfe but bleun e spern-gwenn,
+        </l>
+        <l>
+         Ha but laket ar he varlen.
+        </l>
+        <l>
+         Mont a ra kuit digen omp-ni,
+        </l>
+        <l>
+         Pa za ar goan tre barz ann ti ;
+        </l>
+        <l>
+         Mont a ra kuit trezek Bro-c’hall’Vel ar gwennili o nijal.
+        </l>
+        <l>
+         Pa zistro ann amzer neve,
+        </l>
+        <l>
+         Distroi ra dreman adarre ;
+        </l>
+        <l>
+         Pa zav ar bleun ial er prajou,
+        </l>
+        <l>
+         Hag ar bleun kerc’h barz ar parkou ;
+        </l>
+        <l>
+         Ha pa gan ar pinterigou,
+        </l>
+        <l>
+         Kerkouls hag al linerigou ;
+        </l>
+        <l>
+         Dont a ra da heul ar festou,
+        </l>
+        <l>
+         Dont a ra c’hoaz d’hon pardoniou.
+        </l>
+        <l>
+         Me garfe gwel’t e peb amzer
+        </l>
+        <l>
+         Bleuniou ha festou barz ar ger,
+        </l>
+        <l>
+         Ha gwelet ar gwennilied
+        </l>
+        <l>
+         O nijal tro zreman bepred ;
+        </l>
+        <l>
+         Me garfe ho gwel’t o nijal
+        </l>
+        <l>
+         Bepred e beg hon chiminal.
+        </l>
+       </lg>
+      </div>
+      <div n="8" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        Il est impossible d’exprimer avec plus de délicatesse un sentiment plus
+                        doux. Tous les chants des jeunes paysannes bretonnes {et ils sont nombreux)
+                        ont le même caractère de pudique réserve : vous diriez qu’on y sent toujours
+                        battre le cœur d’une vierge. Lorsque le sujet s’élève, comme en cette
+                        circonstance, et que l’auteur se trouve lié à celui qu’il chante par une
+                        communauté d’origine, de langue, de traditions, de souvenirs, d’intérêts et
+                        d’affections, résultat du vieil esprit de clan, il s’enveloppe d’ombres
+                        discrètes, et le mystère prête à son œuvre un charme nouveau. Mais malheur a
+                        qui le trahit ! Alors arrivent par troupeaux ces chercheurs de motifs et de
+                        paroles qu’on appelle compositeurs de romances : jugeant l’esprit Français
+                        moins pénétrant que celui des paysans bas bretons, ils déchirent tous les
+                        voiles dont le chaste poêle a enveloppé sa création virginale ; ils chargent
+                        de notes l’harmonieuse plainte qui devait avoir pour unique accompagnement
+                        le frôlement du fuseau de la jeune fileuse, et l’imprudent révélateur n’a
+                        plus qu’a se frapper la poitrine en répétant ce vers de Virgile, que M.
+                        Sainte-Beuve a fait passer avec tant de bonheur et d’art dans la poésie
+                        française :
+       </p>
+       <p>
+        Perditus, ah ! liquidis immisi fontibus apros !
+       </p>
+       <p>
+        J'ai mis le sanglier dans la claire fontaine, Amour du peuplier !
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div n="4" type="T">
+    <head>
+     Légendes et chants religieux
+    </head>
+    <div n="2" type="D">
+     <head>
+      Dialecte de Léon (Leoneg)
+     </head>
+     <div n="9" type="chanson">
+      <head type="titre_général">
+       L’ENFER (ANN IFERN)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        Pour trouver la société chrétienne telle qu’elle était jadis, une réunion
+                        d’hommes à natures primitives, à organisation puissante, à imagination
+                        dévorante ; pour trouver un prêtre que la foule comprenne, qu’elle aime, et
+                        qui soit de force a lutter corps à corps avec elle et à la terrasser, il
+                        n’est pas nécessaire de remonter le cours du temps et d’aller jusqu’au moyen
+                        âge : on n’a qu’à venir en Bretagne. Les cantiques qu’y chante le peuple
+                        sont en harmonie avec ses mœurs, ses mâles croyances et les doctrines qu’on
+                        lui prêche : il a un secret penchant pour les sujets qui traitent des
+                        vérités les plus effrayantes de la religion, comme s’il avait gardé l’esprit
+                        dont les druides remplissaient ses ancêtres au fond de la forêt sacrée ; le
+                        cantique de l’enfer, le plus ancien et le plus populaire de tous ceux que
+                        nous possédons, me parait en être une preuve. On l’attribue tantôt au père
+                        Morin, qui vivait au quinzième siècle, tantôt au père Maunoir, qui vivait au
+                        dix-septième ; toutefois il ne se retrouve pas dans la collection imprimée
+                        des cantiques de ce dernier, mais dans un recueil plus ancien où il diffère
+                        beaucoup de la version orale que nous publions : la langue en est moins
+                        pure, l’allure moins franche, l’ensemble moins empreint de rudesse
+                        primitive. J’ai donc cru devoir suivre la version populaire.
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        L’Enfer
+       </head>
+       <lg>
+        <l>
+         Descendons tous, chrétiens, en enfer, pour voir quel supplice effroyable
+                           endurent les âmes damnées que la colère de Dieu tient enchaînées au
+                           milieu des flammes, pour avoir abusé de ses grâces en ce monde.
+        </l>
+        <l>
+         L’enfer est un abîme profond plein de ténèbres, où ne luit jamais la plus
+                           petite clarté ; les portes ont été fermées et verrouillées par Dieu, et
+                           il ne les ouvrira jamais ; la clef en est perdue !
+        </l>
+        <l>
+         Les dalles rougies d’un four d’ici-bas ne sont que fumée, au prix du feu
+                           de l’enfer, du feu qui dévore les âmes damnées ; mieux vaudrait brûler,
+                           en ce four, jusqu’à la fin du monde, que d’être, pendant une heure,
+                           tourmenté en enfer.
+        </l>
+        <l>
+         Ils hurlent à tue-tête, comme des chiens enragés ; ils ne savent où fuir
+                           ; partout des flammes ! des flammes sur leur tête, des flammes sous leurs
+                           pieds, des flammes de tous côtés, qui les dévoreront à jamais.
+        </l>
+        <l>
+         Le fils s’élancera sur son père, et la fille sur sa mère, et ils les
+                           traîneront par les cheveux, au milieu des flammes, avec mille
+                           malédictions :
+        </l>
+        <l>
+         — Soyez maudite, femme perdue, qui nous avez mis au monde ; soyez maudit,
+                           homme insouciant, qui êtes la cause de notre damnation.
+        </l>
+        <l>
+         Ce sera Satan qui leur préparera à manger, et les ordures des monstres de
+                           l’enfer, ramassées dans les ruisseaux de feu, qu'il leur servira ; et
+                           pour boisson, ils auront leurs larmes, mêlées de mille immondices et de
+                           sang de crapaud.
+        </l>
+        <l>
+         Et leur peau sera écorchée et leur chair déchirée par la dent des
+                           serpents et des démons ; et leur chair et leurs os seront jetés au feu,
+                           pour alimenter la fournaise immense de l’enfer.
+        </l>
+        <l>
+         Après qu’ils auront été laissés quelque temps dans les flammes, ils
+                           seront plongés, par Satan, dans un lac de glace ; et du lac de glace
+                           replongés dans les flammes, et des flammes dans l’eau, comme la barre de
+                           fer en forge.
+        </l>
+        <l>
+         Alors, ils se mettront à pleurer, à pleurer amèrement : — Ayez pitié, mon
+                           Dieu, ayez pitié de nous ! — Mais ce sera en vain qu’ils pleureront, car
+                           tant que Dieu durera, dureront leurs tourments et leurs maux.
+        </l>
+        <l>
+         Le feu qui les brûlera en enfer sera si vif, que leur moelle bouillira
+                           dans leurs os ; plus ils demanderont grâce, plus ils seront tourmentés ;
+                           ils auront beau hurler, ils brûleront éternellement.
+        </l>
+        <l>
+         Ce feu-là. c’est la colère de Dieu qui l’a allumé ; et il ne pourrait
+                           plus l’éteindre, quand même il le voudrait ; jamais il ne jettera de
+                           fumée, et jamais il ne consumera ; il les brûlera éternellement, sans
+                           jamais les détruire.
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Ann Ifern
+       </head>
+       <lg>
+        <l>
+         Diskennomp holl, kristenien, enn ifern da welet
+        </l>
+        <l>
+         Ar wanerez estlammuz euz ann eneou daonet
+        </l>
+        <l>
+         Pe re zo dre wir Doue dalc’het e-barz ann tan,
+        </l>
+        <l>
+         O veza gret gwall zispign euz he c’hraz er bed-man.
+        </l>
+        <l>
+         Ann ifern zo eunn toulldon leun a devalijen,
+        </l>
+        <l>
+         Elec’h ne weler morse bihana sklerijen,
+        </l>
+        <l>
+         Ann noriou zo bet sarret ha prennet gand Doue,
+        </l>
+        <l>
+         Ha n’ho digoro biken ; kollet eo ann alc’houe !
+        </l>
+        <l>
+         Eur forn c’horet er bed-ma n’ed eo nemed moged,
+        </l>
+        <l>
+         E-kever tan ann ifern, tan eneou daonet,
+        </l>
+        <l>
+         Gwell e ve devi enn hi ac’han da fin ar bed ;
+        </l>
+        <l>
+         Eget beza enn ifern e-pad eunn heur gwanet.
+        </l>
+        <l>
+         Iudal reont a-boez penn, evel chaz kounnaret ;
+        </l>
+        <l>
+         Ne ouzont pelec’h tec’het, peb-lec’h ez-int losket ;
+        </l>
+        <l>
+         Ann tan zo war ho gorre, ann tan zo dindan ho,
+        </l>
+        <l>
+         Ann tan zo a bep kostez hag ho devo ato.
+        </l>
+        <l>
+         Ar mab a lamm gand he dad, hag ar verc’h gand he mamm,
+        </l>
+        <l>
+         Ho stlnjo, gand mil malloz, dre ho bleo, kreiz ar flamm.
+        </l>
+        <l>
+         — Malloz d’hoc’h grek diaket, hag hoc’h euz hon ganet ;
+        </l>
+        <l>
+         Malloz d’hoc’h, tra didalvez, kiriok oc’h omp daonet ! —
+        </l>
+        <l>
+         Ho magadurez a vo da viken gand Satan
+        </l>
+        <l>
+         Kaezour ann dragoned, etouez ar gwaziou tan ;
+        </l>
+        <l>
+         Hag ho evach, ho daelou, hag a vezo mesket
+        </l>
+        <l>
+         Gand mil ha mil seurt viltanz ha goad ann touseged.
+        </l>
+        <l>
+         Ha kignet vo ho c’hroc’hen, hag ho c’hik difreuzet,
+        </l>
+        <l>
+         Gand beg ann aered-wiber, kouls ha dend ann diaouled,
+        </l>
+        <l>
+         Hag enn tan a vo ruillet ho c’hig hag ho eskern,
+        </l>
+        <l>
+         Evit ma tevo kreoc’h forn vraz euz ann ifern.
+        </l>
+        <l>
+         Goude ma vezint losket eur boutadig enn tan,
+        </l>
+        <l>
+         E vint tolet enn eul lenn leun a skorn gand Satan,
+        </l>
+        <l>
+         Ha deuz al lenn barz ann tan arre vint didolet
+        </l>
+        <l>
+         Ha deuz ann tan barz ann dour, ’vel al loc’h-houarn goeliet.
+        </l>
+        <l>
+         Neuze teuint da wela, da wela gand enkrez :
+        </l>
+        <l>
+         — Ho ped ouz omp, ma Doue, ho ped ouz omp truez. —
+        </l>
+        <l>
+         Hogen enn aner welint ; rag ’tra bado Doue
+        </l>
+        <l>
+         E pado ho ankeniou hag ho enkrez ive !
+        </l>
+        <l>
+         Ken ter a vezo ann tan ho rosto enn ifern,
+        </l>
+        <l>
+         Ma teui ar mel da virvi, penn-da-benn ’nn ho eskern,
+        </l>
+        <l>
+         Seul-vui c’houlennint true, seul-vui e vint gwanet ;
+        </l>
+        <l>
+         Kaer ho devezo iudal, losket e vint bepret.
+        </l>
+        <l>
+         Ann tan-ze a zo c’houezet dre vuanegez Doue,
+        </l>
+        <l>
+         Ha halfe ked hen laza evel pa ma garfe ;
+        </l>
+        <l>
+         Biken na dolo moged, ha biken na devo,
+        </l>
+        <l>
+         Heb ehana d’ho leski biken n’ho diskarro.
+        </l>
+       </lg>
+      </div>
+      <div n="9" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        Cela fait frémir : l’imagination de Michel-Ange n’est pas allée plus loin :
+                        et, pour que rien ne manque à la réalité du tableau, certains passages
+                        poussent l’horreur jusqu’au dégoût, comme ces mystérieux recoins du Jugement
+                        dernier du peintre italien. Qu’on se rappelle maintenant que ce cantique est
+                        chanté fréquemment par des chrétiens de tout âge en Bretagne. Quel trouble,
+                        quel terreur profonde ne doit-il pas jeter dans l’âme des enfants, des
+                        jeunes filles et des vieillards ! Mais, ainsi que je l’ai remarqué, le
+                        paysan breton ne recule pas d’effroi devant les peintures sombres ; la
+                        tournure de son esprit l’y invite au contraire, et son calme intérieur n’en
+                        est point troublé. J’ai dit aussi précédemment que la pièce était tronquée
+                        dans les versions imprimées : croirait-on, par exemple, qu’en son adorable
+                        simplicité, un de ces naïfs protes franco-bretons, comme il y en a
+                        plusieurs, a reculé d’effroi devant la sublime clef perdue de l’enfer, et
+                        qu’il l’a remplacée par une cheville de sa façon ?
+       </p>
+      </div>
+     </div>
+    </div>
+    <div n="3" type="D">
+     <head>
+      Dialecte Trégorois (Tregerieg)
+     </head>
+     <div n="10" type="chanson">
+      <head type="titre_général">
+       LE PARADIS (AR BARADOZ)
+      </head>
+      <div type="argument">
+       <head>
+        Argument
+       </head>
+       <p>
+        Autant le cantique de l’Enfer est épouvantable, autant celui du Ciel est
+                        mystique et charmant. On l’attribue généralement à Michel le Nobletz de
+                        Kerodern, missionnaire breton, contemporain du père Maunoir. Cette opinion
+                        nous paraît soutenable, et nous l’adoptons ; mais nous ne pouvons croire
+                        qu’il ait composé la pièce telle qu’elle se lit dans les collections
+                        imprimées. Outre qu’on en trouve autant de versions différentes qu’il y en a
+                        eu d’éditions depuis le dix-septième siècle jusqu’à nos jours, ces versions
+                        écrites, qui s’accordent plus ou moins, quant au fond, avec les versions
+                        orales, en diffèrent notablement par certains détails ; elles ont perdu des
+                        strophes entières, des ornements pleins de grâce et de poésie que celles-ci
+                        offrent encore ; enfin elles ont subi, sous le rapport du langage, des
+                        altérations nombreuses. Nous n’hésitons donc pas à suivre encore les
+                        versions inédites.
+       </p>
+      </div>
+      <div type="transcription" xml:lang="fr">
+       <head type="titre-français">
+        Le Paradis
+       </head>
+       <lg>
+        <l>
+         Jésus ! combien sera grand le bonheur des âmes, quand elles seront devant
+                           Dieu, et dans son amour !
+        </l>
+        <l>
+         Je trouve le temps court, et légères les peines, en songeant nuit et jour
+                           à la gloire du Paradis.
+        </l>
+        <l>
+         Quand je regarde le ciel, ma pairie, je voudrais y voler comme une petite
+                           colombe blanche.
+        </l>
+        <l>
+         Quand viendra l’heure de la mort, alors je quitterai cette chair
+                           angoisseuse, l’ennemie de Jésus.
+        </l>
+        <l>
+         J’attends avec joie le dernier passage, j’ai hâte de voir Jésus, mon
+                           véritable époux.
+        </l>
+        <l>
+         Aussitôt que mes chaînes seront brisées, je m’élèverai dans les airs
+                           comme une alouette.
+        </l>
+        <l>
+         Je passerai la lune pour aller à la gloire, je foulerai aux pieds le
+                           soleil et les étoiles.
+        </l>
+        <l>
+         Quand je serai loin de la terre, celle vallée de larmes, alors je
+                           jetterai mes regards sur mon pays de Bretagne :
+        </l>
+        <l>
+         Alors je dirai : — Adieu, mon pays, adieu, à toi, monde de souffrances et
+                           à tes douloureux fardeaux ;
+        </l>
+        <l>
+         Adieu, pauvreté, adieu, affliction, adieu, troubles du cœur, adieu,
+                           péchés !
+        </l>
+        <l>
+         Je ne craindrai plus les ruses du malin esprit ; maintenant que l’heure
+                           de ma mort est passée, je ne me perdrai plus !
+        </l>
+        <l>
+         Mon corps, comme un vaisseau perdu, m’a conduit ici, malgré les vents et
+                           la tempête :
+        </l>
+        <l>
+         O trépas, tu es le portier qui m’ouvre le château contre les écueils
+                           duquel les flots ont brisé mon navire. —
+        </l>
+        <l>
+         De quelque côté que je me tournerai, tout ce que je verrai remplira mes
+                           yeux et mon cœur de bonheur :
+        </l>
+        <l>
+         Je verrai les portes du paradis ouvertes pour m’attendre, et les saints
+                           et les saintes prêts à me recevoir.
+        </l>
+        <l>
+         Je serai reçu dans le palais de la Trinité au milieu d honneurs et
+                           d’harmonies ;
+        </l>
+        <l>
+         Et là, je verrai Dieu le Père avec son Fils et l’Esprit-Saint.
+        </l>
+        <l>
+         Je verrai Jésus, d’un air plein de bonté, placer sur mon front une belle
+                           couronne :
+        </l>
+        <l>
+         — Vos corps heureux, dira Jésus, étaient des trésors cachés en une terre
+                           bénie.
+        </l>
+        <l>
+         Vous êtes en ma cour comme des racines de rosiers blancs, de lis, ou
+                           d’aubépines, dans un jardin ;
+        </l>
+        <l>
+         Les rosiers, les aubépines et les lis, perdent leur fleur dans la saison,
+                           et la recouvrent comme vous. —
+        </l>
+        <l>
+         Pour de légères souffrances, pour de courtes angoisses, nous recevrons de
+                           Dieu, notre véritable père, une brillante récompense.
+        </l>
+        <l>
+         Elle sera belle à voir, la Vierge bénie, avec les douze étoiles qui
+                           forment sa couronne.
+        </l>
+        <l>
+         Nous verrons aussi les légions des archanges, qui chantent les louanges
+                           de Dieu, chacun une harpe à la main ;
+        </l>
+        <l>
+         Nous verrons encore, pleins de gloire et de grâce, nos pères, nos mères,
+                           nos frères, les hommes de notre pays ;
+        </l>
+        <l>
+         Des vierges de tout âge, des saintes de toute condition, des femmes, des
+                           veuves couronnées par Dieu.
+        </l>
+        <l>
+         Tous les petits anges, portés sur leurs petites ailes, si gentils et si
+                           roses, voltigeront au-dessus de nos têtes ;
+        </l>
+        <l>
+         Voltigeront au-dessus de nos têtes, comme un essaim mélodieux et parfumé
+                           d’abeilles dans un champ de fleurs.
+        </l>
+        <l>
+         Bonheur sans pareil ! plus je pense à vous, plus je vous désire ! vous
+                           consolez mon cœur dans les peines de cette vie !
+        </l>
+       </lg>
+      </div>
+      <div type="original" xml:lang="br">
+       <head type="titre-breton">
+        Ar Baradoz
+       </head>
+       <lg>
+        <l>
+         Jezus ! peger braz vo
+        </l>
+        <l>
+         Plijadur ann eneo,
+        </l>
+        <l>
+         Pa vint dirak Doue,
+        </l>
+        <l>
+         Hag enn he garante.
+        </l>
+        <l>
+         Berr gavann ann amzer,
+        </l>
+        <l>
+         Hag ar poaniou dister,
+        </l>
+        <l>
+         O sonjal de ha noz,
+        </l>
+        <l>
+         E gloar ar baradoz.
+        </l>
+        <l>
+         Pa zellann enn envo,
+        </l>
+        <l>
+         Hag entreze va bro,
+        </l>
+        <l>
+         Nijal di a garenn,
+        </l>
+        <l>
+         Evel eur goulmik wenn.
+        </l>
+        <l>
+         Pa vo pred ar maro,
+        </l>
+        <l>
+         Neuze me gimiado
+        </l>
+        <l>
+         Ouz ar c’hig ankeniuz,
+        </l>
+        <l>
+         Enebour da Jezus.
+        </l>
+        <l>
+         Gand joa e c’hortoann
+        </l>
+        <l>
+         Ann tremen divezan ;
+        </l>
+        <l>
+         Hast am euz da welet
+        </l>
+        <l>
+         Jezus, va gwir bried.
+        </l>
+        <l>
+         Kerkent ha ma vezo
+        </l>
+        <l>
+         Torret va chadenno,
+        </l>
+        <l>
+         M’en em zavo enn er
+        </l>
+        <l>
+         Evel eunn alc’houeder.
+        </l>
+        <l>
+         Tremen a rinn al loar
+        </l>
+        <l>
+         Evit monet d’ar c’hloar
+        </l>
+        <l>
+         Dreist ann heol, ar stered,
+        </l>
+        <l>
+         Me a vezo douget.
+        </l>
+        <l>
+         Pa vinn pell diouz ann douar,
+        </l>
+        <l>
+         Traonien leun a c’hlac’har,
+        </l>
+        <l>
+         Neuze me rai eur zell
+        </l>
+        <l>
+         Ouz va bro Breiz-izel.
+        </l>
+        <l>
+         Neuze me a laro :
+        </l>
+        <l>
+         — Kenavo d’id, va bro,
+        </l>
+        <l>
+         Kenavo, bed doaniuz,
+        </l>
+        <l>
+         Gand da veac’hiou poaniuz ;
+        </l>
+        <l>
+         Kenavo paourentez,
+        </l>
+        <l>
+         Kenavo, goanerez,
+        </l>
+        <l>
+         Kenavo trubuillo,
+        </l>
+        <l>
+         Kenavo, pec’hejo !
+        </l>
+        <l>
+         Pelloc’h ne zonjinn ket
+        </l>
+        <l>
+         Ardou ann drouk-spered ;
+        </l>
+        <l>
+         Biken me n’em golo
+        </l>
+        <l>
+         Goude pred ar maro.
+        </l>
+        <l>
+         Evel eur vag gollet,
+        </l>
+        <l>
+         Va c’horf deuz va c’haset
+        </l>
+        <l>
+         Ama, dre ann avel,
+        </l>
+        <l>
+         Ar glao har ar riel.
+        </l>
+        <l>
+         Maro, te ann treizer
+        </l>
+        <l>
+         A ziger d’in ar ger,
+        </l>
+        <l>
+         Pa vruzun gand ann her
+        </l>
+        <l>
+         Va lestr oud he rec’hier. —
+        </l>
+        <l>
+         Abep-tu pa zellinn,
+        </l>
+        <l>
+         Kement tra a welinn
+        </l>
+        <l>
+         A rai d’am daoulagad,
+        </l>
+        <l>
+         Ha d’am c’halon mil vad :
+        </l>
+        <l>
+         Perc’her ar baradoz
+        </l>
+        <l>
+         Digor ouz va gortoz,
+        </l>
+        <l>
+         Ar zent, ar zentezed,
+        </l>
+        <l>
+         Tost d’am digemeret.
+        </l>
+        <l>
+         Me vo digemeret
+        </l>
+        <l>
+         E palez ann Drinded,
+        </l>
+        <l>
+         E-kreiz ann enorio
+        </l>
+        <l>
+         Hag ar meuleudio ;
+        </l>
+        <l>
+         Hag eno, evit mad
+        </l>
+        <l>
+         Welinn Doue ann Tad
+        </l>
+        <l>
+         Gand he vab benniget
+        </l>
+        <l>
+         Hag ar Spered meulet.
+        </l>
+        <l>
+         Me a welo Jezus,
+        </l>
+        <l>
+         Enn eur c’hiz dudiuz,
+        </l>
+        <l>
+         O lakat war va fenn
+        </l>
+        <l>
+         Ar gaera kurunen :
+        </l>
+        <l>
+         — Ho korfou evuruz,
+        </l>
+        <l>
+         A lavaro Jezus,
+        </l>
+        <l>
+         Oa tensorio kuzet
+        </l>
+        <l>
+         Enn douar benniget.
+        </l>
+        <l>
+         Evel grizio roz-gwenn,
+        </l>
+        <l>
+         Pe lili pe spern-gwenn,
+        </l>
+        <l>
+         E kornig eul-liorz,
+        </l>
+        <l>
+         Ed hoc’h e-kreiz va forz ;
+        </l>
+        <l>
+         C’houi zo er baradoz
+        </l>
+        <l>
+         Evel bokedo roz
+        </l>
+        <l>
+         A zivleun d’ar mare,
+        </l>
+        <l>
+         Hag a vleun adarre. —
+        </l>
+        <l>
+         Evit poanio dister
+        </l>
+        <l>
+         Evit ankenio berr,
+        </l>
+        <l>
+         Ni vezo peet mad
+        </l>
+        <l>
+         Gand Doue, hor gwir dad.
+        </l>
+        <l>
+         Kaer a vezo gwelet
+        </l>
+        <l>
+         Ar Werc’hez benniget,
+        </l>
+        <l>
+         Gand daouzek stereden
+        </l>
+        <l>
+         A ra he c’hurunen.
+        </l>
+        <l>
+         Gwelet a rimp ouspenn
+        </l>
+        <l>
+         Gant-ho peb a delen,
+        </l>
+        <l>
+         Aele hag arc’haele
+        </l>
+        <l>
+         Holl o veuli Doue ;
+        </l>
+        <l>
+         Gwelet a raimp-ni c’hoaz
+        </l>
+        <l>
+         Leun a c’hloar, leun a c’hraz,
+        </l>
+        <l>
+         Hon tado, hor mammo ;
+        </l>
+        <l>
+         Hor breudeur, tud hor bro.
+        </l>
+        <l>
+         Gwerc’hezed a bep oad,
+        </l>
+        <l>
+         Sentezed a bep stad,
+        </l>
+        <l>
+         Gragez, intanvezed,
+        </l>
+        <l>
+         Gand Doue kurunet,
+        </l>
+        <l>
+         Ann holl eledigo
+        </l>
+        <l>
+         War ho eskeligo
+        </l>
+        <l>
+         Ker mignon, ker ru-benn,
+        </l>
+        <l>
+         A nijo dreist hor penn,
+        </l>
+        <l>
+         A nijo dreist hor penn,
+        </l>
+        <l>
+         Evel eunn hed gwenen,
+        </l>
+        <l>
+         Enn eur parkad bleunio,
+        </l>
+        <l>
+         Son ha c’houez-vad gant-ho.
+        </l>
+        <l>
+         Euruzded heb he far !
+        </l>
+        <l>
+         O sonjal me ho kar ;
+        </l>
+        <l>
+         C’hui a ro d’in dizoan
+        </l>
+        <l>
+         E poanio ar bed-man !
+        </l>
+       </lg>
+      </div>
+      <div n="10" type="Ne">
+       <head>
+        Notes et éclaircissements
+       </head>
+       <p>
+        Le cantique du Paradis, dont l’air est aussi suave et aussi charmant que les
+                        paroles (V. les Mélodies, p. 56) nous a été chanté pour la première fois,
+                        par une mendiante assise au pied d’une croix, au bord d’un chemin. La pauvre
+                        femme avait peine à contenir son émotion, et pleurait en nous le chantant.
+                        Dieu nous donnait en elle un symbole touchant de la piété des Bretons.
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </body>
+ </text>
+</TEI>

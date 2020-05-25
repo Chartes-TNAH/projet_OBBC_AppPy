@@ -11393,7 +11393,7 @@ a.text-dark:hover {
     }
 
     body {
-        min-width: 992px !important
+        width: 100%;
     }
 
     .container {

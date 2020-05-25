@@ -16,6 +16,9 @@ from ..constantes import SOURCE_DOCUMENT
 
 
 class SongsBB(db.Model):
+
+    # On initialise les colonnes de la table
+
     __tablename__ = "chansonBB"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title_fr = db.Column(db.String(45))
@@ -25,6 +28,8 @@ class SongsBB(db.Model):
     song_fr = db.Column(db.Text)
     song_brz = db.Column(db.Text)
     MusicSheetPath = db.Column(db.String(64))
+
+    # On initialise le constructeur de la classe
 
     def __init__(self, id, title_fr, title_brz, dialect, theme, song_fr, song_brz, MusicSheetPath):
         self.id = id
@@ -47,10 +52,10 @@ list_dialect = []
 list_theme = []
 
 
-# Une exception : le choix a été fait, sûrement discutable, de remplir
-# les chemins vers les images à la main. Cependant, on pourra par la suite
-# selon l'accroissement du corpus (dataset XML) intégrer les chemins vers les
-# images directement dans le dataset XML
+# Une exception : le choix a été fait, sûrement discutable, de remplir une liste avec
+# les chemins vers les images. Cependant, on pourra par la suite
+# selon l'accroissement du corpus (dataset XML) intégrer les chemins d'images
+# directement dans le dataset XML (Barzaz-Breiz.xml).
 
 list_MusicSheetPath = ['<img src="/static/images/img_partitions/chansonPR.jpg">',
                        '<img src="/static/images/img_partitions/chansonMA.jpg">',
@@ -95,23 +100,41 @@ def extraction_lyrics(list_song):
 # selon la variable element qui varie selon la position de l'attribut @n dans le dataset.
 
 for element in SOURCE_DOCUMENT.xpath("//body/div/div/div[@type='chanson']/@n"):
-    node_titre_fr = SOURCE_DOCUMENT.xpath("//text/body/div/div/div[@type='chanson'][@n=" + str(
-        element) + "]/div[@type='transcription']/head[@type='titre-français']/text()")
+
+    node_titre_fr = SOURCE_DOCUMENT.xpath("//text/body/div/div/div[@type='chanson'][@n="
+                                          + str(element)
+                                          + "]/div[@type='transcription']/head[@type='titre-français']/text()")
+
     list_title_fr.append(deepcopy(node_titre_fr[0]))
-    node_titre_brz = SOURCE_DOCUMENT.xpath("//div/div/div[@type='chanson'][@n=" + str(
-        element) + "]/div[@type='original']/head[@type='titre-breton']/text()")
+
+    node_titre_brz = SOURCE_DOCUMENT.xpath("//div/div/div[@type='chanson'][@n="
+                                           + str(element)
+                                           + "]/div[@type='original']/head[@type='titre-breton']/text()")
+
     list_title_brz.append(deepcopy(node_titre_brz[0]))
-    node_dialecte = SOURCE_DOCUMENT.xpath(
-        "//body/div/div/div[@type='chanson'][@n=" + str(element) + "]/ancestor::div[@type='D']/head/text()")
+
+    node_dialecte = SOURCE_DOCUMENT.xpath("//body/div/div/div[@type='chanson'][@n="
+                                          + str(element)
+                                          + "]/ancestor::div[@type='D']/head/text()")
+
     list_dialect.append(deepcopy(node_dialecte[0]))
-    node_theme = SOURCE_DOCUMENT.xpath(
-        "//body/div/div/div[@type='chanson'][@n=" + str(element) + "]/ancestor::div[@type='T']/head/text()")
+
+    node_theme = SOURCE_DOCUMENT.xpath("//body/div/div/div[@type='chanson'][@n="
+                                       + str(element)
+                                       + "]/ancestor::div[@type='T']/head/text()")
+
     list_theme.append(deepcopy(node_theme[0]))
-    node_chanson_fr = SOURCE_DOCUMENT.xpath(
-        "//div[@type='chanson'][@n='" + str(element) + "']/div[@type = 'transcription']/lg/l/text()")
+
+    node_chanson_fr = SOURCE_DOCUMENT.xpath("//div[@type='chanson'][@n='"
+                                            + str(element)
+                                            + "']/div[@type = 'transcription']/lg/l/text()")
+
     list_song_fr.append(deepcopy(node_chanson_fr))
-    node_chanson_brz = SOURCE_DOCUMENT.xpath(
-        "//div[@type='chanson'][@n='" + str(element) + "']/div[@type = 'original']/lg/l/text()")
+
+    node_chanson_brz = SOURCE_DOCUMENT.xpath("//div[@type='chanson'][@n='"
+                                             + str(element)
+                                             + "']/div[@type = 'original']/lg/l/text()")
+
     list_song_brz.append(deepcopy(node_chanson_brz))
     list_verses_fr = extraction_lyrics(list_song_fr)
     list_verses_brz = extraction_lyrics(list_song_brz)
