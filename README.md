@@ -33,7 +33,6 @@ Composée d'actuellement dix chansons, le but technique de l'application est de 
 
 6. Dans le terminal, rentrer la commande `$ cd OBBC/`, Une fois dans le dossier lancer l'application avec la commande `$ python run.py` ou `$ python3 run.py` via le serveur local et selon votre version de python (`$ python --version ou -V`).
 
->Afin de profiter de la meilleure expérience possible, il se peut qu'un certain ajustement du zoom (70% 80%) dans le navigateur pour les petites résolutions d'écran soit nécéssaire.
 
 
 ---
