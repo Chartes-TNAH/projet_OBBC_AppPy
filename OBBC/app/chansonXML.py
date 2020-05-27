@@ -101,25 +101,16 @@ def Song2XmlTei(chanson_id):
 
     nodeTeiHeader = SOURCE_DOCUMENT.findall('teiHeader')
 
-    titles = SOURCE_DOCUMENT.findall(
-        "//div[@type='chanson'][@n='" + str(chanson_id) +
-        "']/head")
+    titles = SOURCE_DOCUMENT.findall(f"//div[@type='chanson'][@n='{chanson_id}']/head")
 
-    arguments = SOURCE_DOCUMENT.findall(
-        "//div[@type='chanson'][@n='" + str(chanson_id) +
-        "']/div[@type = 'argument']/*")
+    arguments = SOURCE_DOCUMENT.findall(f"//div[@type='chanson'][@n='{chanson_id}']/div[@type = 'argument']/*")
 
-    transcriptions = SOURCE_DOCUMENT.findall(
-        "//div[@type='chanson'][@n='" + str(chanson_id) +
-        "']/div[@type = 'transcription']/lg/*")
+    transcriptions = SOURCE_DOCUMENT.findall(f"//div[@type='chanson'][@n='{chanson_id}']"
+                                             f"/div[@type = 'transcription']/lg/*")
 
-    originals = SOURCE_DOCUMENT.findall(
-        "//div[@type='chanson'][@n='" + str(chanson_id) +
-        "']/div[@type = 'original']/lg/*")
+    originals = SOURCE_DOCUMENT.findall(f"//div[@type='chanson'][@n='{chanson_id}']/div[@type = 'original']/lg/*")
 
-    Ne = SOURCE_DOCUMENT.findall(
-        "//div[@type='chanson'][@n='" + str(chanson_id) +
-        "']/div[@type = 'Ne']/*")
+    Ne = SOURCE_DOCUMENT.findall(f"//div[@type='chanson'][@n='{chanson_id}']/div[@type = 'Ne']/*")
 
     #  Création de l'élément racine TEI et du conteneur XML-TEI
 
@@ -171,10 +162,11 @@ def Song2XmlTei(chanson_id):
     # Titre
 
     head = ET.SubElement(divGeneral, 'head')
+
     for title in titles:
         head.text = title.text
 
-    # Appelle de la sous-fonction de traitement layoutDivP()
+    # Appel de la sous-fonction de traitement layoutDivP()
 
     # div Argument
 

@@ -99,43 +99,41 @@ def extraction_lyrics(list_song):
 # Chaque node vient récupérer la partie du dataset XML qui l'intéresse
 # selon la variable element qui varie selon la position de l'attribut @n dans le dataset.
 
-for element in SOURCE_DOCUMENT.xpath("//body/div/div/div[@type='chanson']/@n"):
+for id in SOURCE_DOCUMENT.xpath("//body/div/div/div[@type='chanson']/@n"):
 
-    node_titre_fr = SOURCE_DOCUMENT.xpath("//text/body/div/div/div[@type='chanson'][@n="
-                                          + str(element)
-                                          + "]/div[@type='transcription']/head[@type='titre-français']/text()")
+    node_title_fr = SOURCE_DOCUMENT.xpath(f"//text/body/div/div/div[@type='chanson'][@n='{str(id)}']"
+                                          f"/div[@type='transcription']/head[@type='titre-français']/text()")
 
-    list_title_fr.append(deepcopy(node_titre_fr[0]))
+    list_title_fr.append(deepcopy(node_title_fr[0]))
 
-    node_titre_brz = SOURCE_DOCUMENT.xpath("//div/div/div[@type='chanson'][@n="
-                                           + str(element)
-                                           + "]/div[@type='original']/head[@type='titre-breton']/text()")
+    node_title_brz = SOURCE_DOCUMENT.xpath(f"//div/div/div[@type='chanson'][@n='{str(id)}']"
+                                           f"/div[@type='original']/head[@type='titre-breton']/text()")
 
-    list_title_brz.append(deepcopy(node_titre_brz[0]))
+    list_title_brz.append(deepcopy(node_title_brz[0]))
 
-    node_dialecte = SOURCE_DOCUMENT.xpath("//body/div/div/div[@type='chanson'][@n="
-                                          + str(element)
-                                          + "]/ancestor::div[@type='D']/head/text()")
+    node_dialect = SOURCE_DOCUMENT.xpath(f"//body/div/div/div[@type='chanson'][@n='{str(id)}']"
+                                          f"/ancestor::div[@type='D']/head/text()")
 
-    list_dialect.append(deepcopy(node_dialecte[0]))
+    list_dialect.append(deepcopy(node_dialect[0]))
 
-    node_theme = SOURCE_DOCUMENT.xpath("//body/div/div/div[@type='chanson'][@n="
-                                       + str(element)
-                                       + "]/ancestor::div[@type='T']/head/text()")
+    node_theme = SOURCE_DOCUMENT.xpath(f"//body/div/div/div[@type='chanson'][@n='{str(id)}']"
+                                       f"/ancestor::div[@type='T']/head/text()")
 
     list_theme.append(deepcopy(node_theme[0]))
 
-    node_chanson_fr = SOURCE_DOCUMENT.xpath("//div[@type='chanson'][@n='"
-                                            + str(element)
-                                            + "']/div[@type = 'transcription']/lg/l/text()")
+    node_song_fr = SOURCE_DOCUMENT.xpath(f"//div[@type='chanson'][@n='{str(id)}']"
+                                            f"/div[@type = 'transcription']/lg/l/text()")
 
-    list_song_fr.append(deepcopy(node_chanson_fr))
+    list_song_fr.append(deepcopy(node_song_fr))
 
-    node_chanson_brz = SOURCE_DOCUMENT.xpath("//div[@type='chanson'][@n='"
-                                             + str(element)
-                                             + "']/div[@type = 'original']/lg/l/text()")
+    node_song_brz = SOURCE_DOCUMENT.xpath(f"//div[@type='chanson'][@n='{str(id)}']"
+                                             f"/div[@type = 'original']/lg/l/text()")
 
-    list_song_brz.append(deepcopy(node_chanson_brz))
+    list_song_brz.append(deepcopy(node_song_brz))
+
+    # On stocke les paroles de chansons dans des listes à partir
+    # de la fonction extraction_lyrics()
+
     list_verses_fr = extraction_lyrics(list_song_fr)
     list_verses_brz = extraction_lyrics(list_song_brz)
 
@@ -153,16 +151,17 @@ for element in SOURCE_DOCUMENT.xpath("//body/div/div/div[@type='chanson']/@n"):
 
     db.session.add(
         SongsBB(
-            element,
-            list_title_fr[int(element) - 1],
-            list_title_brz[int(element) - 1],
-            list_dialect[int(element) - 1],
-            list_theme[int(element) - 1],
+            id,
+            list_title_fr[int(id) - 1],
+            list_title_brz[int(id) - 1],
+            list_dialect[int(id) - 1],
+            list_theme[int(id) - 1],
             "".join(list_verses_fr),
             "".join(list_verses_brz),
-            list_MusicSheetPath[int(element) - 1]
+            list_MusicSheetPath[int(id) - 1]
         )
     )
+
 
 # Enfin on indique à l'ORM via la méthode .commit()
 # de faire les requêtes nécéssaires pour finaliser les

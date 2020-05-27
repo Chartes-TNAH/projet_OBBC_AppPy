@@ -39,21 +39,21 @@ def validator_rng(source_xml, schema_rng):
     :type returns: str
     """
 
-    # STEP 1 : TEST DE LA SYNTAXE XML PAR LE PARSEUR
+    # STEP 1 : TEST DE LA SYNTAXE XML PAR LE PARSEUR LXML
 
     try:
         ET.parse(source_xml)
 
     except ET.XMLSyntaxError:
         # S'il existe une erreur lxml, on renvoie un message de log, et
-        # la cause de cette erreur qui correspond au log du système récupéré
-        # le '%' est une autre méthode de formatage des chaines de caractères
-        print(colored('Failed to Parse XML source, Error Syntax !\n Error log : %s',
-                      'red') % sys.exc_info()[1])
+        # la cause de cette erreur qui correspond au log du système qui est récupéré
+
+        print(colored(f'Failed to Parse XML source, Error Syntax !\n Error log : {sys.exc_info()[1]}',
+                      'red'))
         # En cas d'erreur on quitte alors le programme
         sys.exit()
 
-    # STEP 2 : SI LE PARSAGE OK, ON STOCKE SON CONTENU DANS UNE VARIABLE
+    # STEP 2 : SI LE RESULTAT DU PARSEUR EST OK, ON STOCKE SON CONTENU DANS UNE VARIABLE
 
     input_xml = ET.parse(source_xml)
 
@@ -101,7 +101,7 @@ def validator_rng(source_xml, schema_rng):
             relaxng.assertValid(input_xml)
         # On lève le message d'erreur
         except ET.DocumentInvalid:
-            print(colored('Error log : %s', 'red') % sys.exc_info()[1])
+            print(colored(f'Error log : {sys.exc_info()[1]}', 'red'))
 
     return validation
 

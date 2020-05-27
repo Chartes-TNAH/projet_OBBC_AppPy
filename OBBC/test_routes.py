@@ -64,10 +64,10 @@ class TestMainRoads(unittest.TestCase):
         # 1 <= id <= 4 : correspond aux thèmes et aux dialectes qui reste au nombre de 4
 
         for id in self.liste:
-            page_theme = self.app.get('/themes/'+str(id))
-            page_dialecte = self.app.get('/nav_carte_dialectes/'+str(id))
-            print("page themes : {} => OK ! ".format(id))
-            print("page dialectes : {} => OK ! ".format(id))
+            page_theme = self.app.get(f'/themes/{str(id)}')
+            page_dialecte = self.app.get(f'/nav_carte_dialectes/{str(id)}')
+            print(f'page themes : {id} => OK ! ')
+            print(f'page dialectes : {id} => OK ! ')
             assert page_theme.status == '200 OK', 'themes failed'
             assert page_dialecte.status == '200 OK', 'dialectes failed'
 

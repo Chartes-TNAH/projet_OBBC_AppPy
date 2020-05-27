@@ -180,20 +180,20 @@ def recherche():
     if motclef:
         resultats = SongsBB.query.filter(
             or_(
-                SongsBB.title_fr.like("%{}%".format(motclef)),
+                SongsBB.title_fr.like(f"%{motclef}%"),
                 \
-                SongsBB.title_brz.like("%{}%".format(motclef)),
+                SongsBB.title_brz.like(f"%{motclef}%"),
                 \
-                SongsBB.song_fr.like("%{}%".format(motclef)),
+                SongsBB.song_fr.like(f"%{motclef}%"),
                 \
-                SongsBB.song_brz.like("%{}%".format(motclef)),
+                SongsBB.song_brz.like(f"%{motclef}%"),
             )
         ).order_by(SongsBB.title_fr.asc()).all()
 
     #  Dans la variable titre concaténation
     #  du motclef avec une chaîne de caractère
 
-    titre = "Résultats pour la recherche '" + motclef + "'"
+    titre = f"Résultats pour la recherche '{motclef}'"
 
     return render_template(
         "pages/recherche.html",
